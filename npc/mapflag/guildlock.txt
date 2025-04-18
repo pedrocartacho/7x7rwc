@@ -1,0 +1,42 @@
+//===== rAthena Script =======================================
+//= Mapflag: Guild lock.
+//===== By: ==================================================
+//= rAthena Dev Team
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: ========================================= 
+//= Blocks all guild modifications on a map:
+//=   /organize, /leave, /invite, @changeleader
+//===== Additional Comments: ================================= 
+//= 1.0 Initial script.
+//= 1.1 Updated. [L0ne_W0lf]
+//= 1.2 Renewal split. [Euphy]
+//============================================================
+
+// RWC Maps ===============
+2009rwc_01	mapflag	guildlock
+2009rwc_02	mapflag	guildlock
+2009rwc_03	mapflag	guildlock
+2009rwc_04	mapflag	guildlock
+2009rwc_05	mapflag	guildlock
+2009rwc_06	mapflag	guildlock
+2009rwc_07	mapflag	guildlock
+2009rwc_08	mapflag	guildlock
+2009rwc_f01	mapflag	guildlock
+2012rwc_01	mapflag	guildlock
+2012rwc_02	mapflag	guildlock
+2012rwc_03	mapflag	guildlock
+2012rwc_04	mapflag	guildlock
+2012rwc_05	mapflag	guildlock
+2012rwc_06	mapflag	guildlock
+2012rwc_07	mapflag	guildlock
+2012rwc_08	mapflag	guildlock
+guild_vs1	mapflag	guildlock
+guild_vs2	mapflag	guildlock
+guild_vs3	mapflag	guildlock
+guild_vs4	mapflag	guildlock
+guild_vs5	mapflag	guildlock
+rwc01	mapflag	guildlock
+rwc03	mapflag	guildlock

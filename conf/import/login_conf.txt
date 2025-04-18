@@ -1,0 +1,8 @@
+login_ip: 127.0.0.1
+char_ip: 35.247.202.156
+
+// Login Server Port
+login_port: 6900
+
+// Can you use _M/_F to make new accounts on the server?
+new_account: yes

@@ -1,0 +1,2 @@
+// Internal default is limited to 128 lines.  If you need more, you will need to modify the MOTD_LINE_SIZE definition in pc.cpp
+Bem-vindo ao RWC Brasil! Aproveite! Por favor, relate quaisquer bugs que você encontrar.
