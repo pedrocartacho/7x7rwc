@@ -1,4 +1,4 @@
-quiz_02,143,353,4	script	Healer Blue	624,{
+quiz_02,143,353,4	script	Healer Blue	450,{
     if (@healer_delay > gettimetick(2)) {
         end;
     }
@@ -238,6 +238,6 @@ quiz_02,143,353,4	script	Healer Blue	624,{
 
 
 // Duplicates
-quiz_02,245,351,4	duplicate(Healer Blue)	Healer Blue#quiz_02_2	624
-quiz_02,152,353,6	duplicate(Healer Blue)	Healer Red#quiz_02	624
-quiz_02,254,351,6	duplicate(Healer Blue)	Healer Red#quiz_02_2	624
+quiz_02,245,351,4	duplicate(Healer Blue)	Healer Blue#quiz_02_2	450
+quiz_02,152,353,6	duplicate(Healer Blue)	Healer Red#quiz_02	450
+quiz_02,254,351,6	duplicate(Healer Blue)	Healer Red#quiz_02_2	450

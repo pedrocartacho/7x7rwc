@@ -1,7 +1,7 @@
 // ==============================================================================
 // Arenas 7vs7 modificada por rodrigo aka narutekz (2014), Fissuris (2017) e Moskaum Y (2024)
 // ==============================================================================
-quiz_02,131,349,5	script	Waiting Room::KvM37R_Guillaume	418,{
+quiz_02,136,341,5	script	Waiting Room::KvM37R_Guillaume	418,{
 	end;
 	
 OnInit:
@@ -19,7 +19,7 @@ OnEnterBG:
 	end;
 }
 
-quiz_02,164,349,4	script	Waiting Room::KvM37R_Croix	414,{
+quiz_02,159,341,4	script	Waiting Room::KvM37R_Croix	414,{
 	end;
 
 OnInit:

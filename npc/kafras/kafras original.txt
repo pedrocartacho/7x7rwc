@@ -403,7 +403,7 @@ cmd_fild07,136,134,4	script	Kafra Employee::kaf_cmd_fild07	721,{
 	mes "[Kafra RWC]";
 	mes "You can use this storage to swap your equipments between rounds without slowing down your whole team by going to the market.";
 	mes "Now everyone can stop bitching about being overweight. Fatties.";
-	callfunc "F_Kafra",5,2,1,0,0;
+	callfunc "F_Kafra",5,1,1,0,0;
 //	if (checkre(0))
 //		savepoint strnpcinfo(4),129,97,1,1;
 //	else

@@ -10,7 +10,7 @@
 //= 1.1 Switched to 'getbattleflag', credits to Saithis. [Euphy]
 //============================================================
 
-izlude,122,119,1	script	Stylist#custom_stylist	2_M_DYEINGER,{ //TAVA 170 180
+izlude,125,115,3	script	Stylist#custom_stylist	503,{ //TAVA 170 180
 
 	setarray .@styles[1],getbattleflag("max_hair_style"),getbattleflag("max_hair_color");
 	setarray .@Look[1],1,6;

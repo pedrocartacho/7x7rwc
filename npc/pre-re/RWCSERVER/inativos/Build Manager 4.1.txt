@@ -1,5 +1,5 @@
-izlude,121,108,4	script	Builds	50,{
-//a
+izlude,121,108,3	script	Builds	50,{
+
 DROP TABLE IF EXISTS `ero_buildmanager`;
 CREATE TABLE IF NOT EXISTS `ero_buildmanager` (
   `id` int(11) unsigned NOT NULL auto_increment,

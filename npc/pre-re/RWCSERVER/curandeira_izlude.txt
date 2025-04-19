@@ -1,4 +1,4 @@
-izlude,131,112,5	script	Healer	624,{
+izlude,131,112,5	script	Healer	450,{
     setoption 0x40 | Option_Invisible | Option_Xmas, 0;
 
     if (@healer_delay > gettimetick(2)) {
@@ -6,7 +6,7 @@ izlude,131,112,5	script	Healer	624,{
     }
     set @healer_delay, gettimetick(2) + 3;
 
-    switch(BaseClass) {
+/*     switch(BaseClass) {
         case 0: if (Class !=23) skill 143,1,0; break;
         case 1: skill 144,1,0; skill 145,1,0; skill 146,1,0; break;
         case 2: skill 157,1,0; break;
@@ -30,12 +30,12 @@ izlude,131,112,5	script	Healer	624,{
         case 19: skill 1010,1,0; break;
         case 20: skill 1011,1,0; break;
         default: break;
-    }
+    } */
 
     atcommand "@repairall";
-    percentheal 100,100;
     sc_start SC_BLESSING,300000,10; // Cast Blessing level 10 for 600 seconds
     sc_start SC_INCREASEAGI,300000,10; // Cast Increase Agility level 10 for 600 seconds
+    percentheal 100,100;//obviamente isso precisa ser depois da bless pra nego n ter q falar 2x
 
     if (qtdcompbranca > 0) { 
         set .qtd, qtdcompbranca; 
@@ -241,6 +241,9 @@ izlude,131,112,5	script	Healer	624,{
 }
 
 // Duplicates
+//quiz_02,152,356,6	duplicate(Restock)	Restock Red#quiz_02	666
+izlude,50,128,6	duplicate(Healer)	Healer West#izlude	450
+//izlude,47,132,5 duplicate(Healer)   Healer West#izlude  450
 // crystilia,67,90,6	duplicate(Healer)	Healer#crystilia	475
 // quiz_02,143,353,6	duplicate(Healer)	Healer Blue#quiz_02	475
 // quiz_02,157,353,6	duplicate(Healer)	Healer Red#quiz_02	475

@@ -122,12 +122,12 @@ function	script	F_Kafra	{
 			// Save and Storage only
 			case 1:	setarray .@K_Menu0$[0],"Save","Use Storage","Cancel"; break;
 			// Storage only
-			case 2:	setarray .@K_Menu0$[0],"Cancel","Use Storage"; break;
+			case 2:	setarray .@K_Menu0$[0],"Use Storage","Cancel"; break;
 			// No Teleport (Common)
 			case 3: setarray .@K_Menu0$[0],"Save","Use Storage","Rent a Pushcart","Check Other Information","Cancel"; break;
 			// Case 4 is Einbroch no tele message.
 			// No save, or teleport. (Common)
-			case 5:	setarray .@K_Menu0$[0],"Cancel","Use Storage","Rent a Pushcart","Check Other Information"; break;
+			case 5:	setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Check Other Information","Cancel"; break;
 			// Storage and Check Other Information only.
 			case 6:	setarray .@K_Menu0$[0],"Use Storage","Check Other Information","Cancel"; break;
 			// Save, Storage, and Pushcart only (Kafra Warehouse)
@@ -139,7 +139,7 @@ function	script	F_Kafra	{
 			// Storage, Save, and Pushcart (Dewata, reorder of case 7)
 			case 10: setarray .@K_Menu0$[0],"Use Storage","Save","Rent a Pushcart","Cancel"; break;
 			// Default message (obsolete)
-			default: setarray .@K_Menu0$[0],"Cancel","Save","Use Storage","Use Teleport Service","Rent a Pushcart","Check Other Information"; break;
+			default: setarray .@K_Menu0$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Check Other Information","Cancel"; break;
 		}
 	}
 	.@menu$ = implode(.@K_Menu0$,":");
@@ -147,10 +147,6 @@ function	script	F_Kafra	{
 		.@j = select(.@menu$) - 1;
 		if (.@K_Menu0$[.@j] == "Save")
 			return;
-        else if (.@K_Menu0$[.@j] == "Cancel") {
-			callfunc "F_KafEnd",.@welcome,0;
-			end;
-		}
 		else if (.@K_Menu0$[.@j] == "Use Storage") {
 			if (.@welcome == 2)// Do not charge for Guild Storage
 				callfunc "F_KafStor",2,0,0;
@@ -184,6 +180,10 @@ function	script	F_Kafra	{
 		else if (.@K_Menu0$[.@j] == "Check Other Information") {
 			callfunc "F_KafInfo",getarg(2);
 			next;
+		}
+		else if (.@K_Menu0$[.@j] == "Cancel") {
+			callfunc "F_KafEnd",.@welcome,0;
+			end;
 		}
 		else if (.@K_Menu0$[.@j] == "Use Guild Storage") {
 			callfunc "F_KafStor",1,0;
@@ -267,11 +267,11 @@ function	script	F_KafStor	{
 		}
 		// Normal message
 		else {
-		//	mes "[Kafra Employee]";
-		//	mes "Here, let me open";
-		//	mes "your Storage for you.";
-		//	mes "Thank you for using";
-		//	mes "the Kafra Service.";
+			mes "[Kafra Employee]";
+			mes "Here, let me open";
+			mes "your Storage for you.";
+			mes "Thank you for using";
+			mes "the Kafra Service.";
 		}
 	}
 	callfunc("F_CheckKafCode");	//check your storage password, if set
@@ -447,7 +447,7 @@ function	script	F_KafInfo	{
 //===================================================================
 function	script	F_KafEnd	{
 	.@type = getarg(0);
-	//mes "[Kafra Employee]";
+	mes "[Kafra Employee]";
 	if (getarg(1) == true) {// Save
 		mes "Your Respawn Point";
 		mes "has been saved here";
@@ -455,8 +455,8 @@ function	script	F_KafEnd	{
 		mes "Thank you for using";
 		mes "the Kafra Services.";
 	} else if (.@type == 0 || .@type == 5) {// Generic End
-		//mes "We, here at Kafra Corporation,";
-		//mes "are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+		mes "We, here at Kafra Corporation,";
+		mes "are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
 	} else if (.@type == 1) {// Niflheim End
 		percentheal 0,-25;
 		mes "^666666Kaffffra n-never";

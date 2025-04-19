@@ -1,7 +1,7 @@
 // ==============================================================================
 // edited by Moskaum Y (2024)
 // ==============================================================================
-izlude,128,223,4	script	Job Master	811,{
+izlude,128,223,4	script	Job Master	650,{
 if(Class > 4007) {
 	mes	"[ ^0000FFJob Master^000000 ]";
 	mes	"You already Transcendent Class";

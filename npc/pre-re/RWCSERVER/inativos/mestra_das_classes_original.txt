@@ -1,4 +1,4 @@
-izlude,120,115,4	script	Job Master	811,{
+izlude,120,115,4	script	Job Master	650,{
 if(Class >= 1) {
 close;
 }

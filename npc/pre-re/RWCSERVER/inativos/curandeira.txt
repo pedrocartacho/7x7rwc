@@ -1,7 +1,7 @@
 
-izlude,131,112,5	script	Healer	475,{
+izlude,130,112,5	script	Healer	666,{
 
-	atcommand "@repairall";
+//	atcommand "@repairall";
 	percentheal 100,100;
 
 	if(qtdcompbranca>0) { set .qtd, qtdcompbranca; getitem 547,.qtd-countitem(547); }
@@ -46,5 +46,5 @@ izlude,131,112,5	script	Healer	475,{
 
 // Duplicates
 //crystilia,67,90,6	duplicate(Healer)	Healer#crystilia	475
-quiz_02,145,353,6	duplicate(Healer)	Healer Blue#quiz_02	475
-quiz_02,158,351,6	duplicate(Healer)	Healer Red#quiz_02	475
+quiz_02,145,353,6	duplicate(Healer)	Healer Blue#quiz_02	666
+quiz_02,158,351,6	duplicate(Healer)	Healer Red#quiz_02	666

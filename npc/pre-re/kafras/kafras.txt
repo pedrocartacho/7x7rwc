@@ -21,8 +21,8 @@
 
 // Izlude
 //============================================================
-izlude,127,118,4	duplicate(kaf_izlude)	Kafra#iz	423
-quiz_02,137,353,4	duplicate(kaf_izlude)	Kafra Blue#iz	423
+izlude,129,112,4	duplicate(kaf_izlude)	Kafra#iz	423
+quiz_02,141,353,4	duplicate(kaf_izlude)	Kafra Blue#iz	423
 quiz_02,239,351,4	duplicate(kaf_izlude)	Kafra Blue#quiz_02_2	423
-quiz_02,158,353,4	duplicate(kaf_izlude)	Kafra Red#iz	423
+quiz_02,154,353,4	duplicate(kaf_izlude)	Kafra Red#iz	423
 quiz_02,260,351,4	duplicate(kaf_izlude)	Kafra Red#quiz_02_2	423

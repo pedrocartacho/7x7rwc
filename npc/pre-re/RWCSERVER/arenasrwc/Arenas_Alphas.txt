@@ -540,3 +540,17 @@ rwc03	mapflag	partylock
 rwc03	mapflag	guildlock
 rwc03	mapflag	nodrop
 rwc03	mapflag	notrade
+//
+//ababa	mapflag	nopenalty
+//ababa	mapflag	nosave	SavePoint
+//ababa	mapflag	nowarp
+//ababa	mapflag	nomemo
+//ababa	mapflag	loadevent
+//ababa	mapflag	noicewall
+//ababa	mapflag	gvg
+//ababa	mapflag	noreturn
+//ababa	mapflag	nobranch
+//ababa	mapflag	partylock
+//ababa	mapflag	guildlock
+//ababa	mapflag	nodrop
+//ababa	mapflag	notrade

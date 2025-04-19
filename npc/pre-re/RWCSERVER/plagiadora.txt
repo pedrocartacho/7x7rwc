@@ -1,4 +1,8 @@
-izlude,125,115,5	script	Plagiarism	747,{
+//versao 20 ago 2024
+//precisa ser otimizado
+//atualmente o usuario precisa relogar para nao perder a skill ao falar com a curandeira ou quando troca de mapa
+//e isso e um pe no saco pro player 
+izlude,127,115,3	script	Plagiaridora	451,{
 set .@skill_level,getskilllv( "RG_PLAGIARISM" );
 
 mes "[ Plagiarizer ]";
@@ -61,7 +65,7 @@ while( .@i < .skill_size ){
 end;
 }
 
-quiz_02,137,356,6	duplicate(Plagiarism)	Plagiarism Blue#quiz_02	747
-quiz_02,239,354,6	duplicate(Plagiarism)	Plagiarism Blue#quiz_02_2	747
-quiz_02,158,356,4	duplicate(Plagiarism)	Plagiarism Red#quiz_02	747
-quiz_02,260,354,4	duplicate(Plagiarism)	Plagiarism Red#quiz_02_2	747
+quiz_02,139,356,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02	451
+quiz_02,239,354,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02_2	451
+quiz_02,156,356,5	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02	451
+quiz_02,260,354,3	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02_2	451

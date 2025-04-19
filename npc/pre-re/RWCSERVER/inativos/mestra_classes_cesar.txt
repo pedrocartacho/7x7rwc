@@ -1,4 +1,4 @@
-izlude,120,115,4	script	Job Master	811,{
+izlude,120,115,4	script	Job Master	650,{
 	// Initial check for current job class and skill points allocation
 	if (Class == 4001) { // High Novice
 		if (JobLevel == 10 && SkillPoint == 0) {
