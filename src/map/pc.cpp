@@ -10277,6 +10277,25 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 		pc_calcweapontype(sd);
 		clif_changelook(&sd->bl,LOOK_WEAPON,sd->status.weapon);
 	}
+	//codigo original
+	// if(pos & EQP_HAND_L) {
+	// 	if(id) {
+	// 		if(id->type == IT_WEAPON) {
+	// 			sd->status.shield = 0;
+	// 			sd->weapontype2 = id->look;
+	// 		}
+	// 		else
+	// 		if(id->type == IT_ARMOR) {
+	// 			sd->status.shield = id->look;
+	// 			sd->weapontype2 = 0;
+	// 		}
+	// 	}
+	// 	else
+	// 		sd->status.shield = sd->weapontype2 = 0;
+	// 	pc_calcweapontype(sd);
+	// 	clif_changelook(&sd->bl,LOOK_SHIELD,sd->status.shield);
+	// }
+	//
 	if(pos & EQP_HAND_L) {
 		if(id) {
 			if(id->type == IT_WEAPON) {
@@ -10291,9 +10310,11 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 		}
 		else
 			sd->status.shield = sd->weapontype2 = 0;
+		sd->block_allowskill_check = false;
 		pc_calcweapontype(sd);
 		clif_changelook(&sd->bl,LOOK_SHIELD,sd->status.shield);
 	}
+	
 	if(pos & EQP_SHOES)
 		clif_changelook(&sd->bl,LOOK_SHOES,0);
 
@@ -10509,14 +10530,23 @@ bool pc_unequipitem(struct map_session_data *sd, int n, int flag) {
 			status_change_end(&sd->bl, SC_EDP, INVALID_TIMER);
 		}
 	}
-	if(pos & EQP_HAND_L) {
-		if (sd->status.shield && battle_getcurrentskill(&sd->bl) == LG_SHIELDSPELL)
-			unit_skillcastcancel(&sd->bl, 0); // Cancel Shield Spell if player swaps shields.
+	//codigo original a frente
+	// if(pos & EQP_HAND_L) {
+	// 	if (sd->status.shield && battle_getcurrentskill(&sd->bl) == LG_SHIELDSPELL)
+	// 		unit_skillcastcancel(&sd->bl, 0); // Cancel Shield Spell if player swaps shields.
 
-		sd->status.shield = sd->weapontype2 = 0;
-		pc_calcweapontype(sd);
-		clif_changelook(&sd->bl,LOOK_SHIELD,sd->status.shield);
-	}
+	// 	sd->status.shield = sd->weapontype2 = 0;
+	// 	pc_calcweapontype(sd);
+	// 	clif_changelook(&sd->bl,LOOK_SHIELD,sd->status.shield);
+	// }
+	//fim
+	if(pos & EQP_HAND_L) {
+		if ((flag & 4) && sd->equip_switch_index[EQI_HAND_L] >= 0)
+			sd->block_allowskill_check = true;
+			else
+	   pc_calcweapontype(sd);
+	   clif_changelook(&sd->bl,LOOK_SHIELD,sd->status.shield);
+   }
 
 	if(pos & EQP_SHOES)
 		clif_changelook(&sd->bl,LOOK_SHOES,0);

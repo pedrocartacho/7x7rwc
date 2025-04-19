@@ -12116,7 +12116,12 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		return 0;
 
 	sd = BL_CAST(BL_PC,bl);
-
+	
+	if (sd && (type == SC_AUTOGUARD || type == SC_REFLECTSHIELD || type == SC_DEFENDER)) {
+		if (sd->block_allowskill_check)
+			return 0;
+	}
+	
 	if (sce->timer != tid && tid != INVALID_TIMER)
 		return 0;
 
