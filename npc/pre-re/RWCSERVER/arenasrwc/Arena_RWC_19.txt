@@ -108,8 +108,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 19 - 1@dth3 ]. -", bc_yellow;
 	set $@kvm49BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm49BG_id1,"1@dth3",9,50;
-	bg_warp $@kvm49BG_id2,"1@dth3",91,50;
+	bg_warp $@kvm49BG_id1,"1@dth3",52,89;
+	bg_warp $@kvm49BG_id2,"1@dth3",88,48;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -118,10 +118,14 @@ OnStart:
         $@guildsInArena2--;
     }
 
-	setwall "1@dth3",17,53,8,4,0,"batc20wall_a";
-	setwall "1@dth3",16,52,8,4,0,"batc20wall_b";
-	setwall "1@dth3",85,52,8,4,0,"batc20wall_c";
-	setwall "1@dth3",84,53,8,4,0,"batc20wall_d";
+	setwall "1@dth3",48,93,10,6,0,"batc20wall_a";
+	setwall "1@dth3",48,92,9,4,0,"batc20wall_b";
+	setwall "1@dth3",57,84,9,2,0,"batc20wall_c";
+	setwall "1@dth3",57,85,8,0,0,"batc20wall_d";
+	setwall "1@dth3",83,53,10,6,0,"batc20wall_e";
+	setwall "1@dth3",83,52,9,4,0,"batc20wall_f";
+	setwall "1@dth3",92,44,9,2,0,"batc20wall_g";
+	setwall "1@dth3",92,45,8,0,0,"batc20wall_h";
 
 	sleep 100;
 	// ScoreBoard

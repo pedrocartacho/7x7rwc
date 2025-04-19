@@ -108,8 +108,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 25 - kvm ]. -", bc_yellow;
 	set $@kvm55BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm55BG_id1,"kvm",9,50;
-	bg_warp $@kvm55BG_id2,"kvm",91,50;
+	bg_warp $@kvm55BG_id1,"kvm",53,128;
+	bg_warp $@kvm55BG_id2,"kvm",146,55;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -118,10 +118,10 @@ OnStart:
         $@guildsInArena2--;
     }
 
-	setwall "kvm",17,53,8,4,0,"batc20wall_a";
-	setwall "kvm",16,52,8,4,0,"batc20wall_b";
-	setwall "kvm",85,52,8,4,0,"batc20wall_c";
-	setwall "kvm",84,53,8,4,0,"batc20wall_d";
+	setwall "kvm",58,123,5,2,0,"batc20wall_a";
+	setwall "kvm",58,124,4,0,0,"batc20wall_b";
+	setwall "kvm",141,60,5,6,0,"batc20wall_c";
+	setwall "kvm",141,59,4,4,0,"batc20wall_d";
 
 	sleep 100;
 	// ScoreBoard

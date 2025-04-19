@@ -108,8 +108,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 24 - guild_vs2 ]. -", bc_yellow;
 	set $@kvm54BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm54BG_id1,"guild_vs2",9,50;
-	bg_warp $@kvm54BG_id2,"guild_vs2",91,50;
+	bg_warp $@kvm54BG_id1,"guild_vs2",10,50;
+	bg_warp $@kvm54BG_id2,"guild_vs2",89,50;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -118,10 +118,8 @@ OnStart:
         $@guildsInArena2--;
     }
 
-	setwall "guild_vs2",17,53,8,4,0,"batc20wall_a";
-	setwall "guild_vs2",16,52,8,4,0,"batc20wall_b";
-	setwall "guild_vs2",85,52,8,4,0,"batc20wall_c";
-	setwall "guild_vs2",84,53,8,4,0,"batc20wall_d";
+	setwall "guild_vs2",18,53,10,4,0,"batc20wall_a";
+	setwall "guild_vs2",81,53,8,4,0,"batc20wall_b";
 
 	sleep 100;
 	// ScoreBoard
@@ -173,8 +171,6 @@ OnTimer20000:
 	set $@kvm54BG, 2; // Playing
 	delwall "batc20wall_a";
 	delwall "batc20wall_b";
-	delwall "batc20wall_c";
-	delwall "batc20wall_d";
 	end;
 
 OnTimer25001:

@@ -26,8 +26,8 @@ izlude,135,111,3	script	Red Team	10066,{
 
     set .@guild_id, getcharid(2);
     if( (getguildmasterid(.@guild_id)) == (getcharid(0)) ){
-        $@jogadoresred1 = 7; // Number of players required
-        if ($@jogadoresred1 < 7){
+        $@jogadoresred1 = 2; // Number of players required
+        if ($@jogadoresred1 < 2){
             mes "^ff0000You need 7 players^000000";
             close;
         }

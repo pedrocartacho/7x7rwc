@@ -117,11 +117,19 @@ OnStart:
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
     }
-
-	setwall "2008rwc_04",17,53,8,4,0,"batc20wall_a";
-	setwall "2008rwc_04",16,52,8,4,0,"batc20wall_b";
-	setwall "2008rwc_04",85,52,8,4,0,"batc20wall_c";
-	setwall "2008rwc_04",84,53,8,4,0,"batc20wall_d";
+	//setwall "<mapname>", <x>, <y>, <tamanho>, <diressaum>, <wall_id>, "<sprite_name>";
+	//0=cima
+	//2=esquerda
+	//4=baixo
+	//6=direia
+	setwall "2008rwc_04",19,86,10,6,0,"batc20wall_a";
+	setwall "2008rwc_04",20,85,9,4,0,"batc20wall_b";
+	setwall "2008rwc_04",21,77,9,6,0,"batc20wall_c";
+	setwall "2008rwc_04",29,78,9,0,0,"batc20wall_d";
+	setwall "2008rwc_04",68,15,10,6,0,"batc20wall_e";
+	setwall "2008rwc_04",68,16,9,0,0,"batc20wall_f";
+	setwall "2008rwc_04",77,24,9,2,0,"batc20wall_g";
+	setwall "2008rwc_04",77,23,8,4,0,"batc20wall_h";
 
 	sleep 100;
 	// ScoreBoard

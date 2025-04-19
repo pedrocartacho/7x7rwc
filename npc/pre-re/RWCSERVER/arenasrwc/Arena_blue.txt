@@ -28,8 +28,8 @@ izlude,121,111,6	script	Blue Team	683,{
 
     set .@guild_id, getcharid(2);
     if ( (getguildmasterid(.@guild_id)) == (getcharid(0)) ){
-        $@jogadoresblue1 = 7; // Number of players required
-        if ($@jogadoresblue1 < 7){
+        $@jogadoresblue1 = 2; // Number of players required
+        if ($@jogadoresblue1 < 2){
             mes "^ff0000You need 7 players^000000";
             cutin "", 255;
             close;

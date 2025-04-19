@@ -108,8 +108,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 15 - 2008rwc_01 ]. -", bc_yellow;
 	set $@kvm45BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm45BG_id1,"2008rwc_01",9,50;
-	bg_warp $@kvm45BG_id2,"2008rwc_01",91,50;
+	bg_warp $@kvm45BG_id1,"2008rwc_01",27,78;
+	bg_warp $@kvm45BG_id2,"2008rwc_01",74,19;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -117,11 +117,14 @@ OnStart:
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
     }
+//setwall "<mapname>", <x>, <y>, <tamanho>, <diressaum>, <wall_id>, "<sprite_name>";
 
-	setwall "2008rwc_01",17,53,8,4,0,"batc20wall_a";
-	setwall "2008rwc_01",16,52,8,4,0,"batc20wall_b";
-	setwall "2008rwc_01",85,52,8,4,0,"batc20wall_c";
-	setwall "2008rwc_01",84,53,8,4,0,"batc20wall_d";
+	setwall "2008rwc_01",79,24,10,2,0,"batc20wall_a";
+	setwall "2008rwc_01",69,19,6,4,0,"batc20wall_b";
+	setwall "2008rwc_01",79,15,11,2,0,"batc20wall_c";
+	setwall "2008rwc_01",22,82,11,6,0,"batc20wall_d";
+	setwall "2008rwc_01",32,72,11,0,0,"batc20wall_e";
+	setwall "2008rwc_01",22,73,11,6,0,"batc20wall_f";
 
 	sleep 100;
 	// ScoreBoard
@@ -175,6 +178,8 @@ OnTimer20000:
 	delwall "batc20wall_b";
 	delwall "batc20wall_c";
 	delwall "batc20wall_d";
+	delwall "batc20wall_e";
+	delwall "batc20wall_f";
 	end;
 
 OnTimer25001:

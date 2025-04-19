@@ -108,8 +108,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 22 - 1@pump ]. -", bc_yellow;
 	set $@kvm52BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm52BG_id1,"1@pump",9,50;
-	bg_warp $@kvm52BG_id2,"1@pump",91,50;
+	bg_warp $@kvm52BG_id1,"1@pump",36,128;
+	bg_warp $@kvm52BG_id2,"1@pump",83,76;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -118,10 +118,10 @@ OnStart:
         $@guildsInArena2--;
     }
 
-	setwall "1@pump",17,53,8,4,0,"batc20wall_a";
-	setwall "1@pump",16,52,8,4,0,"batc20wall_b";
-	setwall "1@pump",85,52,8,4,0,"batc20wall_c";
-	setwall "1@pump",84,53,8,4,0,"batc20wall_d";
+	setwall "1@pump",30,124,11,6,0,"batc20wall_a";
+	setwall "1@pump",40,125,3,0,0,"batc20wall_b";
+	setwall "1@pump",79,80,8,6,0,"batc20wall_c";
+	setwall "1@pump",79,79,8,4,0,"batc20wall_d";
 
 	sleep 100;
 	// ScoreBoard
