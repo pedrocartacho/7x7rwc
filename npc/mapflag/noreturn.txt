@@ -273,4 +273,18 @@ guild_vs5	mapflag	noreturn
 rwc01	mapflag	noreturn
 rwc03	mapflag	noreturn
 
+4thts	mapflag	noreturn
+5thts	mapflag	noreturn
+6thts	mapflag	noreturn
+7thts	mapflag	noreturn
+2008rwc_01	mapflag	noreturn
+2008rwc_02	mapflag	noreturn
+2008rwc_03	mapflag	noreturn
+2008rwc_04	mapflag	noreturn
+2008rwc_05	mapflag	noreturn
+2008rwc_06	mapflag	noreturn
+2008rwc_07	mapflag	noreturn
+2008rwc_08	mapflag	noreturn
+kvm	mapflag	noreturn
+
 //evt_zombie	mapflag	noreturn

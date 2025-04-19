@@ -431,4 +431,18 @@ quiz_02	mapflag	noteleport
 rwc01	mapflag	noteleport
 rwc03	mapflag	noteleport
 
+4thts	mapflag	noteleport
+5thts	mapflag	noteleport
+6thts	mapflag	noteleport
+7thts	mapflag	noteleport
+2008rwc_01	mapflag	noteleport
+2008rwc_02	mapflag	noteleport
+2008rwc_03	mapflag	noteleport
+2008rwc_04	mapflag	noteleport
+2008rwc_05	mapflag	noteleport
+2008rwc_06	mapflag	noteleport
+2008rwc_07	mapflag	noteleport
+2008rwc_08	mapflag	noteleport
+kvm	mapflag	noteleport
+
 //evt_zombie	mapflag	noteleport

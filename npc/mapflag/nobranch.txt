@@ -357,4 +357,18 @@ quiz_02	mapflag	nobranch
 rwc01	mapflag	nobranch
 rwc03	mapflag	nobranch
 
+4thts	mapflag	nobranch
+5thts	mapflag	nobranch
+6thts	mapflag	nobranch
+7thts	mapflag	nobranch
+2008rwc_01	mapflag	nobranch
+2008rwc_02	mapflag	nobranch
+2008rwc_03	mapflag	nobranch
+2008rwc_04	mapflag	nobranch
+2008rwc_05	mapflag	nobranch
+2008rwc_06	mapflag	nobranch
+2008rwc_07	mapflag	nobranch
+2008rwc_08	mapflag	nobranch
+kvm	mapflag	nobranch
+
 //evt_zombie	mapflag	nobranch

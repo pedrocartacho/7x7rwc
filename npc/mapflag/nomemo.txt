@@ -716,3 +716,17 @@ guild_vs5	mapflag	nomemo
 quiz_02	mapflag	nomemo
 rwc01	mapflag	nomemo
 rwc03	mapflag	nomemo
+
+4thts	mapflag	nomemo
+5thts	mapflag	nomemo
+6thts	mapflag	nomemo
+7thts	mapflag	nomemo
+2008rwc_01	mapflag	nomemo
+2008rwc_02	mapflag	nomemo
+2008rwc_03	mapflag	nomemo
+2008rwc_04	mapflag	nomemo
+2008rwc_05	mapflag	nomemo
+2008rwc_06	mapflag	nomemo
+2008rwc_07	mapflag	nomemo
+2008rwc_08	mapflag	nomemo
+kvm	mapflag	nomemo

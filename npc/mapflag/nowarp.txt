@@ -107,3 +107,17 @@ guild_vs4	mapflag	nowarp
 guild_vs5	mapflag	nowarp
 rwc01	mapflag	nowarp
 rwc03	mapflag	nowarp
+
+4thts	mapflag	nowarp
+5thts	mapflag	nowarp
+6thts	mapflag	nowarp
+7thts	mapflag	nowarp
+2008rwc_01	mapflag	nowarp
+2008rwc_02	mapflag	nowarp
+2008rwc_03	mapflag	nowarp
+2008rwc_04	mapflag	nowarp
+2008rwc_05	mapflag	nowarp
+2008rwc_06	mapflag	nowarp
+2008rwc_07	mapflag	nowarp
+2008rwc_08	mapflag	nowarp
+kvm	mapflag	nowarp

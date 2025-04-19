@@ -173,3 +173,17 @@ bat_a02	mapflag	hidemobhpbar
 2012rwc_08	mapflag	hidemobhpbar
 rwc01	mapflag	hidemobhpbar
 rwc03	mapflag	hidemobhpbar
+
+4thts	mapflag	hidemobhpbar
+5thts	mapflag	hidemobhpbar
+6thts	mapflag	hidemobhpbar
+7thts	mapflag	hidemobhpbar
+2008rwc_01	mapflag	hidemobhpbar
+2008rwc_02	mapflag	hidemobhpbar
+2008rwc_03	mapflag	hidemobhpbar
+2008rwc_04	mapflag	hidemobhpbar
+2008rwc_05	mapflag	hidemobhpbar
+2008rwc_06	mapflag	hidemobhpbar
+2008rwc_07	mapflag	hidemobhpbar
+2008rwc_08	mapflag	hidemobhpbar
+kvm	mapflag	hidemobhpbar

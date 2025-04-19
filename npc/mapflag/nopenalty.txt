@@ -292,4 +292,18 @@ quiz_02	mapflag	nopenalty
 rwc01	mapflag	nopenalty
 rwc03	mapflag	nopenalty
 
+4thts	mapflag	nopenalty
+5thts	mapflag	nopenalty
+6thts	mapflag	nopenalty
+7thts	mapflag	nopenalty
+2008rwc_01	mapflag	nopenalty
+2008rwc_02	mapflag	nopenalty
+2008rwc_03	mapflag	nopenalty
+2008rwc_04	mapflag	nopenalty
+2008rwc_05	mapflag	nopenalty
+2008rwc_06	mapflag	nopenalty
+2008rwc_07	mapflag	nopenalty
+2008rwc_08	mapflag	nopenalty
+kvm	mapflag	nopenalty
+
 //evt_zombie	mapflag	nopenalty

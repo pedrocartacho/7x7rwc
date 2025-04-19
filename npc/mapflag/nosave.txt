@@ -301,5 +301,19 @@ quiz_02	mapflag	nosave
 rwc01	mapflag	nosave	SavePoint
 rwc03	mapflag	nosave	SavePoint
 
+4thts	mapflag	nosave	SavePoint
+5thts	mapflag	nosave	SavePoint
+6thts	mapflag	nosave	SavePoint
+7thts	mapflag	nosave	SavePoint
+2008rwc_01	mapflag	nosave	SavePoint
+2008rwc_02	mapflag	nosave	SavePoint
+2008rwc_03	mapflag	nosave	SavePoint
+2008rwc_04	mapflag	nosave	SavePoint
+2008rwc_05	mapflag	nosave	SavePoint
+2008rwc_06	mapflag	nosave	SavePoint
+2008rwc_07	mapflag	nosave	SavePoint
+2008rwc_08	mapflag	nosave	SavePoint
+kvm	mapflag	nosave	SavePoint
+
 evt_bomb	mapflag	nosave	SavePoint
 //evt_zombie	mapflag	nosave	SavePoint

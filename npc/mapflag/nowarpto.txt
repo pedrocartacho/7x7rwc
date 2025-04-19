@@ -188,3 +188,17 @@ guild_vs5	mapflag	nopenalty
 quiz_02	mapflag	nowarpto
 rwc01	mapflag	nowarpto
 rwc03	mapflag	nowarpto
+
+4thts	mapflag	nowarpto
+5thts	mapflag	nowarpto
+6thts	mapflag	nowarpto
+7thts	mapflag	nowarpto
+2008rwc_01	mapflag	nowarpto
+2008rwc_02	mapflag	nowarpto
+2008rwc_03	mapflag	nowarpto
+2008rwc_04	mapflag	nowarpto
+2008rwc_05	mapflag	nowarpto
+2008rwc_06	mapflag	nowarpto
+2008rwc_07	mapflag	nowarpto
+2008rwc_08	mapflag	nowarpto
+kvm	mapflag	nowarpto

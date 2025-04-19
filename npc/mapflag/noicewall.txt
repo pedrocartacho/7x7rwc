@@ -164,3 +164,17 @@ guild_vs5	mapflag	noicewall
 quiz_02	mapflag	noicewall
 rwc01	mapflag	noicewall
 rwc03	mapflag	noicewall
+
+4thts	mapflag	noicewall
+5thts	mapflag	noicewall
+6thts	mapflag	noicewall
+7thts	mapflag	noicewall
+2008rwc_01	mapflag	noicewall
+2008rwc_02	mapflag	noicewall
+2008rwc_03	mapflag	noicewall
+2008rwc_04	mapflag	noicewall
+2008rwc_05	mapflag	noicewall
+2008rwc_06	mapflag	noicewall
+2008rwc_07	mapflag	noicewall
+2008rwc_08	mapflag	noicewall
+kvm	mapflag	noicewall

@@ -39,3 +39,17 @@ guild_vs4	mapflag	notrade
 guild_vs5	mapflag	notrade
 rwc01	mapflag	notrade
 rwc03	mapflag	notrade
+
+4thts	mapflag	notrade
+5thts	mapflag	notrade
+6thts	mapflag	notrade
+7thts	mapflag	notrade
+2008rwc_01	mapflag	notrade
+2008rwc_02	mapflag	notrade
+2008rwc_03	mapflag	notrade
+2008rwc_04	mapflag	notrade
+2008rwc_05	mapflag	notrade
+2008rwc_06	mapflag	notrade
+2008rwc_07	mapflag	notrade
+2008rwc_08	mapflag	notrade
+kvm	mapflag	notrade

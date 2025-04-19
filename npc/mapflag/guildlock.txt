@@ -40,3 +40,16 @@ guild_vs4	mapflag	guildlock
 guild_vs5	mapflag	guildlock
 rwc01	mapflag	guildlock
 rwc03	mapflag	guildlock
+4thts	mapflag	guildlock
+5thts	mapflag	guildlock
+6thts	mapflag	guildlock
+7thts	mapflag	guildlock
+2008rwc_01	mapflag	guildlock
+2008rwc_02	mapflag	guildlock
+2008rwc_03	mapflag	guildlock
+2008rwc_04	mapflag	guildlock
+2008rwc_05	mapflag	guildlock
+2008rwc_06	mapflag	guildlock
+2008rwc_07	mapflag	guildlock
+2008rwc_08	mapflag	guildlock
+kvm	mapflag	guildlock

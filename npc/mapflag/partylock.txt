@@ -60,3 +60,17 @@ guild_vs4	mapflag	partylock
 guild_vs5	mapflag	partylock
 rwc01	mapflag	partylock
 rwc03	mapflag	partylock
+
+4thts	mapflag	partylock
+5thts	mapflag	partylock
+6thts	mapflag	partylock
+7thts	mapflag	partylock
+2008rwc_01	mapflag	partylock
+2008rwc_02	mapflag	partylock
+2008rwc_03	mapflag	partylock
+2008rwc_04	mapflag	partylock
+2008rwc_05	mapflag	partylock
+2008rwc_06	mapflag	partylock
+2008rwc_07	mapflag	partylock
+2008rwc_08	mapflag	partylock
+kvm	mapflag	partylock

@@ -41,3 +41,17 @@ izlude	mapflag	nodrop
 quiz_02	mapflag	nodrop
 rwc01	mapflag	nodrop
 rwc03	mapflag	nodrop
+
+4thts	mapflag	nodrop
+5thts	mapflag	nodrop
+6thts	mapflag	nodrop
+7thts	mapflag	nodrop
+2008rwc_01	mapflag	nodrop
+2008rwc_02	mapflag	nodrop
+2008rwc_03	mapflag	nodrop
+2008rwc_04	mapflag	nodrop
+2008rwc_05	mapflag	nodrop
+2008rwc_06	mapflag	nodrop
+2008rwc_07	mapflag	nodrop
+2008rwc_08	mapflag	nodrop
+kvm	mapflag	nodrop
