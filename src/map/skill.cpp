@@ -4552,22 +4552,22 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		card = rnd() % 14 + 1;
 	}
 	else {
-		//Official chances
+		//moskaum chances
 		int rate = rnd() % 100;
-		if (rate < 10) card = 1; // THE FOOL
-		else if (rate < 20) card = 2; // THE MAGICIAN
-		else if (rate < 30) card = 3; // THE HIGH PRIESTESS
-		else if (rate < 37) card = 4; // THE CHARIOT
-		else if (rate < 47) card = 5; // STRENGTH
-		else if (rate < 62) card = 6; // THE LOVERS
-		else if (rate < 63) card = 7; // WHEEL OF FORTUNE
-		else if (rate < 69) card = 8; // THE HANGED MAN
-		else if (rate < 74) card = 9; // DEATH
-		else if (rate < 82) card = 10; // TEMPERANCE
-		else if (rate < 83) card = 11; // THE DEVIL
-		else if (rate < 85) card = 12; // THE TOWER
-		else if (rate < 90) card = 13; // THE STAR
-		else card = 14; // THE SUN
+		if (rate < 10) card = 1; // 10% THE FOOL, zera sp
+		else if (rate < 20) card = 2; // 10% THE MAGICIAN -50%matk por 30sec
+		else if (rate < 30) card = 3; // 10% THE HIGH PRIESTESS dispel
+		else if (rate < 37) card = 4; // 5% THE CHARIOT 1k dmg+quebra topo/armadura/arma/escudo/capa/bota
+		else if (rate < 47) card = 5; // 10% STRENGTH -50%atk por 30sec
+		else if (rate < 62) card = 6; // 15% THE LOVERS cura o dono por 2k
+		else if (rate < 63) card = 7; // 1% WHEEL OF FORTUNE da 2 cartas
+		else if (rate < 69) card = 8; // 6% THE HANGED MAN inflinge freeze, petrify2, snare 30sec
+		else if (rate < 74) card = 9; // 1% DEATH coma, curse, poison
+		else if (rate < 82) card = 10; // 8% TEMPERANCE chaos por 30sec
+		else if (rate < 83) card = 11; // 3% THE DEVIL 6666dmg e -50%atk e matk
+		else if (rate < 85) card = 12; // 6% THE TOWER 4444dmg
+		else if (rate < 90) card = 13; // 5% THE STAR stun 5sec
+		else card = 14; // 10% THE SUN -20% atk,matk,def,hit,flee por 30sec
 	}
 
 	switch (card) {
