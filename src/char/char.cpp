@@ -2756,12 +2756,12 @@ void char_set_defaults(){
 	charserv_config.start_point_count_doram = 1;
 #endif
 
-	charserv_config.start_items[0].nameid = 1201;
-	charserv_config.start_items[0].amount = 1;
-	charserv_config.start_items[0].pos = 2;
-	charserv_config.start_items[1].nameid = 2301;
-	charserv_config.start_items[1].amount = 1;
-	charserv_config.start_items[1].pos = 16;
+	// charserv_config.start_items[0].nameid = 1201;
+	// charserv_config.start_items[0].amount = 1;
+	// charserv_config.start_items[0].pos = 2;
+	// charserv_config.start_items[1].nameid = 2301;
+	// charserv_config.start_items[1].amount = 1;
+	// charserv_config.start_items[1].pos = 16;
 
 #if PACKETVER >= 20150101
 	charserv_config.start_items_doram[0].nameid = 1681;
