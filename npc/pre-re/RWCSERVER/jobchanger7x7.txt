@@ -271,6 +271,8 @@ izlude,120,115,4	script	Job Master	650,{
             getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
             getitem2 5311, 1, 1, 4, 0, 4127, 0, 0, 0; // +4 // gigant hibiscus nightmare
             equip 5311;
+            getitem2 5104, 1, 1, 0, 0, 0, 0, 0, 0; // dark blinder
+            equip 5104;
             getitem2 2326, 1, 1, 4, 0, 4054, 0, 0, 0; // +4 saint robe angeling
             equip 2326;
             //getitem2 2326, 1, 1, 4, 0, 4031, 0, 0, 0; // +4 saint robe peco peco
