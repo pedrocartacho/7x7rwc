@@ -86,6 +86,7 @@ izlude,120,115,4	script	Job Master	650,{
             skill 157,1,0;
             skill 483,1,0;
             skill 1006,1,0;
+            //equips
             getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
             //getitem2 5379, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 ballon isilla
             //equip 5379;
@@ -179,14 +180,14 @@ izlude,120,115,4	script	Job Master	650,{
             //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
             //equips
             getitem 505, 1;
-            getitem2 5364, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 evil snake lord isilla
+            getitem2 5364, 1, 1, 4, 0, 4127, 0, 0, 0; // +4 evil snake lord nightmare
             equip 5364;
             getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
             getitem2 2296, 1, 1, 0, 0, 0, 0, 0, 0; // binoculars
             equip 2296;
             getitem2 5305, 1, 1, 0, 0, 0, 0, 0, 0; // pirate dagger
             equip 5305;
-            getitem2 2331, 1, 1, 4, 0, 4021, 0, 0, 0; // +4 tights baby rocker
+            getitem2 2331, 1, 1, 4, 0, 4021, 0, 0, 0; // +4 tights rocker
             equip 2331;
             getitem2 1208, 1, 1, 7, 0, 4004, 4004, 4004, 4004; // +7 mg 4drops
             equip 1208;
@@ -509,83 +510,166 @@ izlude,120,115,4	script	Job Master	650,{
             jobchange .job;
             set BaseLevel, 90;
 
-            //build stats
-            set StatusPoint, 0;
-            statusup2 bAgi, 3;
-            statusup2 bVit, 57;
-            statusup2 bInt, 98;
-            statusup2 bDex, 57;
+            // checar sexo antes de dar itens específicos
+            // set .@sexo$, getcharinfo(PC_SEX);
 
-            //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
-            //equips
-            // 
-            getitem2 5364, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 evil snake lord isilla
-            equip 5364;
-            getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
-            getitem2 2296, 1, 1, 0, 0, 0, 0, 0, 0; // binoculars
-            equip 2296;
-            getitem2 5305, 1, 1, 0, 0, 0, 0, 0, 0; // pirate dagger
-            equip 5305;
-            getitem2 2331, 1, 1, 4, 0, 4023, 0, 0, 0; // +4 tights baby desert wolf
-            equip 2331;
-            getitem2 1909, 2, 1, 5, 0, 4072, 0, 0, 0; // +4 harp
-            equip 1909;
-            getitem2 1922, 1, 1, 4, 0, 4035, 4035, 0, 0; // oriental lute 2hydra
-            //getitem2 1913, 1, 1, 4, 0, 0, 0, 0, 0; // guitarra de vento
-            getitem2 1705, 1, 1, 4, 0, 4076, 4076, 4076, 4076; // composite bow 4 magnolia (curse)
-            getitem2 2104, 1, 1, 4, 0, 4058, 0, 0, 0; // +4 buckler thara
-            equip 2104;
-            getitem2 2102, 1, 1, 4, 0, 4414, 0, 0, 0; // +4 guard seeker
-            //getitem2 2102, 1, 1, 4, 0, 4146, 0, 0, 0; // +4 guard maya
-            getitem2 2523, 1, 1, 4, 0, 4402, 0, 0, 0; // +4 undershirt aliot
-            equip 2523;
-            getitem2 2532, 1, 1, 4, 0, 4133, 0, 0, 0; // +4 mithril raydric
-            //equip 2532;
-            //getitem2 2532, 1, 1, 4, 0, 4088, 0, 0, 0; // +4 mithril frilldora
-            getitem2 2434, 1, 1, 4, 0, 4381, 0, 0, 0;// +4 black leather green ferus
-            equip 2434;
-            //getitem2 2607, 2, 1, 0, 0, 4064, 0, 0, 0; // clip zerom
-            getitem2 2602, 2, 1, 0, 0, 0, 0, 0, 0; // brinco
-            equip 2602;
-            //stuffs
-            //getitem <itemde id>,<amount>;
-            //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
-            getitem 505,75;//blue
-            getitem 547,80;//slim
-            getitem 525,9;//panacea
-            getitem 645,2;//concentration
-            getitem 1752,25;//arrow fogo
-            getitem 1769,66;
-            getitem 1761,66;
-            getitem 1759,66;
-            getitem 1750,25;//arrow
-            //skills
-            set JobLevel, 60;
-            set SkillPoint, 0;
-            skill 1,9,0;
-            skill 43,10,0;
-            skill 44,10,0;
-            skill 45,10,0;
-            skill 46,9,0;
-            skill 47,10,0;
-            skill 142,1,0;
-            skill 147,1,0;
-            skill 148,1,0;
-            skill 304,1,0;
-            skill 305,1,0;
-            skill 311,1,0;
-            skill 315,10,0;
-            skill 316,1,0;
-            skill 317,3,0;
-            skill 318,5,0;
-            skill 320,10,0;
-            skill 321,10,0;
-            skill 322,5,0;
-            skill 394,8,0;
-            skill 396,1,0;
-            skill 487,1,0;
-            skill 489,2,0;
-            skill 1010,1,0;
+            // dispbottom "VALOR DE getcharinfo(PC_SEX): " + getcharinfo(PC_SEX);
+            // dispbottom "VALOR DE Sex: " + Sex;
+            // mes "[DEBUG]";
+            // mes "getcharinfo(PC_SEX): " + getcharinfo(PC_SEX);
+            // mes "Sex: " + Sex;
+            // next;
+            if (Sex == SEX_MALE) {
+            // if (getcharinfo(PC_SEX) == "0") { // masculino (Clown)
+                //build stats
+                set StatusPoint, 0;
+                statusup2 bAgi, 3;
+                statusup2 bVit, 57;
+                statusup2 bInt, 98;
+                statusup2 bDex, 57;
+
+                //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+                //equips
+                // 
+                getitem2 5364, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 evil snake lord isilla
+                equip 5364;
+                getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
+                getitem2 2296, 1, 1, 0, 0, 0, 0, 0, 0; // binoculars
+                equip 2296;
+                getitem2 5305, 1, 1, 0, 0, 0, 0, 0, 0; // pirate dagger
+                equip 5305;
+                getitem2 2331, 1, 1, 4, 0, 4023, 0, 0, 0; // +4 tights baby desert wolf
+                equip 2331;
+                getitem2 1909, 2, 1, 5, 0, 4072, 0, 0, 0; // +4 harp
+                equip 1909;
+                getitem2 1922, 1, 1, 4, 0, 4035, 4035, 0, 0; // oriental lute 2hydra
+                //getitem2 1913, 1, 1, 4, 0, 0, 0, 0, 0; // guitarra de vento
+                getitem2 1705, 1, 1, 4, 0, 4076, 4076, 4076, 4076; // composite bow 4 magnolia (curse)
+                getitem2 2104, 1, 1, 4, 0, 4058, 0, 0, 0; // +4 buckler thara
+                equip 2104;
+                getitem2 2102, 1, 1, 4, 0, 4414, 0, 0, 0; // +4 guard seeker
+                //getitem2 2102, 1, 1, 4, 0, 4146, 0, 0, 0; // +4 guard maya
+                getitem2 2523, 1, 1, 4, 0, 4402, 0, 0, 0; // +4 undershirt aliot
+                equip 2523;
+                getitem2 2532, 1, 1, 4, 0, 4133, 0, 0, 0; // +4 mithril raydric
+                equip 2532;
+                //getitem2 2532, 1, 1, 4, 0, 4088, 0, 0, 0; // +4 mithril frilldora
+                getitem2 2434, 1, 1, 4, 0, 4381, 0, 0, 0;// +4 black leather green ferus
+                equip 2434;
+                //getitem2 2607, 2, 1, 0, 0, 4064, 0, 0, 0; // clip zerom
+                getitem2 2602, 2, 1, 0, 0, 0, 0, 0, 0; // brinco
+                equip 2602;
+                //stuffs
+                //getitem <itemde id>,<amount>;
+                //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+                getitem 505,75;//blue
+                getitem 547,80;//slim
+                getitem 525,9;//panacea
+                getitem 645,2;//concentration
+                getitem 1752,25;//arrow fogo
+                getitem 1769,66;
+                getitem 1761,66;
+                getitem 1759,66;
+                getitem 1750,25;//arrow
+                //skills
+                set JobLevel, 60;
+                set SkillPoint, 0;
+                skill 1,9,0;
+                skill 43,10,0;
+                skill 44,10,0;
+                skill 45,10,0;
+                skill 46,9,0;
+                skill 47,10,0;
+                skill 142,1,0;
+                skill 147,1,0;
+                skill 148,1,0;
+                skill 304,1,0;
+                skill 305,1,0;
+                skill 311,1,0;
+                skill 315,10,0;
+                skill 316,1,0;
+                skill 317,3,0;
+                skill 318,5,0;
+                skill 320,10,0;
+                skill 321,10,0;
+                skill 322,5,0;
+                skill 394,8,0;
+                skill 396,1,0;
+                skill 487,1,0;
+                skill 489,2,0;
+                skill 1010,1,0;
+            } else { 
+                
+                // feminino (Gypsy)
+                // //build stats
+                set StatusPoint, 0;
+                statusup2 bStr, 20;
+                statusup2 bAgi, 38;
+                statusup2 bVit, 70;
+                statusup2 bInt, 11;
+                statusup2 bDex, 93;
+                statusup2 bLuk, 3;
+                //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+                //equips
+                // 
+                getitem2 5364, 1, 1, 4, 0, 4127, 0, 0, 0; // +4 evil snake lord nightmare
+                equip 5364;
+                getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
+                getitem2 2296, 1, 1, 0, 0, 0, 0, 0, 0; // binoculars
+                equip 2296;
+                getitem2 5305, 1, 1, 0, 0, 0, 0, 0, 0; // pirate dagger
+                equip 5305;
+                getitem2 1979, 1, 1, 4, 0, 4035, 4035, 0, 0; // +4 2hydra 1sw
+                equip 1979;
+                getitem2 1208, 1, 1, 7, 0, 4004, 4004, 4004, 4004; // +7 mg 4drops
+                getitem2 1705, 1, 1, 4, 0, 4076, 4076, 4076, 4076; // composite bow 4 magnolia (curse)
+                getitem2 2331, 1, 1, 4, 0, 4031, 0, 0, 0; // +4 tights pecopeco
+                equip 2331;
+                getitem2 2102, 1, 1, 4, 0, 4058, 0, 0, 0; // +4 guard thara
+                equip 2102;
+                //getitem2 2102, 1, 1, 4, 0, 4146, 0, 0, 0; // +4 guard maya
+                getitem2 2523, 1, 1, 4, 0, 4133, 0, 0, 0; // +4 undershirt raydric
+                equip 2523;
+                getitem2 2404, 1, 1, 4, 0, 4381, 0, 0, 0;// +4 shoes green ferus
+                equip 2404;
+                getitem2 2607, 2, 1, 0, 0, 4064, 0, 0, 0; // clip zerom
+                equip 2607;
+                //stuffs
+                //getitem <itemde id>,<amount>;
+                //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+                getitem 505,122;//blue
+                getitem 547,75;//slim
+                getitem 525,12;//panacea
+                getitem 645,7;//concentration
+                getitem 1752,25;//arrow fogo
+                getitem 1769,66;
+                getitem 1761,66;
+                getitem 1759,66;
+                getitem 1750,25;//arrow
+                //skills
+                set JobLevel, 60;
+                set SkillPoint, 0;
+                skill 1,9,0;
+                skill 43,10,0;
+                skill 44,10,0;
+                skill 45,10,0;
+                skill 46,9,0;
+                skill 47,10,0;
+                skill 304,1,0;
+                skill 305,1,0;
+                skill 311,1,0;
+                skill 323,10,0;
+                skill 324,1,0;
+                skill 325,3,0;
+                skill 326,5,0;
+                skill 328,10,0;
+                skill 330,10,0;
+                skill 394,10,0;
+                skill 396,1,0;
+                skill 487,1,0;
+                skill 489,5,0;
+                skill 1011,1,0;
+            }
             goto PLAT_SKILLS;
             break;
 
