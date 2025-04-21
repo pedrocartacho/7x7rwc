@@ -335,6 +335,34 @@ int skill_unit_onleft(uint16 skill_id, struct block_list *bl,t_tick tick);
 static int skill_unit_effect(struct block_list *bl,va_list ap);
 static int skill_bind_trap(struct block_list *bl, va_list ap);
 
+//custom
+TIMER_FUNC(tarot_sun_end) {
+	struct map_session_data* sd = map_id2sd(id);
+	if (sd)
+		status_change_end(&sd->bl, SC_TAROT_SUN, INVALID_TIMER);
+	return 0;
+}
+TIMER_FUNC(tarot_magician_end) {
+	struct map_session_data* sd = map_id2sd(id);
+	if (sd)
+		status_change_end(&sd->bl, SC_TAROT_MAGICIAN, INVALID_TIMER);
+	return 0;
+}
+
+TIMER_FUNC(tarot_strength_end) {
+	struct map_session_data* sd = map_id2sd(id);
+	if (sd)
+		status_change_end(&sd->bl, SC_TAROT_STRENGTH, INVALID_TIMER);
+	return 0;
+}
+
+TIMER_FUNC(tarot_devil_end) {
+	struct map_session_data* sd = map_id2sd(id);
+	if (sd)
+		status_change_end(&sd->bl, SC_TAROT_DEVIL, INVALID_TIMER);
+	return 0;
+}
+//custom
 int skill_get_casttype (uint16 skill_id) {
 	int inf = skill_get_inf(skill_id);
 	if (inf&(INF_GROUND_SKILL))
@@ -4553,21 +4581,22 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 	}
 	else {
 		//moskaum chances
+
 		int rate = rnd() % 100;
-		if (rate < 10) card = 1; // 10% THE FOOL, zera sp
-		else if (rate < 20) card = 2; // 10% THE MAGICIAN -50%matk por 30sec
-		else if (rate < 30) card = 3; // 10% THE HIGH PRIESTESS dispel
-		else if (rate < 37) card = 4; // 5% THE CHARIOT 1k dmg+quebra topo/armadura/arma/escudo/capa/bota
-		else if (rate < 47) card = 5; // 10% STRENGTH -50%atk por 30sec
-		else if (rate < 62) card = 6; // 15% THE LOVERS cura o dono por 2k
-		else if (rate < 63) card = 7; // 1% WHEEL OF FORTUNE da 2 cartas
-		else if (rate < 69) card = 8; // 6% THE HANGED MAN inflinge freeze, petrify2, snare 30sec
-		else if (rate < 74) card = 9; // 1% DEATH coma, curse, poison
-		else if (rate < 82) card = 10; // 8% TEMPERANCE chaos por 30sec
-		else if (rate < 83) card = 11; // 3% THE DEVIL 6666dmg e -50%atk e matk
-		else if (rate < 85) card = 12; // 6% THE TOWER 4444dmg
-		else if (rate < 90) card = 13; // 5% THE STAR stun 5sec
-		else card = 14; // 10% THE SUN -20% atk,matk,def,hit,flee por 30sec
+			if (rate < 9) card = 1; // THE FOOL (9%)zera sp
+			else if (rate < 18) card = 2; // THE MAGICIAN (9%) -50%matk por 30sec
+			else if (rate < 33) card = 3; // THE HIGH PRIESTESS (15%) dispel
+			else if (rate < 39) card = 4; // THE CHARIOT (6%) 1k dmg+quebra topo/armadura/arma/escudo/capa/bota
+			else if (rate < 48) card = 5; // STRENGTH (9%) -50%atk por 30sec
+			else if (rate < 58) card = 6; // THE LOVERS (10%) cura o dono por 2k
+			else if (rate < 59) card = 7; // WHEEL OF FORTUNE (1%) da 2 cartas
+			else if (rate < 65) card = 8; // THE HANGED MAN (6%) inflinge freeze, petrify2, snare 30sec
+			else if (rate < 67) card = 9; // DEATH (2%) coma, curse, poison
+			else if (rate < 74) card = 10; // TEMPERANCE (7%) chaos por 30sec
+			else if (rate < 79) card = 11; // THE DEVIL (5%) 6666dmg e -50%atk e matk
+			else if (rate < 85) card = 12; // THE TOWER (6%) 4444dmg
+			else if (rate < 91) card = 13; // THE STAR (6%) stun 5sec
+			else card = 14; // THE SUN (9%) -20% atk,matk,def,hit,flee por 30sec
 	}
 
 	switch (card) {
@@ -4579,6 +4608,8 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 	case 2: // THE MAGICIAN - matk halved
 	{
 		sc_start(src, target, SC_INCMATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));
+		sc_start(src, target, SC_TAROT_MAGICIAN, 100, 0, INVALID_TIMER);
+		add_timer(gettick() + 30000, tarot_magician_end, target->id, 0);
 		break;
 	}
 	case 3: // THE HIGH PRIESTESS - all buffs removed
@@ -4600,6 +4631,8 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 	case 5: // STRENGTH - atk halved
 	{
 		sc_start(src, target, SC_INCATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));
+		sc_start(src, target, SC_TAROT_STRENGTH, 100, 0, INVALID_TIMER);
+		add_timer(gettick() + 30000, tarot_strength_end, target->id, 0);
 		break;
 	}
 	case 6: // THE LOVERS - 2000HP heal, random teleported
@@ -4643,6 +4676,8 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		sc_start(src, target, SC_INCATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));
 		sc_start(src, target, SC_INCMATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));
 		sc_start(src, target, SC_CURSE, skill_lv, 100, skill_get_time2(status_sc2skill(SC_CURSE), 1));
+		sc_start(src, target, SC_TAROT_DEVIL, 100, 0, INVALID_TIMER);
+		add_timer(gettick() + 30000, tarot_devil_end, target->id, 0);
 		break;
 	}
 	case 12: // THE TOWER - 4444 damage
@@ -4657,6 +4692,9 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		break;
 	}
 	default: // THE SUN - atk, matk, hit, flee and def reduced, immune to more tarot card effects
+		sc_start(src, target, SC_TAROT_SUN, 100, 0, INVALID_TIMER);
+		add_timer(gettick() + 30000, tarot_sun_end, target->id, 0); // custom 30 segundos
+
 	{
 #ifdef RENEWAL
 		//In renewal, this card gives the SC_TAROTCARD status change which makes you immune to other cards

@@ -901,6 +901,17 @@ void initChangeTables(void)
 
 	set_sc( WE_CHEERUP				, SC_CHEERUP		, EFST_CHEERUP		, SCB_STR|SCB_AGI|SCB_VIT|SCB_INT|SCB_DEX|SCB_LUK );
 
+	//icone custom
+
+	// set_sc(NPC_TALK, SC_TAROT_SUN      , EFST_FOOD_STR    , SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_DEVIL    , EFST_FOOD_STR , SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_STRENGTH , EFST_FOOD_STR   , SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_MAGICIAN , EFST_FOOD_STR    , SCB_NONE);
+	set_sc(NPC_TALK, SC_TAROT_SUN,       EFST_TAROT_SUN,       SCB_NONE);
+	set_sc(NPC_TALK, SC_TAROT_DEVIL,     EFST_TAROT_DEVIL,     SCB_NONE);
+	set_sc(NPC_TALK, SC_TAROT_STRENGTH,  EFST_TAROT_STRENGTH,  SCB_NONE);
+	set_sc(NPC_TALK, SC_TAROT_MAGICIAN,  EFST_TAROT_MAGICIAN,  SCB_NONE);
+
 	/* Storing the target job rather than simply SC_SPIRIT simplifies code later on */
 	SkillStatusChangeTable[skill_get_index(SL_ALCHEMIST)]	= (sc_type)MAPID_ALCHEMIST,
 	SkillStatusChangeTable[skill_get_index(SL_MONK)]		= (sc_type)MAPID_MONK,
@@ -1475,6 +1486,17 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_SATURDAYNIGHTFEVER]	|= SCS_NOCHAT;
 	StatusChangeStateTable[SC_DEEPSLEEP]			|= SCS_NOCHAT;
 	StatusChangeStateTable[SC_NOCHAT]				|= SCS_NOCHAT|SCS_NOCHATCOND;
+
+	//custom
+	StatusChangeFlagTable[SC_TAROT_SUN] |= EFST_TAROT_SUN;
+	StatusChangeFlagTable[SC_TAROT_DEVIL] |= EFST_TAROT_DEVIL;
+	StatusChangeFlagTable[SC_TAROT_STRENGTH] |= EFST_TAROT_STRENGTH;
+	StatusChangeFlagTable[SC_TAROT_MAGICIAN] |= EFST_TAROT_MAGICIAN;
+
+	// set_sc(NPC_TALK, SC_TAROT_SUN,       EFST_TAROT_SUN,       SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_DEVIL,     EFST_TAROT_DEVIL,     SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_STRENGTH,  EFST_TAROT_STRENGTH,  SCB_NONE);
+	// set_sc(NPC_TALK, SC_TAROT_MAGICIAN,  EFST_TAROT_MAGICIAN,  SCB_NONE);
 }
 
 static void initDummyData(void)

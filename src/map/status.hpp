@@ -864,7 +864,20 @@ enum sc_type : int16 {
 #ifdef RENEWAL
 	SC_EXTREMITYFIST2, //! NOTE: This SC should be right before SC_MAX, so it doesn't disturb if RENEWAL is disabled
 #endif
+
+	//custom
+	SC_TAROT_SUN,
+	SC_TAROT_DEVIL,
+	SC_TAROT_STRENGTH,
+	SC_TAROT_MAGICIAN,
+	// SC_TAROT_SUN       = 10000,
+	// SC_TAROT_DEVIL     = 10001,
+	// SC_TAROT_STRENGTH  = 10002,
+	// SC_TAROT_MAGICIAN  = 10003,
+
 	SC_MAX, //Automatically updated max, used in for's to check we are within bounds.
+
+
 };
 
 /// Official status change ids, used to display status icons on the client.
@@ -1950,6 +1963,12 @@ enum efst_types : short{
 	EFST_NV_TRANSCENDENCE,
 	EFST_SWEETSFAIR_ATK,
 	EFST_SWEETSFAIR_MATK,
+	//custom moskaumRO
+	EFST_TAROT_SUN,//1168
+	EFST_TAROT_DEVIL,
+	EFST_TAROT_STRENGTH,
+	EFST_TAROT_MAGICIAN,
+	//apartir daqui a numeração deve estar errada
 
 	EFST_FLOWER_LEAF2 = 1135,
 	EFST_FLOWER_LEAF3,
