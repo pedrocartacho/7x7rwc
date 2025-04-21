@@ -31,8 +31,8 @@ payon,0,0	monster	Wild Rose	1261,1,7200000,3600000
 comodo,0,0	monster	Wild Rose	1261,1,7200000,3600000
 izlude,0,0	monster	que porra eh essa	1261,30,5000,5000
 izlude,124,99	monster	que	1905,1,5000,5000
-izlude,124,82	monster	teleporta a mae	1905,1,5000,5000
-izlude,149,130	monster	teleporta o pai	1905,1,5000,5000
+izlude,124,82	monster moggadora de ex-telportadores	1905,1,5000,5000
+izlude,149,130	monster moggador de ex-telportadores	1905,1,5000,5000
 
 
 
