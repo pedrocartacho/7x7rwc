@@ -220,7 +220,7 @@ izlude,131,112,5	script	Healer	450,{
 	// Loop through each equipped item
 	for (.@i = 0; .@i < getarraysize(.@positions); .@i++) {
 		.@part = .@positions[.@i];
-		if (getequipisequiped(.@part)) {
+		if (getequipisequiped(.@part) && getequipisenableref(.@part)) {
 			// Get the current refine level
 			.@current_refine = getequiprefinerycnt(.@part);
 			
