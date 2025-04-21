@@ -14,10 +14,10 @@ izlude,131,115,6	script	Restock	666,{
 	}
 	cutin "", 255;
 	// Array of item IDs
-	setarray .@item_ids[0], 547, 505, 715, 716, 717, 1025, 645, 656, 657, 525, 506, 1752, 1750, 1751, 1758, 1768, 1769, 1763, 1761, 1759, 1760, 1065;
+	setarray .@item_ids[0], 547, 505, 715, 716, 717, 1025, 645, 656, 657, 525, 506, 1752, 1750, 1751, 1758, 1768, 1769, 1763, 1761, 1759, 1760, 1065, 7049;
 
 	// Array of variables to store item quantities
-	setarray .@quantities[0], qtdcompbranca, qtdpotazul, qtdyellowgem, qtdredgem, qtdbluegem, qtdteia, qtdptconcentra, qtdptdesper, qtdpotfur, qtdpana, qtdpotverde, qtdflechfog, qtdarrow, qtdsilverarrow, qtdstunarrow, qtdsleeparrow, qtdmutearrow, qtdpoisonarrow, qtdcursedarrow, qtdfrozenarrow, qtdflasharrow, qtdtrap;
+	setarray .@quantities[0], qtdcompbranca, qtdpotazul, qtdyellowgem, qtdredgem, qtdbluegem, qtdteia, qtdptconcentra, qtdptdesper, qtdpotfur, qtdpana, qtdpotverde, qtdflechfog, qtdarrow, qtdsilverarrow, qtdstunarrow, qtdsleeparrow, qtdmutearrow, qtdpoisonarrow, qtdcursedarrow, qtdfrozenarrow, qtdflasharrow, qtdtrap, qtdpedra;
 
 	// Loop through each item and save the quantity in inventory
 	for (.@i = 0; .@i < getarraysize(.@item_ids); .@i++) {
@@ -47,6 +47,7 @@ izlude,131,115,6	script	Restock	666,{
 	set qtdfrozenarrow, .@quantities[19];
 	set qtdflasharrow, .@quantities[20];
 	set qtdtrap, .@quantities[21];
+	set qtdpedra, .@quantities[22];
 
 	// Display a message in the user's chat
 	dispbottom "Your item quantities have been saved successfully.";

@@ -189,6 +189,10 @@ izlude,131,112,5	script	Healer	450,{
         set .qtd, qtdtrap; 
         getitem 1065, .qtd - countitem(1065); 
     }
+    if (qtdpedra > 0) { 
+        set .qtd, qtdpedra; 
+        getitem 7049, .qtd - countitem(7049); 
+    }
 
 	// Set cart, falcon or riding
 	if (getskilllv("MC_PUSHCART")) {
