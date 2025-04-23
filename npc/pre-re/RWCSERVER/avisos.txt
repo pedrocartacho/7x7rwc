@@ -1,4 +1,4 @@
-izlude,129,118,5	script	Update 04 ago	617,{
+izlude,116,120,5	script	Update 04 ago	617,{
 	mes "^FF0000Do not use cheats.^000000";
 	mes "^FF0000Cheat = auto pot, grf, auto click^000000";
 	//	mes "Sem usar cheats";

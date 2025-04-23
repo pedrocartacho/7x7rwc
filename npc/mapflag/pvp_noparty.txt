@@ -11,4 +11,4 @@
 //===== Additional Comments: ================================= 
 //= 1.0 Initial script.
 //============================================================
-2009rwc_01	mapflag	pvp_noparty
+//2009rwc_01	mapflag	pvp_noparty

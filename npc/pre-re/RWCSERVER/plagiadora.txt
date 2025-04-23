@@ -2,16 +2,38 @@
 //precisa ser otimizado
 //atualmente o usuario precisa relogar para nao perder a skill ao falar com a curandeira ou quando troca de mapa
 //e isso e um pe no saco pro player 
-izlude,127,115,3	script	Plagiaridora	451,{
+
+//21 04 2025
+// NPC invisível para restaurar skill copiada ao trocar de mapa ou logar
+// -	script	RestorePlagiado	-1,{
+//     OnPCLoginEvent:
+//     OnPCLoadMapEvent:
+//         if (getskilllv("RG_PLAGIARISM") && CLONE_SKILL && CLONE_SKILL_LV) {
+//             // Remove qualquer versão anterior que possa ter sido limpada
+//             skill CLONE_SKILL, 0, 0;
+//             // Reaplica a skill
+//             skill CLONE_SKILL, CLONE_SKILL_LV, 1;
+//         }
+//         end;
+    // }
+//
+izlude,127,115,3	script	Plagiaridora	10010,{
 set .@skill_level,getskilllv( "RG_PLAGIARISM" );
 
-mes "[ Plagiarizer ]";
-mes "I provide skill to Stalker Class.";
 
+cutin "lydia_a",2;
+mes "[ Lidia ]";
+mes "I provide skill to Stalker Class.";
 if( !.@skill_level ){
+    cutin "lydia_a",2;
+    // mes "[ Lidia ]";
+    // mes "I provide skill to Stalker Class.";
+    //next;
     mes "But only who have ^FF0000Plagiarism skill^000000 can use this services.";
+    next;
 }else{
     if( select( ( CLONE_SKILL && CLONE_SKILL_LV )?"Un-Learn Skill":"Learn Skill","Close" ) == 1 ){
+        cutin "lydia_a",2;
         if( CLONE_SKILL && CLONE_SKILL_LV ){
             mes "Unlearned Copied Skill";
             set CLONE_SKILL_LV,0;
@@ -34,6 +56,7 @@ if( !.@skill_level ){
                         set Zeny,Zeny - .skill_cost[.@i];
                     }else{
                         mes "Not enough Zeny.";
+                        cutin "", 255;
                         close;
                     }
                 }
@@ -46,17 +69,19 @@ if( !.@skill_level ){
     }
 }
 //dispbottom "Skill ID "+CLONE_SKILL+" | Level : "+CLONE_SKILL_LV;
+cutin "", 255;
 close;
 OnInit:
 // Skill Display Names
-setarray .skill_name$,"Storm Gust","Frost Diver";
+setarray .skill_name$,"Storm Gust","Frost Diver","Water Ball";
 // Skill ID
-setarray .skill_id,89,15;
+setarray .skill_id,89,15,86;
 // Skill Max Learn-able Level
-setarray .skill_max_level,10,10;
+setarray .skill_max_level,10,10,5;
 // Skill Cost in Zeny
-setarray .skill_cost,1,1;
+setarray .skill_cost,1,1,1;
 
+set .menu$,"";
 set .skill_size,getarraysize( .skill_name$ );
 while( .@i < .skill_size ){
     set .menu$,.menu$ + "[ ^0055FFLv "+.skill_max_level[.@i]+"^000000 ] "+ .skill_name$[.@i] +":";
@@ -65,7 +90,7 @@ while( .@i < .skill_size ){
 end;
 }
 
-quiz_02,139,356,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02	451
-quiz_02,239,354,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02_2	451
-quiz_02,156,356,5	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02	451
-quiz_02,260,354,3	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02_2	451
+// quiz_02,239,354,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02_2	10010
+// quiz_02,260,354,3	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02_2	10010
+quiz_02,139,356,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02	10010
+quiz_02,156,356,6	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02	10010

@@ -12,11 +12,14 @@ izlude,120,115,4	script	Job Master	650,{
         close;
     }
     cutin "gl_himel2",2;
-    mes	"[ ^0000FFJob Master^000000 ]";
+    mes	"[ Himmelmez ]";
     mes	"Welcome ^ff0000"+strcharinfo(0)+"^000000. Please select the job you wish to change into!";
-    switch(select("Lord Knight:High Wizard:Sniper:High Priest:Assassin Cross:Paladin:Scholar:Clown/Gypsy:Champion:Creator:Stalker")) {
+    switch(select("Cancel:Lord Knight:High Wizard:Sniper:High Priest:Assassin Cross:Paladin:Scholar:Clown/Gypsy:Champion:Creator:Stalker")) {
 
         case 1:
+		goto finalization;
+
+        case 2:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -34,7 +37,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto L_RWCROClass;
             break;
 
-        case 2:
+        case 3:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -125,7 +128,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto PLAT_SKILLS;
             break;
 
-        case 3:
+        case 4:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -215,7 +218,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto PLAT_SKILLS;
             break;
 
-        case 4:
+        case 5:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -294,15 +297,16 @@ izlude,120,115,4	script	Job Master	650,{
             getitem2 2607, 1, 1, 0, 0, 4424, 0, 0, 0; // clip
             //stuffs
             getitem 505,93;//blue
-            getitem 547,64;//slim
-            getitem 525,10;//panacea
-            getitem 645,3;//concentration
+            getitem 547,63;//slim
+            getitem 525,9;//panacea
+            getitem 645,2;//concentration
             getitem 717,12;//blue gem
             getitem 716,7;//red gem
+            getitem 7049,15;//pedra
             goto PLAT_SKILLS;
             break;
 
-        case 5:
+        case 6:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -319,7 +323,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto L_RWCROClass;
             break;
 
-        case 6:
+        case 7:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -348,7 +352,6 @@ izlude,120,115,4	script	Job Master	650,{
             skill 7,4,0;
             skill 8,10,0;
             skill 63,1,0;
-            skill 64,1,0;
             skill 142,1,0;
             skill 144,1,0;
             skill 145,1,0;
@@ -357,7 +360,7 @@ izlude,120,115,4	script	Job Master	650,{
             skill 249,5,0;
             skill 250,3,0;
             skill 251,5,0;
-            skill 252,9,0;
+            skill 252,10,0;
             skill 253,6,0;
             skill 254,4,0;
             skill 255,5,0;
@@ -374,6 +377,7 @@ izlude,120,115,4	script	Job Master	650,{
             getitem2 2285, 1, 1, 4, 0, 0, 0, 0, 0; // +4 aoa
             getitem2 5314, 1, 1, 0, 0, 0, 0, 0, 0; // hockey mask
             equip 5314;
+            getitem2 2289, 1, 1, 0, 0, 0, 0, 0, 0; // poo poo hat popohat poopoohat
             getitem2 1108, 1, 1, 7, 0, 4035, 4035, 4092, 4092; // +7 blade 2hydra 2sw
             getitem2 13405, 1, 1, 4, 0, 4004, 4004, 0, 0; // +4 curved sword 2drops
             equip 13405;
@@ -394,14 +398,14 @@ izlude,120,115,4	script	Job Master	650,{
             //stuffs
             //getitem <itemde id>,<amount>;
             //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
-            getitem 505,114;//blue
-            getitem 547,206;//slim
+            getitem 505,110;//blue
+            getitem 547,204;//slim
             getitem 525,14;//panacea
             getitem 657,6;//berserk
             goto PLAT_SKILLS;
             break;
 
-        case 7: // Case for Scholar
+        case 8: // Case for Scholar
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -434,7 +438,6 @@ izlude,120,115,4	script	Job Master	650,{
             skill 19,1,0;
             skill 20,1,0;
             skill 157,1,0;
-
             skill 274,9,0;
             skill 284,4,0;
             skill 405,1,0;
@@ -496,7 +499,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto PLAT_SKILLS;
             break;
 
-        case 8:
+        case 9:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -510,7 +513,7 @@ izlude,120,115,4	script	Job Master	650,{
             jobchange .job;
             set BaseLevel, 90;
 
-            // checar sexo antes de dar itens especÃ­ficos
+            // checar sexo antes de dar itens específicos
             // set .@sexo$, getcharinfo(PC_SEX);
 
             // dispbottom "VALOR DE getcharinfo(PC_SEX): " + getcharinfo(PC_SEX);
@@ -673,7 +676,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto PLAT_SKILLS;
             break;
 
-        case 9:
+        case 10:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -770,7 +773,7 @@ izlude,120,115,4	script	Job Master	650,{
             goto PLAT_SKILLS;
         break;
 
-        case 10:
+        case 11:
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
@@ -787,15 +790,15 @@ izlude,120,115,4	script	Job Master	650,{
             goto L_RWCROClass;
             break;
 
-        case 11: // stalker
+        case 12: // stalker
             jobchange 0; 
             resetlvl(1);
             jobchange .job;
-            // Change to Mage first
+            // Change to Thief first
             set .job, 6; 
             jobchange .job;
-            set JobLevel, 50; // Max job level for Mage to allocate all necessary skill points
-            set SkillPoint, 49; // Set Skill Points to 49, or the exact number required for Mage skills
+            set JobLevel, 50; // Max job level for Thief to allocate all necessary skill points
+            set SkillPoint, 49; // Set Skill Points to 49, or the exact number required for Thief skills
 
             set .job, 4018; // 
             jobchange .job;
@@ -867,12 +870,13 @@ izlude,120,115,4	script	Job Master	650,{
             //stuffs
             //getitem <itemde id>,<amount>;
             //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
-            getitem 505,75;//blue
-            getitem 547,78;//slim
+            getitem 505,74;//blue
+            getitem 547,72;//slim
             getitem 525,7;//panacea
             getitem 657,2;//awakening
             getitem 1759,50;//freezing arrow
             getitem 1761,50;//cursed arrow
+            getitem 7049,15;//pedra
             //
             goto PLAT_SKILLS;
             break;
@@ -959,7 +963,7 @@ izlude,120,115,4	script	Job Master	650,{
             }
         set classe,1;
         next;
-        mes "[ ^0000FFJob Master^000000 ]";
+        mes "[ Himmelmez ]";
         mes "Congratulations, you just turn one ^ff0000[ "+jobname(Class)+" ]^000000.";
         next;
         mes "[ ^cead00Owner^000000 ]";
@@ -968,6 +972,7 @@ izlude,120,115,4	script	Job Master	650,{
 	    break;
     }
     next;
-    cutin "", 255;
-    close;
+finalization:
+cutin "", 255;
+close;
 }

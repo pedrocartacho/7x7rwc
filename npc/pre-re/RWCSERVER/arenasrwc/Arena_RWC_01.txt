@@ -1,7 +1,13 @@
 // ==============================================================================
-// Arenas 7vs7 modificada por rodrigo aka narutekz (2014), Fissuris (2017) e Moskaum Y (2024)
+// Arenas 7vs7 modificada inicialmente por rodrigo aka narutekz (2014) e Fissuris (2017) 
+// e intensamente aprimorada por Moskaum Y (2024 e 2025)
 // ==============================================================================
-quiz_02,136,353,5	script	Waiting Room::KvM31R_Guillaume	418,{
+quiz_02,135,358,5	script	Waiting Room::KvM31R_Guillaume	418,{
+	cutin "arena1",4;
+	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "^33940CCHAVE PIX xxx^000000";
+	next;
+	cutin "", 255;
 	end;
 	
 OnInit:
@@ -17,10 +23,16 @@ OnInit:
 OnEnterBG:
 	set $@KvM31BG_id1, waitingroom2bg("izlude",128,105,"KvM31_BG::OnGuillaumeQuit","KvM31_BG::OnGuillaumeDie");
 	end;
+	close;
 }
 
-quiz_02,159,353,4	script	Waiting Room::KvM31R_Croix	414,{
-	end;
+quiz_02,160,358,4	script	Waiting Room::KvM31R_Croix	414,{
+	cutin "arena1",4;
+	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "^33940CCHAVE PIX xxx^000000";
+	next;
+	cutin "", 255;
+	end;;
 
 OnInit:
 	while (1){

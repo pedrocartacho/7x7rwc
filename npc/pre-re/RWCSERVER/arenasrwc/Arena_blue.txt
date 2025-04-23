@@ -2,15 +2,15 @@
 // *********************************************************************
 izlude,121,111,6	script	Blue Team	683,{
     cutin "hero_chaos_01 rwc",2;
-    mes "[ ^0000FFBlue Team^000000 ]";
-    mes "You need 7 members in guild and party^000000";
+    mes "[ ^0000FFChaos^000000 ]";
+    mes "Você precisa de ^0000FF7 membros^000000 na guild e na party. Será que você consegue contar até 7?";
     next;
 
     // Check for party
     if ( !getcharid(1) ) {
         cutin "hero_chaos_01 rwc",2;
-        mes "[ ^0000FFBlue Team^000000 ]";
-        mes "^0000ffYou need a party.^000000";
+        mes "[ ^0000FFChaos^000000 ]";
+        mes "Você precisa estar em um ^0000FFgrupo^000000. É ótimo que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terá que melhorar. Você já ouviu a palavra 'liderança' por aí?";
         next;
         cutin "", 255;
         close;
@@ -19,8 +19,8 @@ izlude,121,111,6	script	Blue Team	683,{
     // Check for guild
     if ( !getcharid(2) ) {
         cutin "hero_chaos_01 rwc",2;
-        mes "[ ^0000FFBlue Team^000000 ]";
-        mes "^0000ffYou need a guild.^000000";
+        mes "[ ^0000FFChaos^000000 ]";
+        mes "Você precisa de estar em uma ^0000ffguild^000000. É ótimo que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terá que melhorar. Você já ouviu a palavra 'liderança' por aí?";
         next;
         cutin "", 255;
         close;
@@ -30,7 +30,7 @@ izlude,121,111,6	script	Blue Team	683,{
     if ( (getguildmasterid(.@guild_id)) == (getcharid(0)) ){
         $@jogadoresblue1 = 2; // Number of players required
         if ($@jogadoresblue1 < 2){
-            mes "^ff0000You need 7 players^000000";
+            mes "Eu sei que pessoas decentes não querem se associar com um resto de aborto que nem você, mas para prosseguir você precisa de ^ff00007 players^000000 na sua guild.";
             cutin "", 255;
             close;
         }
@@ -47,8 +47,8 @@ izlude,121,111,6	script	Blue Team	683,{
     if ((.@partymembercount == $@jogadoresblue) && (getcharid(2)) && (strcharinfo(0) == getguildmaster(.@guild_id))) {
         // Check the party size
         if ( .@partymembercount < $@jogadoresblue ) {
-            mes "[ ^0000FFBlue Team^000000 ]";
-            mes "^0000ffYou need "+ $@jogadoresblue +" party members online to enter.^000000";
+            mes "[ ^0000FFChaos^000000 ]";
+            mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 pessoas online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
             cutin "", 255;
             close;
         }
@@ -59,19 +59,26 @@ izlude,121,111,6	script	Blue Team	683,{
             set .@islogin, .@islogin + 1;
         }
         if ( .@islogin < $@jogadoresblue ) {
-            mes "[ ^0000FFBlue Team^000000 ]";
-            mes "^0000ffYou need "+ $@jogadoresblue +" party members online to enter.^000000";
+            mes "[ ^0000FFChaos^000000 ]";
+            mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 pessoas online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
             cutin "", 255;
             close;
         }
 
-        mes "[ ^0000FFBlue Team^000000 ]";
-        mes "Welcome ^0000ff[ "+ strcharinfo(0) +" ]^000000.";
-        mes "Guild leader of ^0000ff[ "+ strcharinfo(2) +" ] ^000000.";
-        mes "Do you want to enter the waiting room with your team?";
+        mes "[ ^0000FFChaos^000000 ]";
+        mes "Bem-vindo, ^0000ff "+ strcharinfo(0) +"^000000, da guild ^0000ff"+ strcharinfo(2) +"^000000!";
+        mes "Quer ser espancado até desistir dos seus sonhos e perder o sentido da vida? Não se esqueça, a repetição é a mãe da habilidade.";
         next;
-        if (select("Yes, please.:No, thanks.") == 2) close;
-        next;
+
+        switch(select("Yes, please.:No, thanks.")) {
+            case 1:
+                break;
+            case 2:
+                cutin "", 255;
+                close;
+        }
+        // if (select("Yes, please.:No, thanks."); == 2)
+        // next;
 
         // Use array to store guild and party information
         $@currentLeader[.@guild_id] = getcharid(0);
@@ -84,12 +91,10 @@ izlude,121,111,6	script	Blue Team	683,{
 
         // Execute the removal of buffs and teleport in a separate script to avoid conflicts
         donpcevent "TeleportAndBuffRemovalBlue::OnTeleport";
-        cutin "", 255;
-        close;
+
     } else {
-        mes "[ ^0000FFBlue Team^000000 ]";
-        mes "^0000ffYour team should have "+ $@jogadoresblue +" members, all in the same party/guild and everyone has to be online.^000000";
-        mes "^0000ffAfter that, the GUILD LEADER can enter the room with their team.^000000";
+        mes "[ ^0000FFChaos^000000 ]";
+        mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 membros, todos online e na mesma guild e party. A dificuldade de cumprir horários é um sinal clássico de incompetência.";
         cutin "", 255;
         close;
     }
@@ -98,11 +103,11 @@ izlude,121,111,6	script	Blue Team	683,{
 // ========================================================= Teleporte
 //=======================================================================
 
-quiz_02,134,336,7	script	Employee#timeaz	849,{
+quiz_02,134,336,7	script	quitter#timeaz	849,{
 
-    mes "[^0000ffEmployee^000000]";
-    mes "Do you wanna go back?";
-    switch(select("Yes.:No.")){
+    mes "[^0000ffquitter^000000]";
+    mes "Você quer quitar?";
+    switch(select("Sim, não aguento mais.:Não.")){
         case 1:
             // Check if the player is the guild leader
             if (getcharid(2) == $@currentGuildID[getcharid(2)] && getcharid(0) == getguildmasterid($@currentGuildID[getcharid(2)])) {
@@ -122,7 +127,7 @@ quiz_02,134,336,7	script	Employee#timeaz	849,{
 quiz_02,143,342,9	script	Employee#timeazul	419,{
 
     mes "[^0000ffEmployee^000000]";
-    mes "Do you wanna go to the red team?";
+    mes "Você quer ir para o time vermelho?";
     switch(select("Yes.:No.")){
         case 1:
             // Check if the player is the guild leader

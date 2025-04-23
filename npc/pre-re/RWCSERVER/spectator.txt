@@ -1,5 +1,5 @@
 izlude,125,112,3	script	Spectator NPC	664,{{
-	cutin "fenrir_a",2;{
+	{
 	// Initialize the spectator count variables if they don't exist
 	if ($spectator_count1 == 0) set $spectator_count1, 0;
 	if ($spectator_count2 == 0) set $spectator_count2, 0;
@@ -17,17 +17,21 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 	if ($spectator_count14 == 0) set $spectator_count14, 0;
 
 	if(Class >= 1) {{
-		mes "[Spectator NPC]";
+		cutin "fenrir_a",2;
+		mes "[ Fenrir ]";
         mes "You need to be a Novice to spectate the match.";
-		cutin "", 255;
-		close;
+		next;
+		goto finalization;
+		//cutin "", 255;
+		//close;
 	}
 	}
 
-	mes "[Spectator NPC]";
+	cutin "fenrir_a",2;
+	mes "[ Fenrir ]";
 	mes "Do you want to spectate the match?";
 	next;
-	mes "[Spectator NPC]";
+	mes "[ Fenrir ]";
 	mes "Choose an arena:";
 	next;
 
@@ -121,8 +125,9 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		end;
 
 	Cancel:
-		mes "[Spectator NPC]";
+		mes "[ Fenrir ]";
 		mes "Okay, come back anytime you want to spectate.";
+		cutin "", 255;
 		close;
 
 	OnPCLogoutEvent:
@@ -177,72 +182,72 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		.@y = getarg(3);
 
 		if (.@arena == 1 && $spectator_count1 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 2 && $spectator_count2 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 3 && $spectator_count3 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 4 && $spectator_count4 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 5 && $spectator_count5 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 6 && $spectator_count6 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 7 && $spectator_count7 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 8 && $spectator_count8 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 9 && $spectator_count9 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 10 && $spectator_count10 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 11 && $spectator_count11 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 12 && $spectator_count12 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 13 && $spectator_count12 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 14 && $spectator_count12 >= 2) {
-			mes "[Spectator NPC]";
+			mes "[ Fenrir ]";
 			mes "Sorry, the spectator limit has been reached. Please try again later.";
 			cutin "", 255;
 			close;
@@ -296,5 +301,9 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (.@arena == 14 && $spectator_count12 > 0) set $spectator_count14, $spectator_count12 - 1;
 	}
 	cutin "", 255;
-	close;}
+	close;
+	}
+finalization:
+cutin "", 255;
+close;
 }

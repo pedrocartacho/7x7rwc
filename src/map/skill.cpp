@@ -4586,16 +4586,16 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 			if (rate < 9) card = 1; // THE FOOL (9%)zera sp
 			else if (rate < 18) card = 2; // THE MAGICIAN (9%) -50%matk por 30sec
 			else if (rate < 33) card = 3; // THE HIGH PRIESTESS (15%) dispel
-			else if (rate < 39) card = 4; // THE CHARIOT (6%) 1k dmg+quebra topo/armadura/arma/escudo/capa/bota
-			else if (rate < 48) card = 5; // STRENGTH (9%) -50%atk por 30sec
-			else if (rate < 58) card = 6; // THE LOVERS (10%) cura o dono por 2k
-			else if (rate < 59) card = 7; // WHEEL OF FORTUNE (1%) da 2 cartas
-			else if (rate < 65) card = 8; // THE HANGED MAN (6%) inflinge freeze, petrify2, snare 30sec
-			else if (rate < 67) card = 9; // DEATH (2%) coma, curse, poison
-			else if (rate < 74) card = 10; // TEMPERANCE (7%) chaos por 30sec
-			else if (rate < 79) card = 11; // THE DEVIL (5%) 6666dmg e -50%atk e matk
-			else if (rate < 85) card = 12; // THE TOWER (6%) 4444dmg
-			else if (rate < 91) card = 13; // THE STAR (6%) stun 5sec
+			else if (rate < 40) card = 4; // THE CHARIOT (7%) 1k dmg+quebra topo/armadura/arma/escudo/capa/bota
+			else if (rate < 49) card = 5; // STRENGTH (9%) -50%atk por 30sec
+			else if (rate < 59) card = 6; // THE LOVERS (10%) cura o dono por 2k
+			else if (rate < 60) card = 7; // WHEEL OF FORTUNE (1%) da 2 cartas
+			else if (rate < 66) card = 8; // THE HANGED MAN (6%) inflinge freeze, petrify2, snare 30sec
+			else if (rate < 68) card = 9; // DEATH (2%) coma, curse, poison
+			else if (rate < 75) card = 10; // TEMPERANCE (7%) chaos por 30sec
+			else if (rate < 80) card = 11; // THE DEVIL (5%) 6666dmg e -50%atk e matk
+			else if (rate < 86) card = 12; // THE TOWER (6%) 4444dmg
+			else if (rate < 91) card = 13; // THE STAR (5%) stun 5sec
 			else card = 14; // THE SUN (9%) -20% atk,matk,def,hit,flee por 30sec
 	}
 

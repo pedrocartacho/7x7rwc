@@ -1,10 +1,9 @@
 izlude,131,112,5	script	Healer	450,{
     setoption 0x40 | Option_Invisible | Option_Xmas, 0;
-
-    if (@healer_delay > gettimetick(2)) {
-        end;
-    }
-    set @healer_delay, gettimetick(2) + 3;
+// Restaura skill copiada do Plagiarism
+// if (getskilllv("RG_PLAGIARISM") && CLONE_SKILL && CLONE_SKILL_LV) {
+//     skill CLONE_SKILL, CLONE_SKILL_LV, 0;
+// }
 
 /*     switch(BaseClass) {
         case 0: if (Class !=23) skill 143,1,0; break;
