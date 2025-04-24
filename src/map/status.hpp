@@ -870,6 +870,7 @@ enum sc_type : int16 {
 	SC_TAROT_DEVIL,
 	SC_TAROT_STRENGTH,
 	SC_TAROT_MAGICIAN,
+	SC_TAROT_STOP,
 	// SC_TAROT_SUN       = 10000,
 	// SC_TAROT_DEVIL     = 10001,
 	// SC_TAROT_STRENGTH  = 10002,
@@ -1968,6 +1969,7 @@ enum efst_types : short{
 	EFST_TAROT_DEVIL,
 	EFST_TAROT_STRENGTH,
 	EFST_TAROT_MAGICIAN,
+	EFST_TAROT_STOP,
 	//apartir daqui a numeração deve estar errada
 
 	EFST_FLOWER_LEAF2 = 1135,

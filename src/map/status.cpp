@@ -407,7 +407,7 @@ void initChangeTables(void)
 	set_sc( DC_SERVICEFORYOU	, SC_SERVICE4U		, EFST_SERVICEFORYOU	, SCB_ALL );
 	add_sc( NPC_DARKCROSS		, SC_BLIND		);
 	add_sc( NPC_GRANDDARKNESS	, SC_BLIND		);
-	set_sc( NPC_STOP		, SC_STOP		, EFST_STOP		, SCB_NONE );
+	set_sc( NPC_STOP		, SC_STOP		,	EFST_STOP		, SCB_NONE );
 	set_sc( NPC_WEAPONBRAKER	, SC_BROKENWEAPON	, EFST_BROKENWEAPON	, SCB_NONE );
 	set_sc( NPC_ARMORBRAKE		, SC_BROKENARMOR	, EFST_BROKENARMOR	, SCB_NONE );
 	set_sc( NPC_CHANGEUNDEAD	, SC_CHANGEUNDEAD	, EFST_PROPERTYUNDEAD, SCB_DEF_ELE );
@@ -911,6 +911,7 @@ void initChangeTables(void)
 	set_sc(NPC_TALK, SC_TAROT_DEVIL,     EFST_TAROT_DEVIL,     SCB_NONE);
 	set_sc(NPC_TALK, SC_TAROT_STRENGTH,  EFST_TAROT_STRENGTH,  SCB_NONE);
 	set_sc(NPC_TALK, SC_TAROT_MAGICIAN,  EFST_TAROT_MAGICIAN,  SCB_NONE);
+	set_sc(NPC_TALK, SC_TAROT_STOP, EFST_TAROT_STOP, SCB_NONE);
 
 	/* Storing the target job rather than simply SC_SPIRIT simplifies code later on */
 	SkillStatusChangeTable[skill_get_index(SL_ALCHEMIST)]	= (sc_type)MAPID_ALCHEMIST,
@@ -1422,6 +1423,7 @@ void initChangeTables(void)
 	StatusChangeStateTable[SC_GOSPEL]				|= SCS_NOMOVE|SCS_NOMOVECOND;
 	StatusChangeStateTable[SC_BASILICA]				|= SCS_NOMOVE|SCS_NOMOVECOND;
 	StatusChangeStateTable[SC_STOP]					|= SCS_NOMOVE;
+	StatusChangeStateTable[SC_TAROT_STOP]					|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_CLOSECONFINE]			|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_CLOSECONFINE2]		|= SCS_NOMOVE;
 	StatusChangeStateTable[SC_TINDER_BREAKER]		|= SCS_NOMOVE;
@@ -1492,6 +1494,8 @@ void initChangeTables(void)
 	StatusChangeFlagTable[SC_TAROT_DEVIL] |= EFST_TAROT_DEVIL;
 	StatusChangeFlagTable[SC_TAROT_STRENGTH] |= EFST_TAROT_STRENGTH;
 	StatusChangeFlagTable[SC_TAROT_MAGICIAN] |= EFST_TAROT_MAGICIAN;
+	StatusChangeFlagTable[SC_TAROT_STOP] |= EFST_TAROT_STOP;
+
 
 	// set_sc(NPC_TALK, SC_TAROT_SUN,       EFST_TAROT_SUN,       SCB_NONE);
 	// set_sc(NPC_TALK, SC_TAROT_DEVIL,     EFST_TAROT_DEVIL,     SCB_NONE);
@@ -11494,6 +11498,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				break;
 		// Fall through
 		case SC_STOP:
+		// customReplicar comportamento do SC_STOP
+		case SC_TAROT_STOP:
 		case SC_CONFUSION:
 		case SC_CLOSECONFINE:
 		case SC_CLOSECONFINE2:
@@ -12478,6 +12484,15 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 				sce->val2 = 0;
 				if( tbl && (sc = status_get_sc(tbl)) && sc->data[SC_STOP] && sc->data[SC_STOP]->val2 == bl->id )
 					status_change_end(tbl, SC_STOP, INVALID_TIMER);
+			}
+			break;
+		//custom
+		case SC_TAROT_STOP:
+			if( sce->val2 ) {
+				struct block_list* tbl = map_id2bl(sce->val2);
+				sce->val2 = 0;
+				if( tbl && (sc = status_get_sc(tbl)) && sc->data[SC_TAROT_STOP] && sc->data[SC_TAROT_STOP]->val2 == bl->id )
+					status_change_end(tbl, SC_TAROT_STOP, INVALID_TIMER);
 			}
 			break;
 		case SC_TENSIONRELAX:
@@ -14126,6 +14141,7 @@ void status_change_clear_buffs(struct block_list* bl, uint8 type)
 			case SC_MINDBREAKER:
 			case SC_WINKCHARM:
 			case SC_STOP:
+			case SC_TAROT_STOP:
 			case SC_ORCISH:
 			case SC_STRIPWEAPON:
 			case SC_STRIPSHIELD:

@@ -362,6 +362,12 @@ TIMER_FUNC(tarot_devil_end) {
 		status_change_end(&sd->bl, SC_TAROT_DEVIL, INVALID_TIMER);
 	return 0;
 }
+TIMER_FUNC(tarot_stop_end) {
+	struct map_session_data* sd = map_id2sd(id);
+	if (sd)
+		status_change_end(&sd->bl, SC_TAROT_STOP, INVALID_TIMER);
+	return 0;
+}
 //custom
 int skill_get_casttype (uint16 skill_id) {
 	int inf = skill_get_inf(skill_id);
@@ -4607,9 +4613,9 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 	}
 	case 2: // THE MAGICIAN - matk halved
 	{
-		sc_start(src, target, SC_INCMATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));
-		sc_start(src, target, SC_TAROT_MAGICIAN, 100, 0, INVALID_TIMER);
-		add_timer(gettick() + 30000, tarot_magician_end, target->id, 0);
+		sc_start(src, target, SC_INCMATKRATE, 100, -50, skill_get_time2(skill_id, skill_lv));//SC_INCMATKRATE SC_TAROT_MAGICIAN
+		sc_start(src, target, SC_TAROT_MAGICIAN, 100, 0, INVALID_TIMER);//SC_TAROT_MAGICIAN
+		add_timer(gettick() + 30000, tarot_magician_end, target->id, 0);//tarot_magician_end
 		break;
 	}
 	case 3: // THE HIGH PRIESTESS - all buffs removed
@@ -4649,11 +4655,25 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		skill_tarotcard(src, target, skill_id, skill_lv, tick);
 		break;
 	}
+	// case 8: // THE HANGED MAN - stop, freeze or stoned
+	// {
+	// 	enum sc_type sc[] = { SC_STOP, SC_FREEZE, SC_STONE };
+	// 	uint8 rand_eff = rnd() % 3;
+	// 	int time = ((rand_eff == 0) ? skill_get_time2(skill_id, skill_lv) : skill_get_time2(status_sc2skill(sc[rand_eff]), 1));
+	// 	sc_start(src, target, sc[rand_eff], 100, skill_lv, time);
+	// 	break;
+	// }
 	case 8: // THE HANGED MAN - stop, freeze or stoned
 	{
-		enum sc_type sc[] = { SC_STOP, SC_FREEZE, SC_STONE };
+		enum sc_type sc[] = { SC_TAROT_STOP, SC_FREEZE, SC_STONE };
 		uint8 rand_eff = rnd() % 3;
-		int time = ((rand_eff == 0) ? skill_get_time2(skill_id, skill_lv) : skill_get_time2(status_sc2skill(sc[rand_eff]), 1));
+		int time;
+	
+		if (sc[rand_eff] == SC_TAROT_STOP)
+			time = skill_get_time2(skill_id, skill_lv); // usa o tempo configurado da própria skill
+		else
+			time = skill_get_time2(status_sc2skill(sc[rand_eff]), 1); // usa o tempo padrão do SC correspondente
+	
 		sc_start(src, target, sc[rand_eff], 100, skill_lv, time);
 		break;
 	}
@@ -4692,7 +4712,7 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		break;
 	}
 	default: // THE SUN - atk, matk, hit, flee and def reduced, immune to more tarot card effects
-		sc_start(src, target, SC_TAROT_SUN, 100, 0, INVALID_TIMER);
+		sc_start(src, target, SC_TAROT_SUN, 100, 0, INVALID_TIMER);////SC_INCMATKRATE SC_TAROT_MAGICIAN SC_TAROT_STRENGTH SC_TAROT_DEVIL SC_TAROT_SUN
 		add_timer(gettick() + 30000, tarot_sun_end, target->id, 0); // custom 30 segundos
 
 	{
@@ -8081,6 +8101,14 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_DONTFORGETME:
 					case SC_FORTUNE:
 					case SC_SERVICE4U:
+					//workarround dos deuses pro debuff matk do tarot e os 4 icones de reducao% n serem dispellados
+					//curiosamente incATKrate n ta saindo com dispel
+					//pq dia
+					case SC_INCMATKRATE:
+					case SC_TAROT_MAGICIAN:
+					case SC_TAROT_STRENGTH:
+					case SC_TAROT_DEVIL:
+					case SC_TAROT_SUN:
 						if (!battle_config.dispel_song || tsc->data[i]->val4 == 0)
 							continue; //If in song area don't end it, even if config enabled
 						break;
