@@ -1681,15 +1681,18 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 				break;
 			case CR_DEVOTION:
 				if (target->type == BL_PC) {
-					uint8 i = 0, count = min(skill_lv, MAX_DEVOTION);
+					uint8 i, count = min(skill_lv, MAX_DEVOTION), existing_targets = 0;
 
-					ARR_FIND(0, count, i, sd->devotion[i] == target_id);
-					if (i == count) {
-						ARR_FIND(0, count, i, sd->devotion[i] == 0);
-						if (i == count) { // No free slots, skill Fail
-							clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
-							return 0;
-						}
+					// Count ACTIVE targets first
+					for (i = 0; i < MAX_DEVOTION; i++) {
+						if (sd->devotion[i] != 0)
+							existing_targets++;
+					}
+
+					// If already at max targets, fail immediately
+					if (existing_targets >= count) {
+						clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
+						return 0;
 					}
 				}
 				break;
