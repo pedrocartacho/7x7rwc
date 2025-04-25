@@ -516,7 +516,7 @@ enum _look {
 	LOOK_BODY2
 };
 
-enum e_mapflag : int16 {
+enum e_mapflag : int32 {
 	MF_INVALID = -1,
 	MF_MIN = 0,
 	MF_NOMEMO = 0,
@@ -589,7 +589,8 @@ enum e_mapflag : int16 {
 	MF_PRIVATEAIRSHIP_SOURCE,
 	MF_PRIVATEAIRSHIP_DESTINATION,
 	MF_SKILL_DURATION,
-	MF_MAX
+	MF_MAX,
+	MF_ALLOWICEWALL,    // Custom flag to allow Ice Wall
 };
 
 /// Enum of damage types

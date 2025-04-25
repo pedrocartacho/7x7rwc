@@ -40,7 +40,7 @@
 //in_moc_16	mapflag	noicewall
 //in_orcs01	mapflag	noicewall
 //izlude_in	mapflag	noicewall
-//izlude	mapflag	noicewall
+izlude	mapflag	noicewall
 //hugel	mapflag	noicewall
 //jawaii	mapflag	noicewall
 //moc_castle	mapflag	noicewall

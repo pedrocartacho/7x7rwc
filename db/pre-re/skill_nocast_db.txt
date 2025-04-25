@@ -45,7 +45,7 @@
 //----------------------------------------------------------------------------
 26,4	//AL_TELEPORT
 27,4	//AL_WARP
-87,15	//WZ_ICEWALL
+87,12	//WZ_ICEWALL (changed from 15 to 12 - only restricted in GvG and BG)
 150,4	//TF_BACKSLIDING
 219,4	//RG_INTIMIDATE
 336,4	//WE_CALLPARTNER
