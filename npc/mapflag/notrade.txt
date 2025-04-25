@@ -15,41 +15,35 @@
 //============================================================
 
 // RWC Maps ===============
-2009rwc_01	mapflag	notrade
-2009rwc_02	mapflag	notrade
-2009rwc_03	mapflag	notrade
-2009rwc_04	mapflag	notrade
-2009rwc_05	mapflag	notrade
-2009rwc_06	mapflag	notrade
-2009rwc_07	mapflag	notrade
-2009rwc_08	mapflag	notrade
-2009rwc_f01	mapflag	notrade
+// 2009rwc_01	mapflag	notrade
 2012rwc_01	mapflag	notrade
 2012rwc_02	mapflag	notrade
 2012rwc_03	mapflag	notrade
 2012rwc_04	mapflag	notrade
-2012rwc_05	mapflag	notrade
-2012rwc_06	mapflag	notrade
-2012rwc_07	mapflag	notrade
-2012rwc_08	mapflag	notrade
 guild_vs1	mapflag	notrade
 guild_vs2	mapflag	notrade
 guild_vs3	mapflag	notrade
 guild_vs4	mapflag	notrade
 guild_vs5	mapflag	notrade
+2009rwc_01	mapflag	notrade
+2009rwc_02	mapflag	notrade
+2009rwc_03	mapflag	notrade
+2009rwc_04	mapflag	notrade
+quiz_02	mapflag	notrade
 rwc01	mapflag	notrade
 rwc03	mapflag	notrade
-
-4thts	mapflag	notrade
-5thts	mapflag	notrade
-6thts	mapflag	notrade
-7thts	mapflag	notrade
 2008rwc_01	mapflag	notrade
 2008rwc_02	mapflag	notrade
 2008rwc_03	mapflag	notrade
 2008rwc_04	mapflag	notrade
-2008rwc_05	mapflag	notrade
-2008rwc_06	mapflag	notrade
-2008rwc_07	mapflag	notrade
-2008rwc_08	mapflag	notrade
 kvm	mapflag	notrade
+flavius	mapflag	notrade
+bio4	mapflag	notrade
+1@lab	mapflag	notrade
+1@dth3	mapflag	notrade
+1@tnm1	mapflag	notrade
+1@pump	mapflag	notrade
+2@pump	mapflag	notrade
+job_prist	mapflag	notrade
+ecl_tdun02	mapflag	notrade
+evt_bomb	mapflag	notrade

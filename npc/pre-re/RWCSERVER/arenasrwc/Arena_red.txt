@@ -94,7 +94,7 @@ izlude,135,111,3	script	Red Team	10066,{
         
     } else {
         mes "[ ^ff0000Sarah^000000 ]";
-        mes "^ff0000Para ter chance de apanhar como um newbha, você precisa de "+ $@jogadoresred +" membros, todos online e na mesma guild e party. Vamos ver quantas vezes eu terei que repetir isso. Algumas pessoa tem inteligência de platelminto, não é mesmo?^000000";
+        mes "Para ter chance de apanhar como um newbha, você precisa de ^ff0000"+ $@jogadoresred +" membros^000000, todos online e na mesma guild e party. Vamos ver quantas vezes eu terei que repetir isso. Algumas pessoa tem inteligência de platelminto, não é mesmo?^000000";
         cutin "", 255;
         close;
     }

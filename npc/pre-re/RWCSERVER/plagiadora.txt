@@ -4,12 +4,12 @@
 //e isso e um pe no saco pro player 
 
 //21 04 2025
-// NPC invisível para restaurar skill copiada ao trocar de mapa ou logar
+// NPC invis?vel para restaurar skill copiada ao trocar de mapa ou logar
 // -	script	RestorePlagiado	-1,{
 //     OnPCLoginEvent:
 //     OnPCLoadMapEvent:
 //         if (getskilllv("RG_PLAGIARISM") && CLONE_SKILL && CLONE_SKILL_LV) {
-//             // Remove qualquer versão anterior que possa ter sido limpada
+//             // Remove qualquer vers?o anterior que possa ter sido limpada
 //             skill CLONE_SKILL, 0, 0;
 //             // Reaplica a skill
 //             skill CLONE_SKILL, CLONE_SKILL_LV, 1;
@@ -23,13 +23,13 @@ set .@skill_level,getskilllv( "RG_PLAGIARISM" );
 
 cutin "lydia_a",2;
 mes "[ Lidia ]";
-mes "I provide skill to Stalker Class.";
+mes "Eu sou a barreira de entrada de stalkers: se não conseguir relogar após receber a skill que eu dou pra ele, então já sabemos que ele vai jogar mal.";
 if( !.@skill_level ){
     cutin "lydia_a",2;
     // mes "[ Lidia ]";
     // mes "I provide skill to Stalker Class.";
     //next;
-    mes "But only who have ^FF0000Plagiarism skill^000000 can use this services.";
+    mes "Eu preciso te dizer que só quem tem ^FF0000Plagiarism skill^000000 pode receber skills?";
     next;
 }else{
     if( select( ( CLONE_SKILL && CLONE_SKILL_LV )?"Un-Learn Skill":"Learn Skill","Close" ) == 1 ){

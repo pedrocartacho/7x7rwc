@@ -8,61 +8,35 @@
 //= 1.0 Initial release. [Cydh]
 //= 1.0.1 Added arug_dun01 and schg_dun01 to the list. [Cydh]
 //============================================================
-
-// WOE:TE Castles =========
-te_prtcas01	mapflag	nocostume
-te_prtcas02	mapflag	nocostume
-te_prtcas03	mapflag	nocostume
-te_prtcas04	mapflag	nocostume
-te_prtcas05	mapflag	nocostume
-te_aldecas1	mapflag	nocostume
-te_aldecas2	mapflag	nocostume
-te_aldecas3	mapflag	nocostume
-te_aldecas4	mapflag	nocostume
-te_aldecas5	mapflag	nocostume
-
-// Guild Dungeons =========
-teg_dun01	mapflag	nocostume
-teg_dun02	mapflag	nocostume
-arug_dun01	mapflag	nocostume
-schg_dun01	mapflag	nocostume
-
 // RWC Maps ===============
-2009rwc_01	mapflag	nocostume
-2009rwc_02	mapflag	nocostume
-2009rwc_03	mapflag	nocostume
-2009rwc_04	mapflag	nocostume
-2009rwc_05	mapflag	nocostume
-2009rwc_06	mapflag	nocostume
-2009rwc_07	mapflag	nocostume
-2009rwc_08	mapflag	nocostume
-2009rwc_f01	mapflag	nocostume
 2012rwc_01	mapflag	nocostume
 2012rwc_02	mapflag	nocostume
 2012rwc_03	mapflag	nocostume
 2012rwc_04	mapflag	nocostume
-2012rwc_05	mapflag	nocostume
-2012rwc_06	mapflag	nocostume
-2012rwc_07	mapflag	nocostume
-2012rwc_08	mapflag	nocostume
 guild_vs1	mapflag	nocostume
 guild_vs2	mapflag	nocostume
 guild_vs3	mapflag	nocostume
 guild_vs4	mapflag	nocostume
 guild_vs5	mapflag	nocostume
+2009rwc_01	mapflag	nocostume
+2009rwc_02	mapflag	nocostume
+2009rwc_03	mapflag	nocostume
+2009rwc_04	mapflag	nocostume
+quiz_02	mapflag	nocostume
 rwc01	mapflag	nocostume
 rwc03	mapflag	nocostume
-
-4thts	mapflag	nocostume
-5thts	mapflag	nocostume
-6thts	mapflag	nocostume
-7thts	mapflag	nocostume
 2008rwc_01	mapflag	nocostume
 2008rwc_02	mapflag	nocostume
 2008rwc_03	mapflag	nocostume
 2008rwc_04	mapflag	nocostume
-2008rwc_05	mapflag	nocostume
-2008rwc_06	mapflag	nocostume
-2008rwc_07	mapflag	nocostume
-2008rwc_08	mapflag	nocostume
 kvm	mapflag	nocostume
+flavius	mapflag	nocostume
+bio4	mapflag	nocostume
+1@lab	mapflag	nocostume
+1@dth3	mapflag	nocostume
+1@tnm1	mapflag	nocostume
+1@pump	mapflag	nocostume
+2@pump	mapflag	nocostume
+job_prist	mapflag	nocostume
+ecl_tdun02	mapflag	nocostume
+evt_bomb	mapflag	nocostume

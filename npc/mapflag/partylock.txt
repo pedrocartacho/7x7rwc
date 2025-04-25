@@ -16,61 +16,35 @@
 //============================================================
 
 // Sealed Shrine ==================
-1@cata	mapflag	partylock
-2@cata	mapflag	partylock
-
-// Endless Tower ==================
-1@tower	mapflag	partylock
-2@tower	mapflag	partylock
-3@tower	mapflag	partylock
-4@tower	mapflag	partylock
-5@tower	mapflag	partylock
-6@tower	mapflag	partylock
-
-// Orc's Memory ===================
-1@orcs	mapflag	partylock
-2@orcs	mapflag	partylock
-
-// Nidhoggr's Instance ============
-1@nyd	mapflag	partylock
-2@nyd	mapflag	partylock
-
-// RWC Maps ===============
-2009rwc_01	mapflag	partylock
-2009rwc_02	mapflag	partylock
-2009rwc_03	mapflag	partylock
-2009rwc_04	mapflag	partylock
-2009rwc_05	mapflag	partylock
-2009rwc_06	mapflag	partylock
-2009rwc_07	mapflag	partylock
-2009rwc_08	mapflag	partylock
-2009rwc_f01	mapflag	partylock
+// 1@cata	mapflag	partylock
 2012rwc_01	mapflag	partylock
 2012rwc_02	mapflag	partylock
 2012rwc_03	mapflag	partylock
 2012rwc_04	mapflag	partylock
-2012rwc_05	mapflag	partylock
-2012rwc_06	mapflag	partylock
-2012rwc_07	mapflag	partylock
-2012rwc_08	mapflag	partylock
 guild_vs1	mapflag	partylock
 guild_vs2	mapflag	partylock
 guild_vs3	mapflag	partylock
 guild_vs4	mapflag	partylock
 guild_vs5	mapflag	partylock
+2009rwc_01	mapflag	partylock
+2009rwc_02	mapflag	partylock
+2009rwc_03	mapflag	partylock
+2009rwc_04	mapflag	partylock
+quiz_02	mapflag	partylock
 rwc01	mapflag	partylock
 rwc03	mapflag	partylock
-
-4thts	mapflag	partylock
-5thts	mapflag	partylock
-6thts	mapflag	partylock
-7thts	mapflag	partylock
 2008rwc_01	mapflag	partylock
 2008rwc_02	mapflag	partylock
 2008rwc_03	mapflag	partylock
 2008rwc_04	mapflag	partylock
-2008rwc_05	mapflag	partylock
-2008rwc_06	mapflag	partylock
-2008rwc_07	mapflag	partylock
-2008rwc_08	mapflag	partylock
 kvm	mapflag	partylock
+flavius	mapflag	partylock
+bio4	mapflag	partylock
+1@lab	mapflag	partylock
+1@dth3	mapflag	partylock
+1@tnm1	mapflag	partylock
+1@pump	mapflag	partylock
+2@pump	mapflag	partylock
+job_prist	mapflag	partylock
+ecl_tdun02	mapflag	partylock
+evt_bomb	mapflag	partylock

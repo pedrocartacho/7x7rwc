@@ -15,24 +15,38 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 	if ($spectator_count12 == 0) set $spectator_count12, 0;
 	if ($spectator_count13 == 0) set $spectator_count13, 0;
 	if ($spectator_count14 == 0) set $spectator_count14, 0;
+	if ($spectator_count15 == 0) set $spectator_count15, 0;
+	if ($spectator_count16 == 0) set $spectator_count16, 0;
+	if ($spectator_count17 == 0) set $spectator_count17, 0;
+	if ($spectator_count18 == 0) set $spectator_count18, 0;
+	if ($spectator_count19 == 0) set $spectator_count19, 0;
+	if ($spectator_count20 == 0) set $spectator_count20, 0;
+	if ($spectator_count21 == 0) set $spectator_count21, 0;
+	if ($spectator_count22 == 0) set $spectator_count22, 0;
+	if ($spectator_count23 == 0) set $spectator_count23, 0;
+	if ($spectator_count24 == 0) set $spectator_count24, 0;
+	if ($spectator_count25 == 0) set $spectator_count25, 0;
+	if ($spectator_count26 == 0) set $spectator_count26, 0;
+	if ($spectator_count27 == 0) set $spectator_count27, 0;
+	if ($spectator_count28 == 0) set $spectator_count28, 0;
+	if ($spectator_count29 == 0) set $spectator_count29, 0;
+	if ($spectator_count30 == 0) set $spectator_count30, 0;
 
-	if(Class >= 1) {{
+	if (Class >= 1) {{
 		cutin "fenrir_a",2;
 		mes "[ Fenrir ]";
-        mes "You need to be a Novice to spectate the match.";
+		mes "Você precisa ser um ^CC00CCaprendiz^000000 para assistir uma partida: é caridoso da sua parte não tirar do newbha seboso a oportunidade de ser massacrado de forma justa, por isso você precisa ser um aprendiz para assistir.";
 		next;
 		goto finalization;
-		//cutin "", 255;
-		//close;
 	}
 	}
 
 	cutin "fenrir_a",2;
 	mes "[ Fenrir ]";
-	mes "Do you want to spectate the match?";
+	mes "Eu posso te levar até uma arena, desse jeito você pode ver com seus próprios olhos que ninguém joga tão mal quanto você.";
 	next;
 	mes "[ Fenrir ]";
-	mes "Choose an arena:";
+	mes "Escolha a arena:";
 	next;
 
 	// Get the number of players in each arena
@@ -50,6 +64,22 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 	set .@players12, getmapusers("2012rwc_04");
 	set .@players13, getmapusers("rwc01");
 	set .@players14, getmapusers("rwc03");
+	set .@players15, getmapusers("2008rwc_01");
+	set .@players16, getmapusers("2008rwc_02");
+	set .@players17, getmapusers("2008rwc_03");
+	set .@players18, getmapusers("2008rwc_04");
+	set .@players19, getmapusers("1@dth3");
+	set .@players20, getmapusers("1@lab");
+	set .@players21, getmapusers("1@tnm1");
+	set .@players22, getmapusers("1@pump");
+	set .@players23, getmapusers("2@pump");
+	set .@players24, getmapusers("guild_vs2");
+	set .@players25, getmapusers("kvm");
+	set .@players26, getmapusers("job_prist");
+	set .@players27, getmapusers("flavius");
+	set .@players28, getmapusers("bio4");
+	set .@players29, getmapusers("ecl_tdun02");
+	set .@players30, getmapusers("evt_bomb");
 
 	// Create the menu with player counts
 	menu "Arena 1 - " + .@players1 + " players",Arena1,
@@ -66,6 +96,22 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		"Arena 12 - " + .@players12 + " players",Arena12,
 		"Arena 13 - " + .@players13 + " players",Arena13,
 		"Arena 14 - " + .@players14 + " players",Arena14,
+		"Arena 15 - " + .@players15 + " players",Arena15,
+		"Arena 16 - " + .@players16 + " players",Arena16,
+		"Arena 17 - " + .@players17 + " players",Arena17,
+		"Arena 18 - " + .@players18 + " players",Arena18,
+		"Arena 19 - " + .@players19 + " players",Arena19,
+		"Arena 20 - " + .@players20 + " players",Arena20,
+		"Arena 21 - " + .@players21 + " players",Arena21,
+		"Arena 22 - " + .@players22 + " players",Arena22,
+		"Arena 23 - " + .@players23 + " players",Arena23,
+		"Arena 24 - " + .@players24 + " players",Arena24,
+		"Arena 25 - " + .@players25 + " players",Arena25,
+		"Arena 26 - " + .@players26 + " players",Arena26,
+		"Arena 27 - " + .@players27 + " players",Arena27,
+		"Arena 28 - " + .@players28 + " players",Arena28,
+		"Arena 29 - " + .@players29 + " players",Arena29,
+		"Arena 30 - " + .@players30 + " players",Arena30,
 		"No",Cancel;
 
 	Arena1:
@@ -124,9 +170,73 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		callsub CheckSpectators, "rwc03", 14, 50, 50;
 		end;
 
+	Arena15:
+		callsub CheckSpectators, "2008rwc_01", 15, 50, 50;
+		end;
+
+	Arena16:
+		callsub CheckSpectators, "2008rwc_02", 16, 50, 50;
+		end;
+
+	Arena17:
+		callsub CheckSpectators, "2008rwc_03", 17, 50, 50;
+		end;
+
+	Arena18:
+		callsub CheckSpectators, "2008rwc_04", 18, 50, 50;
+		end;
+
+	Arena19:
+		callsub CheckSpectators, "1@dth3", 19, 73, 68;
+		end;
+
+	Arena20:
+		callsub CheckSpectators, "1@lab", 20, 84, 88;
+		end;
+
+	Arena21:
+		callsub CheckSpectators, "1@tnm1", 21, 49, 102;
+		end;
+
+	Arena22:
+		callsub CheckSpectators, "1@pump", 22, 54, 101;
+		end;
+
+	Arena23:
+		callsub CheckSpectators, "2@pump", 23, 67, 81;
+		end;
+
+	Arena24:
+		callsub CheckSpectators, "guils_vs2", 24, 50, 50;
+		end;
+
+	Arena25:
+		callsub CheckSpectators, "kvm", 25, 94, 88;
+		end;
+
+	Arena26:
+		callsub CheckSpectators, "job_prist", 26, 24, 79;
+		end;
+
+	Arena27:
+		callsub CheckSpectators, "flavius", 27, 232, 128;
+		end;
+
+	Arena28:
+		callsub CheckSpectators, "bio4", 28, 148, 223;
+		end;
+
+	Arena29:
+		callsub CheckSpectators, "ecl_tdun02", 29, 53, 49;
+		end;
+
+	Arena30:
+		callsub CheckSpectators, "evt_bomb", 30, 339, 60;
+		end;
+
 	Cancel:
 		mes "[ Fenrir ]";
-		mes "Okay, come back anytime you want to spectate.";
+		mes "Não está preparado para um choque de realidade?";
 		cutin "", 255;
 		close;
 
@@ -173,6 +283,54 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (strcharinfo(3) == "rwc03") {
 			callsub ResetSpectator, 14;
 		}
+		if (strcharinfo(3) == "2008rwc_01") {
+			callsub ResetSpectator, 15;
+		}
+		if (strcharinfo(3) == "2008rwc_02") {
+			callsub ResetSpectator, 16;
+		}
+		if (strcharinfo(3) == "2008rwc_03") {
+			callsub ResetSpectator, 17;
+		}
+		if (strcharinfo(3) == "2008rwc_04") {
+			callsub ResetSpectator, 18;
+		}
+		if (strcharinfo(3) == "1@dth3") {
+			callsub ResetSpectator, 19;
+		}
+		if (strcharinfo(3) == "1@lab") {
+			callsub ResetSpectator, 20;
+		}
+		if (strcharinfo(3) == "1@tnm1") {
+			callsub ResetSpectator, 21;
+		}
+		if (strcharinfo(3) == "1@pump") {
+			callsub ResetSpectator, 22;
+		}
+		if (strcharinfo(3) == "2@pump") {
+			callsub ResetSpectator, 23;
+		}
+		if (strcharinfo(3) == "guils_vs2") {
+			callsub ResetSpectator, 24;
+		}
+		if (strcharinfo(3) == "kvm") {
+			callsub ResetSpectator, 25;
+		}
+		if (strcharinfo(3) == "job_prist") {
+			callsub ResetSpectator, 26;
+		}
+		if (strcharinfo(3) == "flavius") {
+			callsub ResetSpectator, 27;
+		}
+		if (strcharinfo(3) == "bio4") {
+		}
+			callsub ResetSpectator, 28;
+		if (strcharinfo(3) == "ecl_tdun02") {
+			callsub ResetSpectator, 29;
+		}
+		if (strcharinfo(3) == "evt_bomb") {
+			callsub ResetSpectator, 30;
+		}
 		end;
 
 	CheckSpectators:
@@ -183,72 +341,152 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 
 		if (.@arena == 1 && $spectator_count1 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 2 && $spectator_count2 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 3 && $spectator_count3 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 4 && $spectator_count4 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 5 && $spectator_count5 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 6 && $spectator_count6 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 7 && $spectator_count7 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 8 && $spectator_count8 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 9 && $spectator_count9 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 10 && $spectator_count10 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 11 && $spectator_count11 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		} else if (.@arena == 12 && $spectator_count12 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
-		} else if (.@arena == 13 && $spectator_count12 >= 2) {
+		} else if (.@arena == 13 && $spectator_count13 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
-		} else if (.@arena == 14 && $spectator_count12 >= 2) {
+		} else if (.@arena == 14 && $spectator_count14 >= 2) {
 			mes "[ Fenrir ]";
-			mes "Sorry, the spectator limit has been reached. Please try again later.";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 15 && $spectator_count15 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 16 && $spectator_count16 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 17 && $spectator_count17 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 18 && $spectator_count18 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 19 && $spectator_count19 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 20 && $spectator_count20 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 21 && $spectator_count21 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 22 && $spectator_count22 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 23 && $spectator_count23 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 24 && $spectator_count24 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 25 && $spectator_count25 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 26 && $spectator_count26 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 27 && $spectator_count27 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 28 && $spectator_count28 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 29 && $spectator_count29 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
+			cutin "", 255;
+			close;
+		} else if (.@arena == 30 && $spectator_count30 >= 2) {
+			mes "[ Fenrir ]";
+			mes "Você chegou tarde. Já tem muitos fedidos assistindo essa partida.";
 			cutin "", 255;
 			close;
 		}
@@ -266,14 +504,29 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (.@arena == 10) set $spectator_count10, $spectator_count10 + 1;
 		if (.@arena == 11) set $spectator_count11, $spectator_count11 + 1;
 		if (.@arena == 12) set $spectator_count12, $spectator_count12 + 1;
-		if (.@arena == 13) set $spectator_count13, $spectator_count12 + 1;
-		if (.@arena == 14) set $spectator_count14, $spectator_count12 + 1;
-
+		if (.@arena == 13) set $spectator_count13, $spectator_count13 + 1;
+		if (.@arena == 14) set $spectator_count14, $spectator_count14 + 1;
+		if (.@arena == 15) set $spectator_count15, $spectator_count15 + 1;
+		if (.@arena == 16) set $spectator_count16, $spectator_count16 + 1;
+		if (.@arena == 17) set $spectator_count17, $spectator_count17 + 1;
+		if (.@arena == 18) set $spectator_count18, $spectator_count18 + 1;
+		if (.@arena == 19) set $spectator_count19, $spectator_count19 + 1;
+		if (.@arena == 20) set $spectator_count20, $spectator_count20 + 1;
+		if (.@arena == 21) set $spectator_count21, $spectator_count21 + 1;
+		if (.@arena == 22) set $spectator_count22, $spectator_count22 + 1;
+		if (.@arena == 23) set $spectator_count23, $spectator_count23 + 1;
+		if (.@arena == 24) set $spectator_count24, $spectator_count24 + 1;
+		if (.@arena == 25) set $spectator_count25, $spectator_count25 + 1;
+		if (.@arena == 26) set $spectator_count26, $spectator_count26 + 1;
+		if (.@arena == 27) set $spectator_count27, $spectator_count27 + 1;
+		if (.@arena == 28) set $spectator_count28, $spectator_count28 + 1;
+		if (.@arena == 29) set $spectator_count29, $spectator_count29 + 1;
+		if (.@arena == 30) set $spectator_count30, $spectator_count30 + 1;
+	
 		// Teleport the user to the map and make them invisible
 		warp .@map$, .@x, .@y;
 		setoption Option_Invisible | Option_Xmas, 1;
 		sc_start SC_NOCHAT,6000,0;
-		// Disable user actions
 		end;
 
 	ResetSpectator:
@@ -297,13 +550,29 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (.@arena == 10 && $spectator_count10 > 0) set $spectator_count10, $spectator_count10 - 1;
 		if (.@arena == 11 && $spectator_count11 > 0) set $spectator_count11, $spectator_count11 - 1;
 		if (.@arena == 12 && $spectator_count12 > 0) set $spectator_count12, $spectator_count12 - 1;
-		if (.@arena == 13 && $spectator_count12 > 0) set $spectator_count13, $spectator_count12 - 1;
-		if (.@arena == 14 && $spectator_count12 > 0) set $spectator_count14, $spectator_count12 - 1;
+		if (.@arena == 13 && $spectator_count13 > 0) set $spectator_count13, $spectator_count13 - 1;
+		if (.@arena == 14 && $spectator_count14 > 0) set $spectator_count14, $spectator_count14 - 1;
+		if (.@arena == 15 && $spectator_count15 > 0) set $spectator_count15, $spectator_count15 - 1;
+		if (.@arena == 16 && $spectator_count16 > 0) set $spectator_count16, $spectator_count16 - 1;
+		if (.@arena == 17 && $spectator_count17 > 0) set $spectator_count17, $spectator_count17 - 1;
+		if (.@arena == 18 && $spectator_count18 > 0) set $spectator_count18, $spectator_count18 - 1;
+		if (.@arena == 19 && $spectator_count19 > 0) set $spectator_count19, $spectator_count19 - 1;
+		if (.@arena == 20 && $spectator_count20 > 0) set $spectator_count20, $spectator_count20 - 1;
+		if (.@arena == 21 && $spectator_count21 > 0) set $spectator_count21, $spectator_count21 - 1;
+		if (.@arena == 22 && $spectator_count22 > 0) set $spectator_count22, $spectator_count22 - 1;
+		if (.@arena == 23 && $spectator_count23 > 0) set $spectator_count23, $spectator_count23 - 1;
+		if (.@arena == 24 && $spectator_count24 > 0) set $spectator_count24, $spectator_count24 - 1;
+		if (.@arena == 25 && $spectator_count25 > 0) set $spectator_count25, $spectator_count25 - 1;
+		if (.@arena == 26 && $spectator_count26 > 0) set $spectator_count26, $spectator_count26 - 1;
+		if (.@arena == 27 && $spectator_count27 > 0) set $spectator_count27, $spectator_count27 - 1;
+		if (.@arena == 28 && $spectator_count28 > 0) set $spectator_count28, $spectator_count28 - 1;
+		if (.@arena == 29 && $spectator_count29 > 0) set $spectator_count29, $spectator_count29 - 1;
+		if (.@arena == 30 && $spectator_count30 > 0) set $spectator_count30, $spectator_count30 - 1;
 	}
 	cutin "", 255;
 	close;
 	}
 finalization:
-cutin "", 255;
-close;
+	cutin "", 255;
+	close;
 }

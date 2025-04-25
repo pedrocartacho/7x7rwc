@@ -20,3 +20,200 @@
 //	Balmung cannot be dropped, traded, or placed in Guild Storage (1+2+64).
 //	Only groups of group-level 50 and up can override this setting.
 
+// Old Blue Box Items - Cannot be dropped, traded, or auctioned but can be stored
+501,259,100  // Red Potion
+502,259,100  // Orange Potion
+503,259,100  // Yellow Potion
+504,259,100  // White Potion
+505,259,100  // Blue Potion
+506,259,100  // Green Potion
+507,259,100  // Red Herb
+508,259,100  // Yellow Herb
+509,259,100  // White Herb
+510,259,100  // Blue Herb
+511,259,100  // Green Herb
+512,259,100  // Apple
+513,259,100  // Banana
+514,259,100  // Grape
+515,259,100  // Carrot
+516,259,100  // Potato
+517,259,100  // Meat
+518,259,100  // Honey
+519,259,100  // Milk
+520,259,100  // Hinalle Leaflet
+521,259,100  // Aloe Leaflet
+522,259,100  // Mastela Fruit
+523,259,100  // Holy Water
+525,259,100  // Panacea
+526,259,100  // Royal Jelly
+528,259,100  // Monster Food
+529,259,100  // Candy
+530,259,100  // Candy Cane
+531,259,100  // Apple Juice
+532,259,100  // Banana Juice
+533,259,100  // Grape Juice
+534,259,100  // Carrot Juice
+535,259,100  // Pumpkin
+536,259,100  // Ice Cream
+537,259,100  // Pet Food
+538,259,100  // Well-baked Cookie
+539,259,100  // Piece of Cake
+544,259,100  // Raw Fish
+545,259,100  // Condensed Red Potion
+546,259,100  // Condensed Yellow Potion
+547,259,100  // Condensed White Potion
+548,259,100  // Cheese
+549,259,100  // Yam
+550,259,100  // Rice Cake
+551,259,100  // Sushi
+553,259,100  // Bao
+555,259,100  // Traditional Rice Cake
+558,259,100  // Chocolate
+561,259,100  // White Chocolate
+601,259,100  // Fly Wing
+602,259,100  // Butterfly Wing
+604,259,100  // Dead Branch
+605,259,100  // Anodyne
+606,259,100  // Aloevera
+607,259,100  // Yggdrasil Berry
+608,259,100  // Yggdrasil Seed
+609,259,100  // Amulet
+610,259,100  // Yggdrasil Leaf
+611,259,100  // Magnifier
+612,259,100  // Mini Furnace
+613,259,100  // Iron Hammer
+614,259,100  // Golden Hammer
+615,259,100  // Oridecon Hammer
+618,259,100  // Worn Out Scroll
+619,259,100  // Unripe Apple
+620,259,100  // Orange Juice
+621,259,100  // Bitter Herb
+622,259,100  // Rainbow Carrot
+623,259,100  // Earthworm the Dude
+624,259,100  // Rotten Fish
+625,259,100  // Rusty Iron
+626,259,100  // Monster Juice
+627,259,100  // Sweet Milk
+628,259,100  // Well-Dried Bone
+629,259,100  // Singing Flower
+630,259,100  // Dew Laden Moss
+631,259,100  // Deadly Noxious Herb
+632,259,100  // Fatty Chubby Earthworm
+633,259,100  // Sweet Potato
+634,259,100  // Tropical Banana
+635,259,100  // Orc Trophy
+636,259,100  // No Recipient
+637,259,100  // Old Broom
+638,259,100  // Silver Knife of Chastity
+639,259,100  // Armlet of Obedience
+640,259,100  // Shining Stone
+641,259,100  // Contracts in Shadow
+642,259,100  // Book of the Devil
+643,259,100  // Pet Incubator
+644,259,100  // Gift Box
+645,259,100  // Concentration Potion
+656,259,100  // Awakening Potion
+657,259,100  // Berserk Potion
+659,259,100  // Her Heart
+663,259,100  // Songpyun
+664,259,100  // Gift Box
+665,259,100  // Gift Box
+666,259,100  // Gift Box
+667,259,100  // Gift Box
+668,259,100  // Red_Envelope
+678,259,100  // Poison Bottle
+679,259,100  // Pilule
+701,259,100  // Ora Ora
+702,259,100  // Animal Gore
+703,259,100  // Hinalle
+704,259,100  // Aloe
+705,259,100  // Clover
+706,259,100  // Four Leaf Clover
+707,259,100  // Singing Plant
+708,259,100  // Ment
+710,259,100  // Illusion Flower
+711,259,100  // Shoot
+712,259,100  // Flower
+713,259,100  // Empty Bottle
+715,259,100  // Yellow Gemstone
+716,259,100  // Red Gemstone
+717,259,100  // Blue Gemstone
+718,259,100  // Garnet
+719,259,100  // Amethyst
+720,259,100  // Aquamarine
+721,259,100  // Emerald
+722,259,100  // Pearl
+723,259,100  // Ruby
+724,259,100  // Cursed Ruby
+725,259,100  // Sardonyx
+726,259,100  // Sapphire
+727,259,100  // Opal
+728,259,100  // Topaz
+729,259,100  // Zircon
+730,259,100  // 1carat Diamond
+731,259,100  // 2carat Diamond
+732,259,100  // 3carat Diamond
+733,259,100  // Cracked Diamond
+734,259,100  // Red Frame
+735,259,100  // Chung Jah
+736,259,100  // China
+737,259,100  // Black Ladle
+738,259,100  // Pencil Case
+739,259,100  // Rouge
+740,259,100  // Puppet
+741,259,100  // Poring Doll
+742,259,100  // Chonchon Doll
+743,259,100  // Spore Doll
+744,259,100  // Bouquet
+745,259,100  // Wedding Bouquet
+746,259,100  // Glass Bead
+747,259,100  // Crystal Mirror
+748,259,100  // Witherless Rose
+749,259,100  // Frozen Rose
+750,259,100  // Baphomet Doll
+751,259,100  // Osiris Doll
+752,259,100  // Grasshopper Doll
+753,259,100  // Yoyo Doll
+754,259,100  // Raccoon Doll
+901,259,100  // Danggie
+902,259,100  // Tree Root
+903,259,100  // Reptile Tongue
+904,259,100  // Scorpion Tail
+905,259,100  // Stem
+906,259,100  // Pointed Scale
+907,259,100  // Resin
+908,259,100  // Spawn
+909,259,100  // Jellopy
+910,259,100  // Garlet
+911,259,100  // Scell
+912,259,100  // Zargon
+913,259,100  // Tooth of Bat
+914,259,100  // Fluff
+915,259,100  // Chrysalis
+916,259,100  // Feather of Birds
+917,259,100  // Talon
+918,259,100  // Sticky Webfoot
+919,259,100  // Animal Skin
+920,259,100  // Wolf Claw
+921,259,100  // Mushroom Spore
+922,259,100  // Orc's Fang
+923,259,100  // Evil Horn
+924,259,100  // Powder of Butterfly
+925,259,100  // Bill of Birds
+926,259,100  // Snake Scale
+928,259,100  // Insect Feeler
+929,259,100  // Immortal Heart
+930,259,100  // Rotten Bandage
+931,259,100  // Orcish Voucher
+932,259,100  // Skel-Bone
+934,259,100  // Memento
+935,259,100  // Shell
+936,259,100  // Scale Shell
+937,259,100  // Venom Canine
+938,259,100  // Sticky Mucus
+939,259,100  // Bee Sting
+940,259,100  // Grasshopper's Leg
+941,259,100  // Nose Ring
+942,259,100  // Yoyo Tail
+943,259,100  // Solid Shell
+

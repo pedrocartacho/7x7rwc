@@ -10,7 +10,7 @@
 //
 
 
-izlude,116,116,5	script	salva skill char_reg_str	739,{
+prontera,150,190,5	script	salva skill char_reg_str	739,{
 function AddZero;
 
 do{

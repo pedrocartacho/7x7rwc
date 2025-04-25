@@ -10,7 +10,7 @@ izlude,121,111,6	script	Blue Team	683,{
     if ( !getcharid(1) ) {
         cutin "hero_chaos_01 rwc",2;
         mes "[ ^0000FFChaos^000000 ]";
-        mes "Você precisa estar em um ^0000FFgrupo^000000. É ótimo que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terá que melhorar. Você já ouviu a palavra 'liderança' por aí?";
+        mes "Você precisa estar em um ^0000FFgrupo^000000. É ótimo que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terï¿½ que melhorar. Você já ouviu a palavra 'liderança' por aí?";
         next;
         cutin "", 255;
         close;
@@ -20,7 +20,7 @@ izlude,121,111,6	script	Blue Team	683,{
     if ( !getcharid(2) ) {
         cutin "hero_chaos_01 rwc",2;
         mes "[ ^0000FFChaos^000000 ]";
-        mes "Você precisa de estar em uma ^0000ffguild^000000. É ótimo que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terá que melhorar. Você já ouviu a palavra 'liderança' por aí?";
+        mes "Você precisa de estar em uma ^0000ffguild^000000. O último que você tenha pudor e evite expor a nojeira de quem você é para os outros, mas, pra jogar 7x7 você terá que melhorar. Você já ouviu a palavra 'liderança' por aí?";
         next;
         cutin "", 255;
         close;
@@ -48,7 +48,7 @@ izlude,121,111,6	script	Blue Team	683,{
         // Check the party size
         if ( .@partymembercount < $@jogadoresblue ) {
             mes "[ ^0000FFChaos^000000 ]";
-            mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 pessoas online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
+            mes "você precisa de ^0000ff"+ $@jogadoresblue +" pessoas^000000 online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
             cutin "", 255;
             close;
         }
@@ -60,7 +60,7 @@ izlude,121,111,6	script	Blue Team	683,{
         }
         if ( .@islogin < $@jogadoresblue ) {
             mes "[ ^0000FFChaos^000000 ]";
-            mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 pessoas online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
+            mes "Você precisa de ^0000ff"+ $@jogadoresblue +" pessoas^000000 online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
             cutin "", 255;
             close;
         }
@@ -94,7 +94,7 @@ izlude,121,111,6	script	Blue Team	683,{
 
     } else {
         mes "[ ^0000FFChaos^000000 ]";
-        mes "Você precisa de ^0000ff"+ $@jogadoresblue +"^000000 membros, todos online e na mesma guild e party. A dificuldade de cumprir horários é um sinal clássico de incompetência.";
+        mes "Você precisa de ^0000ff"+ $@jogadoresblue +" membros^000000, todos online e na mesma guild e party. A dificuldade de cumprir horários é um sinal clássico de incompetência.";
         cutin "", 255;
         close;
     }

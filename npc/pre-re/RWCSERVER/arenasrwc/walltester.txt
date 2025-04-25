@@ -1,4 +1,4 @@
-izlude,116,118,5	script	lembrar de remover	123,{
+prontera,160,190,5	script	lembrar de remover	123,{
 	mes "[Wall Tester]";
 	mes "Oi! O que voce deseja fazer?";
 	next;

@@ -13,7 +13,7 @@
 abbey02,0,0	monster	Swift Zombie Slaughter	2603,2,300000
 gl_prison,0,0	monster	Solid Zombie Prisoner	2604,2,300000
 gld_dun04,0,0	monster	Zombie Master Ringleader	2605,2,300000
-pay_dun00,0,0	monster	Furious Zombie	2606,2,300000
+//pay_dun00,0,0	monster	Furious Zombie	2606,2,300000
 schg_dun01,0,0	monster	Elusive Zakudam	2607,2,300000
 prt_fild03,0,0	monster	Swift Yoyo	2608,2,300000
 ayo_fild02,0,0	monster	Solid Yoyo	2609,2,300000
@@ -55,10 +55,10 @@ beach_dun2,0,0	monster	Furious Stalactic Golem	2644,2,300000
 prt_fild02,0,0	monster	Elusive Stainer	2645,2,300000
 treasure_n1,0,0	monster	Swift Spore	2646,2,300000
 tur_dun02,0,0	monster	Solid Solider	2647,2,300000
-pay_dun02,0,0	monster	Soldier Skeleton Ringleader	2648,2,300000
-pay_dun01,0,0	monster	Furious Soldier Skeleton	2649,2,300000
+//pay_dun02,0,0	monster	Soldier Skeleton Ringleader	2648,2,300000
+//pay_dun01,0,0	monster	Furious Soldier Skeleton	2649,2,300000
 tha_t09,0,0	monster	Elusive Lady Solace	2650,2,300000
-pay_dun03,0,0	monster	Swift Sohee	2651,2,300000
+//pay_dun03,0,0	monster	Swift Sohee	2651,2,300000
 ice_dun02,0,0	monster	Solid Snowier	2652,2,300000
 pay_fild02,0,0	monster	Boa Ringleader	2653,2,300000
 ayo_fild01,0,0	monster	Furious Smokie	2654,2,300000
@@ -110,7 +110,7 @@ gef_fild07,0,0	monster	Swift Poring	2699,2,300000
 ein_fild09,0,0	monster	Solid Porcellio	2700,2,300000
 prt_maze03,0,0	monster	Poporing Ringleader	2701,2,300000
 prt_maze02,0,0	monster	Furious Poporing	2702,2,300000
-pay_fild04,0,0	monster	Elusive Poporing	2703,2,300000
+//pay_dun04,0,0	monster	Elusive Poporing	2703,2,300000
 ama_dun02,0,0	monster	Swift Poison Toad	2704,2,300000
 mjolnir_06,0,0	monster	Solid Poison Spore	2705,2,300000
 odin_tem03,0,0	monster	Plasma Ringleader	2706,2,300000
@@ -258,7 +258,7 @@ in_sphinx1,0,0	monster	Elusive Drainliar	2847,2,300000
 tur_dun01,0,0	monster	Swift Dragon Tail	2848,2,300000
 nyd_dun01,0,0	monster	Solid Draco	2849,2,300000
 dic_fild02,0,0	monster	Dolomedes Ringleader	2850,2,300000
-pay_dun04,0,0	monster	Furious Dokebi	2851,2,300000
+//pay_dun04,0,0	monster	Furious Dokebi	2851,2,300000
 nif_fild01,0,0	monster	Elusive Disguise	2852,2,300000
 jupe_core,0,0	monster	Swift Dimik	2853,2,300000
 gef_dun02,0,0	monster	Solid Deviruchi	2854,2,300000
