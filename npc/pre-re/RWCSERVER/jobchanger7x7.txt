@@ -93,11 +93,11 @@ izlude,120,115,4	script	Job Master	650,{
             getitem2 5170, 1, 1, 4, 0, 0, 0, 0, 0; // +4 feather beret
             //getitem2 5379, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 ballon isilla
             //equip 5379;
+            getitem2 5365, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 magnolia hat isilla
+            equip 5365;
             getitem2 5104, 1, 1, 0, 0, 0, 0, 0, 0; // dark blinder
             equip 5104;
             getitem2 5362, 1, 1, 0, 0, 0, 0, 0, 0; // ninja scroll
-            equip 5362;
-            getitem2 5365, 1, 1, 4, 0, 4412, 0, 0, 0; // +4 magnolia hat isilla
             equip 5362;
             getitem2 2366, 1, 1, 4, 0, 4003, 0, 0, 0; // +4 divine coat pupa
             equip 2366;

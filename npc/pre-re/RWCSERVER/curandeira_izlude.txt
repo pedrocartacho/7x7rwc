@@ -35,6 +35,8 @@ izlude,131,112,5	script	Healer	450,{
     sc_start SC_BLESSING,300000,10; // Cast Blessing level 10 for 600 seconds
     sc_start SC_INCREASEAGI,300000,10; // Cast Increase Agility level 10 for 600 seconds
     percentheal 100,100;//obviamente isso precisa ser depois da bless pra nego n ter q falar 2x
+    //por causa das obb custom
+    atcommand "@identifyall";
 
     if (qtdcompbranca > 0) { 
         set .qtd, qtdcompbranca; 
@@ -206,6 +208,8 @@ izlude,131,112,5	script	Healer	450,{
         atcommand "@option 0 0 32";
     }
 
+    //moskaum identificar
+    
 	// Set the NPC to automatically refine all equipped items to the safe level
 	.@safe_levels = 4; // Safe level for Armor and other equipment
 	.@weapon_safe_levels[1] = 7; // Safe level for Level 1 Weapons

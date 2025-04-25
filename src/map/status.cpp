@@ -8689,6 +8689,48 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			return 0;
 		if (sc->opt1)
 			return 0; // Cannot override other opt1 status changes. [Skotlex]
+		//custom, tentando fazer nego escondido (hide cloaking) aparecer congelado
+		// clif_specialeffect(bl; EFST_BODYSTATE_FREEZING);
+
+
+		//esse codigo aqui fez todos da tela (inclusive os escondidos) emitir um efeito, e nao era efeito de congelamento
+		// {
+		// 	struct block_list *target = bl;
+		// 	map_foreachinrange([](struct block_list *bl_, va_list ap) -> int {
+		// 		struct block_list *target = va_arg(ap, struct block_list *);
+		// 		if (bl_->type == BL_PC && bl_ != target) {
+		// 			clif_specialeffect(bl_, EF_FREEZE, AREA);
+		// 		}
+		// 		return 0;
+		// 	}, target, bl->x, bl->y, AREA_SIZE);
+		// }
+		
+		//
+		
+		//alterei isso if (bl_->type == BL_PC && bl_ != target)
+
+		// map_foreachinrange([](struct block_list *bl_, va_list ap) -> int {
+		// 	struct block_list *target = va_arg(ap, struct block_list *);
+		// 	if (bl_->type == BL_PC) {
+		// 		struct map_session_data *sd = BL_CAST(BL_PC, bl_);
+		// 		if (sd)
+		// 			clif_specialeffect_single(&target->bl, EF_FREEZE);
+		// 	}
+		// 	return 0;
+		// }, bl, AREA_SIZE, bl);
+
+		//isso daqui faz com que um efeito seja emitido toda vez que SC_FREEZE e enviado
+		//porem EF_FREEZE e o efeito de freeze de terceira classe
+		//o congelamento nao e freeze, e frozen
+		//e pareeeeeeeece que nao e um EF_ tipico
+		//clif_specialeffect(bl, EF_FREEZE, AREA);
+		//fim
+
+		//inicio
+		// sd = BL_CAST(BL_PC, bl);
+		// if (sd)
+		// 	clif_refresh(sd); // <- Isso forca o client de todos a receberem a sprite "congelada"
+		//fim
 		break;
 	case SC_FREEZING:
 	case SC_CRYSTALIZE:
@@ -11480,6 +11522,12 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			if (sd && pc_issit(sd)) // Avoid sprite sync problems.
 				pc_setstand(sd, true);
 		case SC_FREEZE:
+		//bullshit q eu tava testando
+			// if (sc->data[SC_DANCING])
+			// unit_stop_walking(bl, 1);
+			// sd = BL_CAST(BL_PC, bl);
+			// if (sd)
+			// 	clif_refresh(sd); // Força o client a reavaliar a sprite (ex: congelamento)
 		case SC_STUN:
 			if (sc->data[SC_DANCING])
 				unit_stop_walking(bl, 1);
@@ -11575,7 +11623,21 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			else
 				sc->opt1 = OPT1_STONE;
 			break;
-		case SC_FREEZE:		sc->opt1 = OPT1_FREEZE;		break;
+		case SC_FREEZE:		
+			sc->opt1 = OPT1_FREEZE;
+			// codigo abaixo foi uma tentativa de fazer o efeito de congelado aparecer mesmo se estiver de cloak
+			//parecer final (24 04 2025 16h) e q SC_FREEZE nao gera EFST_FREEZE
+			//pq EFST_FREEZE e o efeito de freezing, que e um debuff de terceira classe (frost misty, ice launcher, etc)
+			//o congelamento (nevasca, rajada congelante, piada) se chama frozen, tem SC_FREEZE e nao tem EFST_
+			//porque o cliente nao executa um efeito em .tga, ele acresenta uma camada de sprite em cima do cara congelado
+			//essa camada e o data/sprite/이팩트/얼음땡.act e o respectivo .spr de mesmo nome
+			//estorei minha conta de gpt em 2 contas e por isso achei motivos para desistir de consertar esse bug
+			//aaaaaaaaaaaaaaaaaaaaaacho que o problema de n exibir e do client mas posso estar errado
+			// if (bl->type == BL_PC) {
+			// 	struct map_session_data *tsd = BL_CAST(BL_PC, bl);
+			// 	clif_refresh(tsd);
+			//}
+			break;
 		case SC_STUN:		sc->opt1 = OPT1_STUN;		break;
 		case SC_SLEEP:		sc->opt1 = OPT1_SLEEP;		break;
 		case SC_BURNING:	sc->opt1 = OPT1_BURNING;	break; // Burning need this to be showed correctly. [pakpil]

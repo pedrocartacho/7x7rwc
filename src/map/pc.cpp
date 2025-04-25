@@ -5865,6 +5865,64 @@ enum e_setpos pc_setpos(struct map_session_data* sd, unsigned short mapindex, in
 	sd->bl.x = sd->ud.to_x = x;
 	sd->bl.y = sd->ud.to_y = y;
 
+	// // Força remoção do item 5137 ao entrar em mapa GvG
+	// if (map_flag_gvg(m)) {
+	// 	int i;
+	// 	for (i = 0; i < EQI_MAX; i++) {
+	// 		int idx = sd->equip_index[i];
+	// 		if (idx >= 0 && sd->inventory.u.items_inventory[idx].nameid == 5137) {
+	// 			pc_unequipitem(sd, idx, 3); // update cliente e inventário
+	// 		}
+	// 	}
+	// }
+
+	//o codigo acima funciona, mas gpt recomendou outro com mais ids
+
+	// Força remoção de visuais proibidos ao entrar em mapa GvG
+if (map_flag_gvg(m)) {
+	static const int banned_visuals[] = {
+		5137,//alice hat
+		5132,// hat angeling
+		5781,//persica
+		5302,//lotus flower hat
+		5303,//flower wreath
+		5325,//robo eye
+		5332,//loki mask
+		5337,//party recruiter hat
+		5339,//friend recruiter hat
+		5353,//hat of the sun of god
+		5361,//gang's scarf
+		5372,//koneko hat
+		5375,//orc hero headdress
+		5376,//flying evil wing
+		5383,//hunting cap
+		5387,//neko mimi kafra band
+		5389,//angel spirit
+		5200,//coppola
+		5209,//yellow baseball
+		5278,//yellow ribbon
+		5283,//chick hat
+		5287,//vacation hat
+		5100,//sales banner
+		5171,//valkyrie helm
+		5179,//gold tiara
+		5147,//baseball cap
+	};
+	int i, j;
+	for (i = 0; i < EQI_MAX; i++) {
+		int idx = sd->equip_index[i];
+		if (idx >= 0) {
+			int id = sd->inventory.u.items_inventory[idx].nameid;
+			for (j = 0; j < ARRAYLENGTH(banned_visuals); j++) {
+				if (id == banned_visuals[j]) {
+					pc_unequipitem(sd, idx, 3); // update cliente e inventário
+					break;
+				}
+			}
+		}
+	}
+}
+
 	if( sd->status.guild_id > 0 && mapdata->flag[MF_GVG_CASTLE] )
 	{	// Increased guild castle regen [Valaris]
 		struct guild_castle *gc = guild_mapindex2gc(sd->mapindex);
@@ -10145,6 +10203,60 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 	if (!(id = sd->inventory_data[n]))
 		return false;
 	pos = pc_equippoint(sd,n); //With a few exceptions, item should go in all specified slots.
+
+	//isso ja funciona mas gpt quis outro
+	// // Bloquear item 5137 em mapas GvG
+	// if (id->nameid == 5137 && map_flag_gvg(sd->bl.m)) {
+	// 	if( equipswitch ){
+	// 		clif_equipswitch_add(sd, n, req_pos, ITEM_EQUIP_ACK_FAIL);
+	// 	}else{
+	// 		clif_equipitemack(sd,n,0,ITEM_EQUIP_ACK_FAIL);
+	// 	}
+	// 	return false;
+	// }
+
+	// Bloquear visuais proibidos em mapas GvG
+	static const int banned_visuals[] = {
+		5137,//alice hat
+		5132,// hat angeling
+		5781,//persica
+		5302,//lotus flower hat
+		5303,//flower wreath
+		5325,//robo eye
+		5332,//loki mask
+		5337,//party recruiter hat
+		5339,//friend recruiter hat
+		5353,//hat of the sun of god
+		5361,//gang's scarf
+		5372,//koneko hat
+		5375,//orc hero headdress
+		5376,//flying evil wing
+		5383,//hunting cap
+		5387,//neko mimi kafra band
+		5389,//angel spirit
+		5200,//coppola
+		5209,//yellow baseball
+		5278,//yellow ribbon
+		5283,//chick hat
+		5287,//vacation hat
+		5100,//sales banner
+		5171,//valkyrie helm
+		5179,//gold tiara
+		5147,//baseball cap
+	};
+
+	if (map_flag_gvg(sd->bl.m)) {
+		for (int i = 0; i < ARRAYLENGTH(banned_visuals); i++) {
+			if (id->nameid == banned_visuals[i]) {
+				if( equipswitch ){
+					clif_equipswitch_add(sd, n, req_pos, ITEM_EQUIP_ACK_FAIL);
+				}else{
+					clif_equipitemack(sd,n,0,ITEM_EQUIP_ACK_FAIL);
+				}
+				return false;
+			}
+		}
+	}
 
 	if(battle_config.battle_log && !equipswitch)
 		ShowInfo("equip %hu (%d) %x:%x\n",sd->inventory.u.items_inventory[n].nameid,n,id?id->equip:0,req_pos);
