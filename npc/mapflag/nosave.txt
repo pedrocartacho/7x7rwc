@@ -17,6 +17,8 @@
 
 // Job Quests ====================
 //job_thief1	mapflag	nosave	SavePoint
+pvp_y_1-1	mapflag	nosave	SavePoint
+pvp_y_1-2	mapflag	nosave	SavePoint
 2012rwc_01	mapflag	nosave	SavePoint
 2012rwc_02	mapflag	nosave	SavePoint
 2012rwc_03	mapflag	nosave	SavePoint

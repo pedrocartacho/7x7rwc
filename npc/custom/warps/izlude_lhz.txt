@@ -9,5 +9,5 @@
 //============================================================
 
 // Izlude to Lighthalzen Dungeon 3
-izlude,162,87,0	warp	izlude_to_lhz	2,2,lhz_dun03,139,134  // Destination 3 cells south
-lhz_dun03,139,137,0	warp	lhz_to_izlude	2,2,izlude,159,87   // Destination 3 cells west 
+izlude,162,87,0	warp	izlude_to_lhz	1,1,lhz_dun03,139,134  // Destination 3 cells south
+lhz_dun03,139,137,0	warp	lhz_to_izlude	1,1,izlude,159,87   // Destination 3 cells west 
