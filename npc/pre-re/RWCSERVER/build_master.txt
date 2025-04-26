@@ -1014,6 +1014,7 @@
             skill 476,4,0;
             skill 1005,1,0;
 			}
+		close;
 
 		// if (Class == ?) {
 		// 	//primeiro reseta
