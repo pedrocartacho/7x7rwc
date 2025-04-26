@@ -217,3 +217,29 @@
 942,259,100  // Yoyo Tail
 943,259,100  // Solid Shell
 
+// OBB Items - Cannot be dropped or traded
+5132,3,100  // Angeling Hat
+5781,3,100  // Persica
+5302,3,100  // Lotus Flower Hat
+5303,3,100  // Flower Wreath
+5325,3,100  // Robo Eye
+5332,3,100  // Loki Mask
+5337,3,100  // Party Recruiter Hat
+5339,3,100  // Friend Recruiter Hat
+5353,3,100  // Hat of the Sun God
+5361,3,100  // Gang's Scarf
+5372,3,100  // Koneko Hat
+5375,3,100  // Orc Hero Headdress
+5383,3,100  // Hunting Cap
+5387,3,100  // Neko Mimi Kafra Band
+5389,3,100  // Angel Spirit
+5200,3,100  // Coppola
+5209,3,100  // Yellow Baseball
+5278,3,100  // Yellow Ribbon
+5283,3,100  // Chick Hat
+5287,3,100  // Vacation Hat
+5100,3,100  // Sales Banner
+5171,3,100  // Valkyrie Helm
+5179,3,100  // Gold Tiara
+5147,3,100  // Baseball Cap
+
