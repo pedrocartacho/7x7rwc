@@ -1,5 +1,5 @@
-login_ip: 45.231.135.54
-char_ip: 45.231.135.54
+login_ip: 127.0.0.1
+char_ip: 35.247.202.156
 
 // Login Server Port
 login_port: 6900

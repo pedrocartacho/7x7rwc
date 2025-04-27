@@ -1,12 +1,12 @@
 // Server Communication username and password.
-userid: userid
-passwd: user_pass
+userid: s1
+passwd: p1
 
 // Login Server IP
 // The character server connects to the login server using this IP address.
 // NOTE: This is useful when you are running behind a firewall or are on
 // a machine with multiple interfaces.
-login_ip: 45.231.135.54
+login_ip: localhost
 
 // Login Server Port
 login_port: 6900
@@ -14,7 +14,7 @@ login_port: 6900
 // Character Server IP
 // The IP address which clients will use to connect.
 // Set this to what your server's public IP address is.
-char_ip: 45.231.135.54
+char_ip: 127.0.0.1
 
 // Character Server Port
 char_port: 6121

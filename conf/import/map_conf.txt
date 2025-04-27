@@ -1,9 +1,9 @@
 // Interserver communication passwords, set in account.txt (or equiv.)
-userid: userid
-passwd: user_pass
+userid: s1
+passwd: p1
 
-char_ip: 45.231.135.54
-map_ip: 45.231.135.54
+char_ip: 127.0.0.1
+map_ip: 127.0.0.1
 
 // Character Server Port
 char_port: 6121

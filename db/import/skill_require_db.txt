@@ -31,3 +31,10 @@
 //	Specified equipment to be equipped. For multiple values, use : as delimiter.
 //	Max. multiple value is 10 (skill.h: MAX_SKILL_EQUIP_REQUIRE)
 
+CR_AUTOGUARD,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CR_REFLECTSHIELD,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CR_DEFENDER,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ML_AUTOGUARD,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MS_REFLECTSHIELD,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ML_DEFENDER,0,0,0,0,0,0,0,0,0,shield,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
