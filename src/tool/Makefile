@@ -29,11 +29,11 @@ all: mapcache csv2yaml
 
 mapcache: obj_all $(MAPCACHE_OBJ) $(COMMON_DIR_OBJ) $(LIBCONFIG_OBJ)
 	@echo "	LD	$@"
-	@g++  -L/usr/lib -o ../../mapcache $(MAPCACHE_OBJ) $(COMMON_DIR_OBJ) $(LIBCONFIG_AR) -lpcre -lz  -ldl
+	@g++  -L/usr/lib -o ../../mapcache $(MAPCACHE_OBJ) $(COMMON_DIR_OBJ) $(LIBCONFIG_AR) -lpcre -lpthread -lz  -ldl
 
 csv2yaml: obj_all $(CSV2YAML_OBJ) $(COMMON_DIR_OBJ) $(YAML_CPP_AR)
 	@echo "	LD	$@"
-	@g++  -L/usr/lib -o ../../csv2yaml $(CSV2YAML_OBJ) $(COMMON_DIR_OBJ) $(YAML_CPP_AR) -lpcre -lz  -ldl
+	@g++  -L/usr/lib -o ../../csv2yaml $(CSV2YAML_OBJ) $(COMMON_DIR_OBJ) $(YAML_CPP_AR) -lpcre -lpthread -lz  -ldl
 
 clean:
 	@echo "	CLEAN	tool"

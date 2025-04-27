@@ -55,13 +55,13 @@ obj:
 
 login-server: obj $(LOGIN_DIR_OBJ) $(COMMON_AR)
 	@echo "	LD	login-server"
-	@g++  -L/usr/lib -o ../../login-server $(LOGIN_DIR_OBJ) $(COMMON_AR) $(LIBCONFIG_AR) -lpcre -lz  -ldl -L/usr/lib/x86_64-linux-gnu/ -lmariadb
+	@g++  -L/usr/lib -o ../../login-server $(LOGIN_DIR_OBJ) $(COMMON_AR) $(LIBCONFIG_AR) -lpcre -lpthread -lz  -ldl -L/usr/lib64/ -lmariadb
 
 # login object files
 
 obj/%.o: %.cpp $(LOGIN_H) $(COMMON_H) $(LIBCONFIG_H)
 	@echo "	CXX	$<"
-	@g++ -g -O2 -std=c++11 $(COMMON_INCLUDE) $(LIBCONFIG_INCLUDE) -DWITH_SQL -I/usr/include/mariadb -I/usr/include/mariadb/mysql  -I../common -DHAS_TLS -fno-strict-aliasing -DHAVE_SETRLIMIT -DHAVE_STRNLEN  -I/usr/include -DHAVE_MONOTONIC_CLOCK -c $(OUTPUT_OPTION) $<
+	@g++ -g -O2 -std=c++11 $(COMMON_INCLUDE) $(LIBCONFIG_INCLUDE) -DWITH_SQL -I/usr/include/mysql -I/usr/include/mysql/mysql  -I../common -DHAS_TLS -fno-strict-aliasing -DHAVE_SETRLIMIT -DHAVE_STRNLEN  -I/usr/include -DHAVE_MONOTONIC_CLOCK -c $(OUTPUT_OPTION) $<
 
 # missing object files
 $(COMMON_AR):

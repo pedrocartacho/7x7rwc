@@ -39,4 +39,4 @@ yaml-cpp: obj $(YAML_CPP_DIR_OBJ) $(YAML_CPP_AR)
 
 $(YAML_CPP_AR): $(YAML_CPP_DIR_OBJ)
 	@echo "	AR	$@"
-	@/usr/bin/ar rcs obj/yaml-cpp.a $(YAML_CPP_DIR_OBJ)
+	@/opt/rh/devtoolset-7/root/usr/bin/ar rcs obj/yaml-cpp.a $(YAML_CPP_DIR_OBJ)
