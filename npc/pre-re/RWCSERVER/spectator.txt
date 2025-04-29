@@ -207,7 +207,7 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		end;
 
 	Arena24:
-		callsub CheckSpectators, "guils_vs2", 24, 50, 50;
+		callsub CheckSpectators, "guild_vs2", 24, 50, 50;
 		end;
 
 	Arena25:
@@ -231,7 +231,7 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		end;
 
 	Arena30:
-		callsub CheckSpectators, "evt_bomb", 30, 339, 60;
+		callsub CheckSpectators, "evt_bomb", 30, 343, 39;
 		end;
 
 	Cancel:
@@ -310,7 +310,7 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (strcharinfo(3) == "2@pump") {
 			callsub ResetSpectator, 23;
 		}
-		if (strcharinfo(3) == "guils_vs2") {
+		if (strcharinfo(3) == "guild_vs2") {
 			callsub ResetSpectator, 24;
 		}
 		if (strcharinfo(3) == "kvm") {
@@ -323,8 +323,8 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 			callsub ResetSpectator, 27;
 		}
 		if (strcharinfo(3) == "bio4") {
-		}
 			callsub ResetSpectator, 28;
+		}
 		if (strcharinfo(3) == "ecl_tdun02") {
 			callsub ResetSpectator, 29;
 		}
@@ -569,8 +569,6 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (.@arena == 29 && $spectator_count29 > 0) set $spectator_count29, $spectator_count29 - 1;
 		if (.@arena == 30 && $spectator_count30 > 0) set $spectator_count30, $spectator_count30 - 1;
 	}
-	cutin "", 255;
-	close;
 	}
 finalization:
 	cutin "", 255;

@@ -42,7 +42,7 @@
 	cutin "sakray.bmp",2;
 	mes "[ Sakray ]";
 	if(Class == 0) {
-		mes "Primeiro você  vira gente, depois você aplica uma build.";
+		mes "Primeiro vocï¿½  vira gente, depois vocï¿½ aplica uma build.";
 		close;
 	}
 	mes "Ei, newbha! Bora testar aquela build super retardada? Foda-se se os outros 6 membros do seu time ficarem com vontade de se jogar do penhasco.";
@@ -60,11 +60,11 @@
 	set .@ResetBoth,0;	// Zeny for resetting both together
 
 	mes "[ Sakray ]";
-	mes "Qual será sua perpécia de qi negativo?";
+	mes "Qual serï¿½ sua perpï¿½cia de qi negativo?";
 	// mes "Reset Stats: "+ .@ResetStat +"z";
 	// mes "Reset Skills: "+ .@ResetSkill +"z";
 	// mes "Reset Both: "+ .@ResetBoth +"z";
-	mes "Não perca a oportunidade de decepcionar os outros.";
+	mes "Nï¿½o perca a oportunidade de decepcionar os outros.";
 	next;
 	switch(select("Close:^FF3355Reset Skills:Reset Stats:Reset Both^000000")) {
 	case 1:
@@ -73,7 +73,7 @@
 	case 2:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetSkill) {
-			mes "Você não tem zeny.";
+			mes "Vocï¿½ nï¿½o tem zeny.";
 			cutin "", 255;
 			close;
 		}
@@ -86,7 +86,7 @@
 	case 3:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetStat) {
-			mes "Você não tem zeny.";
+			mes "Vocï¿½ nï¿½o tem zeny.";
 			cutin "", 255;
 			close;
 		}
@@ -98,7 +98,7 @@
 	case 4:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetBoth) {
-			mes "Você não tem zeny.";
+			mes "Vocï¿½ nï¿½o tem zeny.";
 			cutin "", 255;
 			close;
 		}
@@ -119,12 +119,12 @@
 
 	SaveBuild:
 		mes "[ Sakray ]";
-		mes "Dê nome a sua build:";
+		mes "Dï¿½ nome a sua build:";
 		input @build_name$;
 
 		// Check for existing build with the same name for this character
 		if (query_sql("SELECT `id` FROM `ero_buildmanager` WHERE `cid` = "+getcharid(0)+" AND `build_name` = '"+escape_sql(@build_name$)+"'", .@id) > 0) {
-			mes "Uma build com esse nome já existe.";
+			mes "Uma build com esse nome jï¿½ existe.";
 			cutin "", 255;
 			close;
 		}
@@ -159,14 +159,14 @@
 
 	ApplyStarterBuild:
 		mes "[ Sakray ]";
-		mes "Você está aplicando a build decente.";
+		mes "Vocï¿½ estï¿½ aplicando a build decente.";
 		next;
 
 		menu "Close", Cancel2, "Apenas stats", ApplyStatsDefault, "Apenas skills", ApplySkillsDefault, "Ambas", ApplyBothDefault;
 		
 		Cancel2:
 			mes "[ Sakray ]";
-			mes "Eu sabia que você faria uma escolha ruim.";
+			mes "Eu sabia que vocï¿½ faria uma escolha ruim.";
 			cutin "", 255;
 			close;
 
@@ -337,34 +337,35 @@
 			//build skills
 			resetskill;//reseta e dps zera
 			set SkillPoint, 0;
-            skill 1,9,0;
-            skill 43,10,0;
-            skill 44,10,0;
-            skill 45,10,0;
-            skill 46,9,0;
-            skill 47,10,0;
-            skill 115,1,0;
-            skill 116,1,0;
-            skill 117,4,0;
-            skill 118,1,0;
-            skill 119,1,0;
-            skill 120,1,0;
-            skill 121,1,0;
-            skill 122,1,0;
-            skill 123,1,0;
-            skill 124,1,0;
-            skill 126,1,0;
-            skill 127,1,0;
-            skill 128,10,0;
-            skill 129,5,0;
-            skill 130,4,0;
-            skill 142,1,0;
-            skill 147,1,0;
-            skill 148,1,0;
-            skill 380,10,0;
-            skill 381,5,0;
-            skill 383,10,0;
-            skill 1009,1,0;
+			skill 1,9,0;
+			skill 43,10,0;
+			skill 44,10,0;
+			skill 45,10,0;
+			skill 46,9,0;
+			skill 47,10,0;
+			skill 115,1,0;
+			skill 116,1,0;
+			skill 117,3,0;
+			skill 118,2,0;
+			skill 119,1,0;
+			skill 120,1,0;
+			skill 121,5,0;
+			skill 122,1,0;
+			skill 123,1,0;
+			skill 124,1,0;
+			skill 126,1,0;
+			skill 127,1,0;
+			skill 128,10,0;
+			skill 129,5,0;
+			skill 130,4,0;
+			skill 131,5,0;
+			skill 142,1,0;
+			skill 147,1,0;
+			skill 148,1,0;
+			skill 380,1,0;
+			skill 381,5,0;
+			skill 383,10,0;
+			skill 1009,1,0;			
 			}
 
 		if (Class == 4009) {//hp
@@ -671,34 +672,35 @@
 			//build skills
 			resetskill;//reseta e dps zera
 			set SkillPoint, 0;
-            skill 1,9,0;
-            skill 43,10,0;
-            skill 44,10,0;
-            skill 45,10,0;
-            skill 46,9,0;
-            skill 47,10,0;
-            skill 115,1,0;
-            skill 116,1,0;
-            skill 117,4,0;
-            skill 118,1,0;
-            skill 119,1,0;
-            skill 120,1,0;
-            skill 121,1,0;
-            skill 122,1,0;
-            skill 123,1,0;
-            skill 124,1,0;
-            skill 126,1,0;
-            skill 127,1,0;
-            skill 128,10,0;
-            skill 129,5,0;
-            skill 130,4,0;
-            skill 142,1,0;
-            skill 147,1,0;
-            skill 148,1,0;
-            skill 380,10,0;
-            skill 381,5,0;
-            skill 383,10,0;
-            skill 1009,1,0;
+			skill 1,9,0;
+			skill 43,10,0;
+			skill 44,10,0;
+			skill 45,10,0;
+			skill 46,9,0;
+			skill 47,10,0;
+			skill 115,1,0;
+			skill 116,1,0;
+			skill 117,3,0;
+			skill 118,2,0;
+			skill 119,1,0;
+			skill 120,1,0;
+			skill 121,5,0;
+			skill 122,1,0;
+			skill 123,1,0;
+			skill 124,1,0;
+			skill 126,1,0;
+			skill 127,1,0;
+			skill 128,10,0;
+			skill 129,5,0;
+			skill 130,4,0;
+			skill 131,5,0;
+			skill 142,1,0;
+			skill 147,1,0;
+			skill 148,1,0;
+			skill 380,1,0;
+			skill 381,5,0;
+			skill 383,10,0;
+			skill 1009,1,0;			
 			}
 
 		if (Class == 4009) {//hp
@@ -1014,6 +1016,7 @@
             skill 476,4,0;
             skill 1005,1,0;
 			}
+		cutin "", 255;	
 		close;
 
 		// if (Class == ?) {
@@ -1049,7 +1052,7 @@
 		.@size = query_sql("SELECT `id`, `build_name`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `status_point` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@id, .@build_name$, .@str, .@agi, .@vit, .@int, .@dex, .@luk, .@status_points);
 
 		if (.@size == 0) {
-			mes "Você não tem builds salvas.";
+			mes "Vocï¿½ nï¿½o tem builds salvas.";
 			cutin "", 255;
 			close;
 		}
@@ -1065,7 +1068,7 @@
 		.@selection = select(.@menu$) - 1;
 		callsub ApplyBuildSelection, .@id[.@selection], .@str[.@selection], .@agi[.@selection], .@vit[.@selection], .@int[.@selection], .@dex[.@selection], .@luk[.@selection], .@status_points[.@selection];
 		cutin "", 255;
-			close;
+		close;
 
 	ShowBuilds:
 		mes "[ Sakray ]";
@@ -1074,7 +1077,7 @@
 		.@size = query_sql("SELECT `build_name` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@build_name$);
 
 		if (.@size == 0) {
-			mes "Você não tem builds salvas.";
+			mes "Vocï¿½ nï¿½o tem builds salvas.";
 			cutin "", 255;
 			close;
 		}
@@ -1082,7 +1085,7 @@
 			mes "Build " + (.@i + 1) + ": " + .@build_name$[.@i];
 		}
 		cutin "", 255;
-			close;
+		close;
 
 	DeleteBuild:
 		mes "[ Sakray ]";
@@ -1091,8 +1094,8 @@
 		.@size = query_sql("SELECT `id`, `build_name` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@id, .@build_name$);
 
 		if (.@size == 0) {
-			mes "Você não tem builds salvas.";
-			cutin "", 255;
+			mes "Vocï¿½ nï¿½o tem builds salvas.";
+			next;
 			cutin "", 255;
 			close;
 		}
@@ -1112,7 +1115,7 @@
 		mes "Build deletada.";
 		next;
 		mes "[ Sakray ]";
-		mes "Graças a Deus.";
+		mes "Graï¿½as a Deus.";
 		cutin "", 255;
 			close;
 
@@ -1139,14 +1142,14 @@
 		mes "A build foi aplicada.";
 		next;
 		mes "[ Sakray ]";
-		mes "É uma pena que você não consiga acumular derrotas tão rápido quanto você gostaria.";
+		mes "ï¿½ uma pena que vocï¿½ nï¿½o consiga acumular derrotas tï¿½o rï¿½pido quanto vocï¿½ gostaria.";
+		next;
 		cutin "", 255;
 			close;
 
 	Cancel:
 		mes "[ Sakray ]";
-		mes "Eu sabia que você faria uma escolha ruim.";
-		cutin "", 255;
+		mes "Eu sabia que vocï¿½ faria uma escolha ruim.";
 		cutin "", 255;
 			close;
 }

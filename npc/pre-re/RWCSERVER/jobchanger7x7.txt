@@ -160,11 +160,11 @@ izlude,120,115,4	script	Job Master	650,{
             skill 47,10,0;
             skill 115,1,0;
             skill 116,1,0;
-            skill 117,4,0;
-            skill 118,1,0;
+            skill 117,3,0;
+            skill 118,2,0;
             skill 119,1,0;
             skill 120,1,0;
-            skill 121,1,0;
+            skill 121,5,0;
             skill 122,1,0;
             skill 123,1,0;
             skill 124,1,0;
@@ -173,13 +173,14 @@ izlude,120,115,4	script	Job Master	650,{
             skill 128,10,0;
             skill 129,5,0;
             skill 130,4,0;
+            skill 131,5,0;
             skill 142,1,0;
             skill 147,1,0;
             skill 148,1,0;
-            skill 380,10,0;
+            skill 380,1,0;
             skill 381,5,0;
             skill 383,10,0;
-            skill 1009,1,0;
+            skill 1009,1,0;            
             //*getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
             //equips
             getitem 505, 1;
@@ -513,7 +514,7 @@ izlude,120,115,4	script	Job Master	650,{
             jobchange .job;
             set BaseLevel, 90;
 
-            // checar sexo antes de dar itens específicos
+            // checar sexo antes de dar itens especï¿½ficos
             // set .@sexo$, getcharinfo(PC_SEX);
 
             // dispbottom "VALOR DE getcharinfo(PC_SEX): " + getcharinfo(PC_SEX);
