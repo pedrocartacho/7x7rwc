@@ -524,9 +524,14 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		if (.@arena == 30) set $spectator_count30, $spectator_count30 + 1;
 	
 		// Teleport the user to the map and make them invisible
+		// warp .@map$, .@x, .@y;
+		// setoption Option_Invisible | Option_Xmas, 1;
+		// sc_start SC_NOCHAT,6000,0;
+		// end;
 		warp .@map$, .@x, .@y;
 		setoption Option_Invisible | Option_Xmas, 1;
-		sc_start SC_NOCHAT,6000,0;
+		sc_start SC_NOCHAT,420000,0;
+		sc_start SC_SPEEDUP1,420000,0;
 		end;
 
 	ResetSpectator:

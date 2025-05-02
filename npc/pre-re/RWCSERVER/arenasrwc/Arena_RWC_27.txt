@@ -4,7 +4,7 @@
 // ==============================================================================
 quiz_02,129,346,5	script	Waiting Room::kvm57R_Guillaume	418,{
 	cutin "arena27",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -27,7 +27,7 @@ OnEnterBG:
 
 quiz_02,166,346,4	script	Waiting Room::kvm57R_Croix	414,{
 	cutin "arena27",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -119,8 +119,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 27 - flavius ]. -", bc_yellow;
 	set $@kvm57BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm57BG_id1,"flavius",88,75;
-	bg_warp $@kvm57BG_id2,"flavius",311,224;
+	bg_warp $@kvm57BG_id1,"flavius",152,114;
+	bg_warp $@kvm57BG_id2,"flavius",248,185;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -128,12 +128,12 @@ OnStart:
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
     }
-	setwall "flavius",99,78,10,4,0,"batc20wall_a";
-	setwall "flavius",76,78,10,4,0,"batc20wall_b";
-	setwall "flavius",300,230,10,4,0,"batc20wall_c";
-	setwall "flavius",223,228,10,4,0,"batc20wall_d";
-	// setwall "flavius",94,42,9,6,0,"batc20wall_e";
-	// setwall "flavius",102,41,9,4,0,"batc20wall_f";
+	setwall "flavius",157,118,10,2,0,"batc20wall_a";
+	setwall "flavius",157,117,10,4,0,"batc20wall_b";
+	setwall "flavius",147,109,10,0,0,"batc20wall_c";
+	setwall "flavius",243,181,10,6,0,"batc20wall_d";
+	setwall "flavius",243,182,9,0,0,"batc20wall_e";
+	setwall "flavius",252,190,14,4,0,"batc20wall_f";
 
 	sleep 100;
 	// ScoreBoard
@@ -187,8 +187,8 @@ OnTimer20000:
 	delwall "batc20wall_b";
 	delwall "batc20wall_c";
 	delwall "batc20wall_d";
-	// delwall "batc20wall_e";
-	// delwall "batc20wall_f";
+	delwall "batc20wall_e";
+	delwall "batc20wall_f";
 	end;
 
 OnTimer25001:

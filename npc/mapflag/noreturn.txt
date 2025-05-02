@@ -35,7 +35,7 @@ guild_vs5	mapflag	noreturn
 2009rwc_02	mapflag	noreturn
 2009rwc_03	mapflag	noreturn
 2009rwc_04	mapflag	noreturn
-quiz_02	mapflag	noreturn
+// quiz_02	mapflag	noreturn
 rwc01	mapflag	noreturn
 rwc03	mapflag	noreturn
 2008rwc_01	mapflag	noreturn

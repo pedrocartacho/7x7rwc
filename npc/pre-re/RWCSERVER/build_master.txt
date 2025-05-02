@@ -42,7 +42,7 @@
 	cutin "sakray.bmp",2;
 	mes "[ Sakray ]";
 	if(Class == 0) {
-		mes "Primeiro vocï¿½  vira gente, depois vocï¿½ aplica uma build.";
+		mes "Primeiro você  vira gente, depois você aplica uma build.";
 		close;
 	}
 	mes "Ei, newbha! Bora testar aquela build super retardada? Foda-se se os outros 6 membros do seu time ficarem com vontade de se jogar do penhasco.";
@@ -60,11 +60,11 @@
 	set .@ResetBoth,0;	// Zeny for resetting both together
 
 	mes "[ Sakray ]";
-	mes "Qual serï¿½ sua perpï¿½cia de qi negativo?";
+	mes "Qual será sua peripécia de qi negativo?";
 	// mes "Reset Stats: "+ .@ResetStat +"z";
 	// mes "Reset Skills: "+ .@ResetSkill +"z";
 	// mes "Reset Both: "+ .@ResetBoth +"z";
-	mes "Nï¿½o perca a oportunidade de decepcionar os outros.";
+	mes "Não perca a oportunidade de decepcionar os outros.";
 	next;
 	switch(select("Close:^FF3355Reset Skills:Reset Stats:Reset Both^000000")) {
 	case 1:
@@ -73,20 +73,24 @@
 	case 2:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetSkill) {
-			mes "Vocï¿½ nï¿½o tem zeny.";
+			mes "Você não tem zeny.";
 			cutin "", 255;
 			close;
 		}
 		Zeny -= .@ResetSkill;
 		sc_end SC_ALL;
 		resetskill;
+		if (Class == 4017) { // 4017 é o ID do Scholar
+			set SkillPoint, 0;
+			set SkillPoint, 108;
+		}
 		mes "champson";
 		cutin "", 255;
 			close;
 	case 3:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetStat) {
-			mes "Vocï¿½ nï¿½o tem zeny.";
+			mes "Você não tem zeny.";
 			cutin "", 255;
 			close;
 		}
@@ -98,13 +102,17 @@
 	case 4:
 		mes "[ Sakray ]";
 		if (Zeny < .@ResetBoth) {
-			mes "Vocï¿½ nï¿½o tem zeny.";
+			mes "Você não tem zeny.";
 			cutin "", 255;
 			close;
 		}
 		Zeny -= .@ResetBoth;
 		sc_end SC_ALL;
 		resetskill;
+		if (Class == 4017) { // 4017 é o ID do Scholar
+			set SkillPoint, 0;
+			set SkillPoint, 108;
+		}
 		resetstatus;
 		mes "jampson";
 		cutin "", 255;
@@ -119,12 +127,12 @@
 
 	SaveBuild:
 		mes "[ Sakray ]";
-		mes "Dï¿½ nome a sua build:";
+		mes "Dê nome a sua build:";
 		input @build_name$;
 
 		// Check for existing build with the same name for this character
 		if (query_sql("SELECT `id` FROM `ero_buildmanager` WHERE `cid` = "+getcharid(0)+" AND `build_name` = '"+escape_sql(@build_name$)+"'", .@id) > 0) {
-			mes "Uma build com esse nome jï¿½ existe.";
+			mes "Uma build com esse nome já existe.";
 			cutin "", 255;
 			close;
 		}
@@ -159,14 +167,14 @@
 
 	ApplyStarterBuild:
 		mes "[ Sakray ]";
-		mes "Vocï¿½ estï¿½ aplicando a build decente.";
+		mes "Você está aplicando a build decente.";
 		next;
 
 		menu "Close", Cancel2, "Apenas stats", ApplyStatsDefault, "Apenas skills", ApplySkillsDefault, "Ambas", ApplyBothDefault;
 		
 		Cancel2:
 			mes "[ Sakray ]";
-			mes "Eu sabia que vocï¿½ faria uma escolha ruim.";
+			mes "Eu sabia que você faria uma escolha ruim.";
 			cutin "", 255;
 			close;
 
@@ -1052,7 +1060,7 @@
 		.@size = query_sql("SELECT `id`, `build_name`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `status_point` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@id, .@build_name$, .@str, .@agi, .@vit, .@int, .@dex, .@luk, .@status_points);
 
 		if (.@size == 0) {
-			mes "Vocï¿½ nï¿½o tem builds salvas.";
+			mes "Você não tem builds salvas.";
 			cutin "", 255;
 			close;
 		}
@@ -1077,7 +1085,7 @@
 		.@size = query_sql("SELECT `build_name` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@build_name$);
 
 		if (.@size == 0) {
-			mes "Vocï¿½ nï¿½o tem builds salvas.";
+			mes "Você não tem builds salvas.";
 			cutin "", 255;
 			close;
 		}
@@ -1094,7 +1102,7 @@
 		.@size = query_sql("SELECT `id`, `build_name` FROM `ero_buildmanager` WHERE `cid` = "+.@cid, .@id, .@build_name$);
 
 		if (.@size == 0) {
-			mes "Vocï¿½ nï¿½o tem builds salvas.";
+			mes "Você não tem builds salvas.";
 			next;
 			cutin "", 255;
 			close;
@@ -1115,7 +1123,7 @@
 		mes "Build deletada.";
 		next;
 		mes "[ Sakray ]";
-		mes "Graï¿½as a Deus.";
+		mes "Glória a Deus.";
 		cutin "", 255;
 			close;
 
@@ -1142,14 +1150,14 @@
 		mes "A build foi aplicada.";
 		next;
 		mes "[ Sakray ]";
-		mes "ï¿½ uma pena que vocï¿½ nï¿½o consiga acumular derrotas tï¿½o rï¿½pido quanto vocï¿½ gostaria.";
+		mes "É uma pena que você não consiga acumular derrotas tão rápido quanto você gostaria.";
 		next;
 		cutin "", 255;
 			close;
 
 	Cancel:
 		mes "[ Sakray ]";
-		mes "Eu sabia que vocï¿½ faria uma escolha ruim.";
+		mes "Eu sabia que você faria uma escolha ruim.";
 		cutin "", 255;
 			close;
 }

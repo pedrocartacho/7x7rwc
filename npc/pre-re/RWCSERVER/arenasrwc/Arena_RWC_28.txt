@@ -4,7 +4,7 @@
 // ==============================================================================
 quiz_02,129,344,5	script	Waiting Room::kvm58R_Guillaume	418,{
 	cutin "arena28-1",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "arena28-2",4;
@@ -29,7 +29,7 @@ OnEnterBG:
 
 quiz_02,166,344,4	script	Waiting Room::kvm58R_Croix	414,{
 	cutin "arena28-1",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "arena28-2",4;
@@ -132,10 +132,10 @@ OnStart:
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
     }
-	setwall bio4,125,243,6,2,0,"batc20wall_a";
-	setwall bio4,126,251,8,4,0,"batc20wall_b";
-	setwall bio4,170,204,6,6,0,"batc20wall_c";
-	setwall bio4,169,203,6,4,0,"batc20wall_d";
+	setwall "bio4",126,235,10,2,0,"batc20wall_a";
+	setwall "bio4",132,240,12,0,0,"batc20wall_b";
+	setwall "bio4",163,205,8,4,0,"batc20wall_c";
+	setwall "bio4",164,208,12,6,0,"batc20wall_d";
 	// setwall "bio4",94,42,9,6,0,"batc20wall_e";
 	// setwall "bio4",102,41,9,4,0,"batc20wall_f";
 

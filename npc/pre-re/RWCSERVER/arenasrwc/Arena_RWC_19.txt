@@ -4,7 +4,7 @@
 // ==============================================================================
 quiz_02,132,342,5	script	Waiting Room::kvm49R_Guillaume	418,{
 	cutin "arena19",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -27,7 +27,7 @@ OnEnterBG:
 
 quiz_02,163,342,4	script	Waiting Room::kvm49R_Croix	414,{
 	cutin "arena19",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -119,8 +119,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 19 - 1@dth3 ]. -", bc_yellow;
 	set $@kvm49BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm49BG_id1,"1@dth3",52,89;
-	bg_warp $@kvm49BG_id2,"1@dth3",88,48;
+	bg_warp $@kvm49BG_id1,"1@dth3",49,91;
+	bg_warp $@kvm49BG_id2,"1@dth3",93,48;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -129,14 +129,14 @@ OnStart:
         $@guildsInArena2--;
     }
 
-	setwall "1@dth3",48,93,10,6,0,"batc20wall_a";
-	setwall "1@dth3",48,92,9,4,0,"batc20wall_b";
-	setwall "1@dth3",57,84,9,2,0,"batc20wall_c";
-	setwall "1@dth3",57,85,8,0,0,"batc20wall_d";
-	setwall "1@dth3",83,53,10,6,0,"batc20wall_e";
-	setwall "1@dth3",83,52,9,4,0,"batc20wall_f";
-	setwall "1@dth3",92,44,9,2,0,"batc20wall_g";
-	setwall "1@dth3",92,45,8,0,0,"batc20wall_h";
+	setwall "1@dth3",52,85,12,2,0,"batc20wall_a";
+	setwall "1@dth3",52,86,12,0,0,"batc20wall_b";
+	setwall "1@dth3",88,51,12,4,0,"batc20wall_c";
+	setwall "1@dth3",89,51,12,6,0,"batc20wall_d";
+	// setwall "1@dth3",83,53,10,6,0,"batc20wall_e";
+	// setwall "1@dth3",83,52,9,4,0,"batc20wall_f";
+	// setwall "1@dth3",92,44,9,2,0,"batc20wall_g";
+	// setwall "1@dth3",92,45,8,0,0,"batc20wall_h";
 
 	sleep 100;
 	// ScoreBoard

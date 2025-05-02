@@ -216,7 +216,8 @@ quiz_02,143,353,4	script	Healer Blue	450,{
 	// Loop through each equipped item
 	for (.@i = 0; .@i < getarraysize(.@positions); .@i++) {
 		.@part = .@positions[.@i];
-		if (getequipisequiped(.@part)) {
+		// if (getequipisequiped(.@part)) {
+        if (getequipisequiped(.@part) && getequipisenableref(.@part)) {
 			// Get the current refine level
 			.@current_refine = getequiprefinerycnt(.@part);
 			

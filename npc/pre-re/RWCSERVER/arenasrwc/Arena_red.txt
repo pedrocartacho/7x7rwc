@@ -26,11 +26,10 @@ izlude,135,111,3	script	Red Team	10066,{
 
     set .@guild_id, getcharid(2);
     if( (getguildmasterid(.@guild_id)) == (getcharid(0)) ){
-        $@jogadoresred1 = 2; // Number of players required
-        if ($@jogadoresred1 < 2){
+        $@jogadoresred1 = 7; // Number of players required
+        if ($@jogadoresred1 < 7){
             mes "Tadinho, você é tão fracasso assim? Nem mesmo tem ^ff00007 players^000000 na sua guild. Vá fazer alguns amigos antes de passar vergonha no 7x7.";
             cutin "", 255;
-            close;
         }
         $@jogadoresred = $@jogadoresred1;
         $@jogadoresredchat = $@jogadoresred + 1;
@@ -60,25 +59,16 @@ izlude,135,111,3	script	Red Team	10066,{
         if ( .@islogin < $@jogadoresred ) {
             mes "[ ^ff0000Sarah^000000 ]";
             mes "Você precisa de ^ff0000"+ $@jogadoresred +"^000000 pessoas online na ^ff0000party^000000 para entrar na sala de espera. Player ruim chega atrasado mesmo.";
-            cutin "", 255;
             close;
         }
 
         mes "[ ^ff0000Sarah^000000 ]";
         mes "^ff0000"+ strcharinfo(0) +"^000000, da guild ^ff0000["+ strcharinfo(2) +"]^000000, você quer mesmo fazer seus amiguinhos testemunharem o vexame que você irá passar na arena?";
         next;
-        
-        // if (select("Yes, please.:No, thanks.") == 2)
-        // cutin "", 255;
-        // close;
-        // next;
-        switch(select("Yes, please.:No, thanks.")) {
-            case 1:
-                break;
-            case 2:
-                cutin "", 255;
-                close;
-        }
+        cutin "", 255;
+        next;
+        if (select("Sim, porfavor.:Não, obrigado.") == 2) close;
+        next;
 
         // Use array to store guild and party information
         $@currentLeader[.@guild_id] = getcharid(0);
@@ -91,7 +81,8 @@ izlude,135,111,3	script	Red Team	10066,{
 
         // Execute the removal of buffs and teleport in a separate script to avoid conflicts
         donpcevent "TeleportAndBuffRemovalRed::OnTeleport";
-        
+
+        close;
     } else {
         mes "[ ^ff0000Sarah^000000 ]";
         mes "Para ter chance de apanhar como um newbha, você precisa de ^ff0000"+ $@jogadoresred +" membros^000000, todos online e na mesma guild e party. Vamos ver quantas vezes eu terei que repetir isso. Algumas pessoa tem inteligência de platelminto, não é mesmo?^000000";
@@ -107,7 +98,7 @@ quiz_02,161,336,1	script	quitter#timeve	849,{
 
     mes "[^0000ffquitter^000000]";
     mes "Você quer quitar?";
-    switch(select("Sim, não aguento mais.:Não.")){
+    switch(select("Sim.:Não.")){
         case 1:
             // Check if the player is the guild leader
             if (getcharid(2) == $@currentGuildID[getcharid(2)] && getcharid(0) == getguildmasterid($@currentGuildID[getcharid(2)])) {
@@ -128,7 +119,7 @@ quiz_02,152,342,7	script	Employee#timevermelho	414,{
 
     mes "[ ^ff0000Employee^000000 ]";
     mes "Você quer ir para o time azul?";
-    switch(select("Yes.:No.")){
+    switch(select("Sim.:Não.")){
         case 1:
             // Check if the player is the guild leader
             if (getcharid(2) == $@currentGuildID[getcharid(2)] && getcharid(0) == getguildmasterid($@currentGuildID[getcharid(2)])) {

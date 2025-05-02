@@ -4,7 +4,7 @@
 // ==============================================================================
 quiz_02,132,344,5	script	Waiting Room::kvm48R_Guillaume	418,{
 	cutin "arena18",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se vocï¿½ tem se divertido no servidor, demonstre sua apreciaï¿½ï¿½oo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que vocï¿½ sente ser proporcional ao entretenimento que vocï¿½ estï¿½ tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -27,7 +27,7 @@ OnEnterBG:
 
 quiz_02,163,344,4	script	Waiting Room::kvm48R_Croix	414,{
 	cutin "arena18",4;
-	mes "Se você tem se divertido no servidor, demonstre sua apreciaçãoo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
+	mes "Se vocï¿½ tem se divertido no servidor, demonstre sua apreciaï¿½ï¿½oo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que vocï¿½ sente ser proporcional ao entretenimento que vocï¿½ estï¿½ tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -119,8 +119,8 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 18 - 2008rwc_04 ]. -", bc_yellow;
 	set $@kvm48BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm48BG_id1,"2008rwc_04",9,50;
-	bg_warp $@kvm48BG_id2,"2008rwc_04",91,50;
+	bg_warp $@kvm48BG_id1,"2008rwc_04",21,82;
+	bg_warp $@kvm48BG_id2,"2008rwc_04",76,20;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
@@ -194,6 +194,10 @@ OnTimer20000:
 	delwall "batc20wall_b";
 	delwall "batc20wall_c";
 	delwall "batc20wall_d";
+	delwall "batc20wall_e";
+	delwall "batc20wall_f";
+	delwall "batc20wall_g";
+	delwall "batc20wall_h";
 	end;
 
 OnTimer25001:

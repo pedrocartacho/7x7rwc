@@ -17,7 +17,7 @@
 //         end;
     // }
 //
-izlude,127,115,3	script	Plagiaridora	10010,{
+izlude,127,115,3	script	Plagiadora	10010,{
 set .@skill_level,getskilllv( "RG_PLAGIARISM" );
 
 
@@ -92,5 +92,5 @@ end;
 
 // quiz_02,239,354,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02_2	10010
 // quiz_02,260,354,3	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02_2	10010
-quiz_02,139,356,3	duplicate(Plagiaridora)	Plagiaridora Blue#quiz_02	10010
-quiz_02,156,356,6	duplicate(Plagiaridora)	Plagiaridora Red#quiz_02	10010
+quiz_02,139,356,3	duplicate(Plagiadora)	Plagiadora Blue#quiz_02	10010
+quiz_02,156,356,6	duplicate(Plagiadora)	Plagiadora Red#quiz_02	10010
