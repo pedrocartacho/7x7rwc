@@ -531,6 +531,7 @@ izlude,125,112,3	script	Spectator NPC	664,{{
 		warp .@map$, .@x, .@y;
 		setoption Option_Invisible | Option_Xmas, 1;
 		sc_start SC_NOCHAT,420000,0;
+		bonus bSpeedRate,50;
 		sc_start SC_SPEEDUP1,420000,0;
 		end;
 

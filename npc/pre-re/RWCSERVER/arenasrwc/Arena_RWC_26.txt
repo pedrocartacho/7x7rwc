@@ -119,8 +119,10 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 26 - job_prist ]. -", bc_yellow;
 	set $@kvm56BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm56BG_id1,"job_prist",23,108;
-	bg_warp $@kvm56BG_id2,"job_prist",23,36;
+	// bg_warp $@kvm56BG_id1,"job_prist",23,108;
+	// bg_warp $@kvm56BG_id2,"job_prist",23,36;
+	bg_warp $@kvm56BG_id1,"job_prist",97,103;
+	bg_warp $@kvm56BG_id2,"job_prist",97,37;
 
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
