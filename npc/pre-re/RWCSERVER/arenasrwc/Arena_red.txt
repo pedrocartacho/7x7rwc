@@ -164,7 +164,7 @@ OnTeleport:
     for ( set .@i, 0; .@i < .@partymembercount; set .@i, .@i + 1 ) {
         if (isloggedin($@partymemberaid[.@i], $@partymembercid[.@i])) {
             attachrid $@partymemberaid[.@i];
-            if (strcharinfo(3) == "izlude") {
+            if (strcharinfo(3) == "izlude" || strcharinfo(3) == "lhz_dun03" || strcharinfo(3) == "arug_cas02") {
                 sc_end SC_ALL;
                 setoption 0x40 | Option_Invisible | Option_Xmas, 0;
             }

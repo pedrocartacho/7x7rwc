@@ -87,6 +87,8 @@ izlude,121,111,6	script	Blue Team	683,{
     } else {
         mes "[ ^0000FFChaos^000000 ]";
         mes "Você precisa de ^0000ff"+ $@jogadoresblue +" membros^000000, todos online e na mesma guild e party. A dificuldade de cumprir horários é um sinal clássico de incompetência.";
+        next;
+        cutin "", 255;
         close;
     }
 }
@@ -160,17 +162,15 @@ OnTeleport:
     getpartymember .@party_id, 2;
     set .@partymembercount, $@partymembercount;
 
-    // Loop through all party members and remove all buffs if they are in Izlude
     for ( set .@i, 0; .@i < .@partymembercount; set .@i, .@i + 1 ) {
         if (isloggedin($@partymemberaid[.@i], $@partymembercid[.@i])) {
             attachrid $@partymemberaid[.@i];
-            if (strcharinfo(3) == "izlude") {
+            if (strcharinfo(3) == "izlude" || strcharinfo(3) == "lhz_dun03" || strcharinfo(3) == "arug_cas02") {
                 sc_end SC_ALL;
                 setoption 0x40 | Option_Invisible | Option_Xmas, 0;
             }
         }
     }
-
     warpguild "quiz_02",141,347,getcharid(2);
 
     end;

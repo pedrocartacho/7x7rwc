@@ -56,7 +56,7 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 	mes "[Sorteio de Arenas]";
 	mes "Qual tipo de sorteio deseja iniciar?";
 	next;
-	switch(select("Como funciona?:Até 9 vitórias:Até 5 vitórias:Até 3 vitórias")) {
+	switch(select("Como funciona?:Até 9 vitórias:Até 7 vitórias:Até 5 vitórias:Até 3 vitórias")) {
 		case 1:
             next;
             mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito inútil.";
@@ -73,15 +73,20 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 			set @tipo_corrida, 9;
 			break;
 		case 3:
-			set @tipo_corrida, 5;
+			set @tipo_corrida, 7;
 			break;
 		case 4:
+			set @tipo_corrida, 5;
+			break;
+		case 5:
 			set @tipo_corrida, 3;
 			break;
 	}
 
 	if (@tipo_corrida == 9)
 		set @quantidade_numeros, 17;
+	else if (@tipo_corrida == 7)
+		set @quantidade_numeros, 13;
 	else if (@tipo_corrida == 5)
 		set @quantidade_numeros, 9;
 	else if (@tipo_corrida == 3)

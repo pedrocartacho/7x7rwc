@@ -52,3 +52,5 @@ ecl_tdun02	mapflag	gvg
 evt_bomb	mapflag	gvg
 // PVP Arenas ===============
 pvp_y_1-1	mapflag	gvg
+alberta2	mapflag	gvg
+arug_cas02	mapflag	gvg

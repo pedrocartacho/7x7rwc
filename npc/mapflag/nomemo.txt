@@ -55,3 +55,5 @@ bio4	mapflag	nomemo
 job_prist	mapflag	nomemo
 ecl_tdun02	mapflag	nomemo
 evt_bomb	mapflag	nomemo
+alberta2	mapflag	nomemo
+arug_cas02	mapflag	nomemo

@@ -775,20 +775,20 @@ izlude,120,115,4	script	Job Master	650,{
         break;
 
         case 11:
-            jobchange 0; 
-            resetlvl(1);
-            jobchange .job;
+            // jobchange 0; 
+            // resetlvl(1);
+            // jobchange .job;
 
-            // Change to Merchant first
-            set .job, 5; 
-            jobchange .job;
-            set JobLevel, 50; // Max job level for Merchant to allocate all necessary skill points
-            set SkillPoint, 49; // Set Skill Points to 49, or the exact number required for Merchant skills
+            // // Change to Merchant first
+            // set .job, 5; 
+            // jobchange .job;
+            // set JobLevel, 50; // Max job level for Merchant to allocate all necessary skill points
+            // set SkillPoint, 49; // Set Skill Points to 49, or the exact number required for Merchant skills
 
-            set .job,4019; // chem
-            jobchange .job;
+            // set .job,4019; // chem
+            // jobchange .job;
 
-            goto L_RWCROClass;
+            // goto L_RWCROClass;
             break;
 
         case 12: // stalker
