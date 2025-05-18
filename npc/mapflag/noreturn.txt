@@ -53,4 +53,4 @@ bio4	mapflag	noreturn
 job_prist	mapflag	noreturn
 ecl_tdun02	mapflag	noreturn
 evt_bomb	mapflag	noreturn
-arug_cas02	mapflag	noreturn
+//arug_cas02	mapflag	noreturn

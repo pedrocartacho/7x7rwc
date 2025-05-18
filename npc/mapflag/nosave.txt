@@ -51,4 +51,4 @@ job_prist	mapflag	nosave	SavePoint
 ecl_tdun02	mapflag	nosave	SavePoint
 evt_bomb	mapflag	nosave	SavePoint
 alberta2	mapflag	nosave	SavePoint
-arug_cas02	mapflag	noreturn
+arug_cas02	mapflag	nosave	SavePoint
