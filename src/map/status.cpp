@@ -12207,10 +12207,10 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 
 	sd = BL_CAST(BL_PC,bl);
 	
-	// if (sd && (type == SC_AUTOGUARD || type == SC_REFLECTSHIELD || type == SC_DEFENDER)) {
-	// 	if (sd->block_allowskill_check)
-	// 		return 0;
-	// }
+	if (sd && (type == SC_AUTOGUARD || type == SC_REFLECTSHIELD || type == SC_DEFENDER)) {
+	 	if (sd->block_allowskill_check)
+			return 0;
+	}
 	
 	if (sce->timer != tid && tid != INVALID_TIMER)
 		return 0;
@@ -12329,25 +12329,25 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 				status_change_end(bl, SC_PROVOKE, INVALID_TIMER);
 			break;
 
-		case SC_ENDURE:
-		case SC_DEFENDER:
-		case SC_REFLECTSHIELD:
-		case SC_AUTOGUARD:
-			{
-				struct map_session_data *tsd;
-				if( bl->type == BL_PC ) { // Clear Status from others
-					int i;
-					for( i = 0; i < MAX_DEVOTION; i++ ) {
-						if( sd->devotion[i] && (tsd = map_id2sd(sd->devotion[i])) && tsd->sc.data[type] )
-							status_change_end(&tsd->bl, type, INVALID_TIMER);
-					}
-				}
-				else if( bl->type == BL_MER && ((TBL_MER*)bl)->devotion_flag ) { // Clear Status from Master
-					tsd = ((TBL_MER*)bl)->master;
-					if( tsd && tsd->sc.data[type] )
-						status_change_end(&tsd->bl, type, INVALID_TIMER);
-				}
-			}
+		//case SC_ENDURE:
+		//case SC_DEFENDER:
+		//case SC_REFLECTSHIELD:
+		//case SC_AUTOGUARD:
+		//	{
+		//		struct map_session_data *tsd;
+		//		if( bl->type == BL_PC ) { // Clear Status from others
+		//			int i;
+		//			for( i = 0; i < MAX_DEVOTION; i++ ) {
+		//				if( sd->devotion[i] && (tsd = map_id2sd(sd->devotion[i])) && tsd->sc.data[type] )
+		//					status_change_end(&tsd->bl, type, INVALID_TIMER);
+		//			}
+		//		}
+		//		else if( bl->type == BL_MER && ((TBL_MER*)bl)->devotion_flag ) { // Clear Status from Master
+		//			tsd = ((TBL_MER*)bl)->master;
+		//			if( tsd && tsd->sc.data[type] )
+		//				status_change_end(&tsd->bl, type, INVALID_TIMER);
+		//		}
+		//	}
 			break;
 		case SC_DEVOTION:
 			{

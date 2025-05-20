@@ -1439,8 +1439,10 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 		if((sce = sc->data[SC_KYRIE]) && damage > 0){
 			sce->val2 -= (int)cap_value(damage,INT_MIN,INT_MAX);
 			if(flag&BF_WEAPON || skill_id == TF_THROWSTONE){
-				if(sce->val2>=0)
-					damage=0;
+				if (sce->val2 >= 0) {
+					damage = 0;
+					d->dmg_lv = ATK_BLOCK;
+				}
 				else
 				  	damage=-sce->val2;
 			}

@@ -4662,7 +4662,7 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		status_heal(src, 2000, 0, 0);
 		// if (!map_flag_vs(target->m))
 		// 	unit_warp(target, -1, -1, -1, CLR_TELEPORT);
-		break;
+		// break;
 	}
 	case 7: // WHEEL OF FORTUNE - random 2 other effects
 	{
