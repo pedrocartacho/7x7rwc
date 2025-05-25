@@ -68,7 +68,32 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 		mes "[Sorteio de Arenas]";
 		mes "Por favor, aguarde ^FF0000" + ((@ultima_corrida + 30) - gettimetick(2)) + " segundos^000000 antes de usar novamente.";
 		mes "Motivo do delay: para seu adversário não correr dessa ou daquela arena.";
-		close;
+        switch(select("Esperar:Como funciona?")) {
+            case 1:
+                close;
+            case 2:
+            next;
+            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito útil.";
+            next;
+            mes "O guild leader inicia um sorteio que lista uma sequência de arenas.";
+            mes "Existem três opções: corrida por vitórias, rodada de corrida por vitórias e os critérios surpresas.";
+			mes "A corrida por vitórias é um set de partidas que encerrado quando algum dos times acumular o número de vitórias estipulado.";
+            mes "Note que melhor de 3 não é a mesma coisa que corrida até 3 vitórias: na melhor de 3, basta ganhar 2 vezes; na corrida até 3 vitórias, você precisa ganhar 3 vezes, não importa se é 3x0 ou 3x2.";
+            next;
+			mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
+            mes "É por isso que ao escolher corrida até 3 vitórias, serão anunciadas 5 arenas, pois ainda que seja possível que a vitória seja encerrada após 3 rounds (3x0), também é possível que se extenda ao quinto round, para decidir o 2x2.";
+			next;
+			mes "Na rodada de corridas por vitórias, são eleitas arenas que serão palco de corridas por vitórias: em uma mesma arena será jogada quantas vezes for necessário até que o número estabelecido de vitórias por uma equipe for alcançado.";
+			mes "Quando uma equipe alcançar o número de vitórias em uma arena, ela ganhou uma rodada, e então segue-se para a próxima arena, e assim subsquentemente, até que uma equipe tenha alcança um número de rodadas ganhas, também estipulado previamente.";
+			next;
+			mes "Já os critérios sortidos são variados: existem sequências de arenas que envolvem números pares, ímpares, primos, arenas específicas escolhhidas a dedo; mas também existe opções que se repete duas vezes cada arena sorteada, ou até três vezes as arenas sorteadas. Os anúncios são claros e autoexplicativos.";
+			next;
+            mes "É aconselhável que alguém tire foto do início de arenas para que tenha como referência.";
+            mes "O game design é que se jogue as arenas anunciadas, em sequência, até que o critério seja preenchido: nas sequências simples, todas as arenas; nas corridas por vitórias, o número de arenas necessáris para completar a corrida por vitórias.";
+			mes "Após o preenchimento de critério, em acordo mútuo, decide-se o novo critério (que pode ou não ser precedido de redraft).";
+            break;
+        }
+        close;
 	}
 
 	mes "[Sorteio de Arenas]";
@@ -118,7 +143,10 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 				if (.@j < @quantidade_numeros - 1)
 					set .@msg$, .@msg$ + ", ";
 			}
-			
+
+			// Salva delay
+			set @ultima_corrida, gettimetick(2);
+
 			announce "Corrida até " + @tipo_corrida + " vitórias nas arenas: " + .@msg$  + ".", bc_all;
 			close;
 			
