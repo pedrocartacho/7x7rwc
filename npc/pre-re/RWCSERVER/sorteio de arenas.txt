@@ -10,16 +10,25 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
                 close;
             case 2:
             next;
-            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito inútil.";
+            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito útil.";
             next;
             mes "O guild leader inicia um sorteio que lista uma sequência de arenas.";
-            mes "O critério é: corrida até um certo número de vitória, ou seja, o set de partidas é encerrado quando algum dos times acumular um número de vitória.";
-            next;
+            mes "Existem três opções: corrida por vitórias, rodada de corrida por vitórias e os critérios surpresas.";
+			mes "A corrida por vitórias é um set de partidas que encerrado quando algum dos times acumular o número de vitórias estipulado.";
             mes "Note que melhor de 3 não é a mesma coisa que corrida até 3 vitórias: na melhor de 3, basta ganhar 2 vezes; na corrida até 3 vitórias, você precisa ganhar 3 vezes, não importa se é 3x0 ou 3x2.";
-            mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
             next;
+			mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
+            mes "É por isso que ao escolher corrida até 3 vitórias, serão anunciadas 5 arenas, pois ainda que seja possível que a vitória seja encerrada após 3 rounds (3x0), também é possível que se extenda ao quinto round, para decidir o 2x2.";
+			next;
+			mes "Na rodada de corridas por vitórias, são eleitas arenas que serão palco de corridas por vitórias: em uma mesma arena será jogada quantas vezes for necessário até que o número estabelecido de vitórias por uma equipe for alcançado.";
+			mes "Quando uma equipe alcançar o número de vitórias em uma arena, ela ganhou uma rodada, e então segue-se para a próxima arena, e assim subsquentemente, até que uma equipe tenha alcança um número de rodadas ganhas, também estipulado previamente.";
+			next;
+			mes "Já os critérios sortidos são variados: existem sequências de arenas que envolvem números pares, ímpares, primos, arenas específicas escolhhidas a dedo; mas também existe opções que se repete duas vezes cada arena sorteada, ou até três vezes as arenas sorteadas. Os anúncios são claros e autoexplicativos.";
+			next;
             mes "É aconselhável que alguém tire foto do início de arenas para que tenha como referência.";
-            break;
+            mes "O game design é que se jogue as arenas anunciadas, em sequência, até que o critério seja preenchido: nas sequências simples, todas as arenas; nas corridas por vitórias, o número de arenas necessáris para completar a corrida por vitórias.";
+			mes "Após o preenchimento de critério, em acordo mútuo, decide-se o novo critério (que pode ou não ser precedido de redraft).";
+			break;
         }    
         close;
 	}
@@ -31,15 +40,24 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
                 close;
             case 2:
             next;
-            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito inútil.";
+            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito útil.";
             next;
             mes "O guild leader inicia um sorteio que lista uma sequência de arenas.";
-            mes "O critério é: corrida até um certo número de vitória, ou seja, o set de partidas é encerrado quando algum dos times acumular um número de vitória.";
-            next;
+            mes "Existem três opções: corrida por vitórias, rodada de corrida por vitórias e os critérios surpresas.";
+			mes "A corrida por vitórias é um set de partidas que encerrado quando algum dos times acumular o número de vitórias estipulado.";
             mes "Note que melhor de 3 não é a mesma coisa que corrida até 3 vitórias: na melhor de 3, basta ganhar 2 vezes; na corrida até 3 vitórias, você precisa ganhar 3 vezes, não importa se é 3x0 ou 3x2.";
-            mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
             next;
+			mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
+            mes "É por isso que ao escolher corrida até 3 vitórias, serão anunciadas 5 arenas, pois ainda que seja possível que a vitória seja encerrada após 3 rounds (3x0), também é possível que se extenda ao quinto round, para decidir o 2x2.";
+			next;
+			mes "Na rodada de corridas por vitórias, são eleitas arenas que serão palco de corridas por vitórias: em uma mesma arena será jogada quantas vezes for necessário até que o número estabelecido de vitórias por uma equipe for alcançado.";
+			mes "Quando uma equipe alcançar o número de vitórias em uma arena, ela ganhou uma rodada, e então segue-se para a próxima arena, e assim subsquentemente, até que uma equipe tenha alcança um número de rodadas ganhas, também estipulado previamente.";
+			next;
+			mes "Já os critérios sortidos são variados: existem sequências de arenas que envolvem números pares, ímpares, primos, arenas específicas escolhhidas a dedo; mas também existe opções que se repete duas vezes cada arena sorteada, ou até três vezes as arenas sorteadas. Os anúncios são claros e autoexplicativos.";
+			next;
             mes "É aconselhável que alguém tire foto do início de arenas para que tenha como referência.";
+            mes "O game design é que se jogue as arenas anunciadas, em sequência, até que o critério seja preenchido: nas sequências simples, todas as arenas; nas corridas por vitórias, o número de arenas necessáris para completar a corrida por vitórias.";
+			mes "Após o preenchimento de critério, em acordo mútuo, decide-se o novo critério (que pode ou não ser precedido de redraft).";
             break;
         }
         close;
@@ -55,68 +73,204 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 
 	mes "[Sorteio de Arenas]";
 	mes "Qual tipo de sorteio deseja iniciar?";
-	next;
-	switch(select("Como funciona?:Até 9 vitórias:Até 7 vitórias:Até 5 vitórias:Até 3 vitórias")) {
+	switch(select("Fechar:Corrida por vitórias em arenas sortidas:Critério surpresa:Rodadas de corridas por vitórias:Como funciona?")) {
 		case 1:
+			close;
+		case 2:
+			mes "[Sorteio de Arenas]";
+			mes "Você escolheu o modo corrida por vitórias em arenas sortidas.";
+			mes "Escolha o tipo de corrida:";
+			next;
+			switch(select("Fechar:Corrida até 3 arenas:Corrida até 5 arenas:Corrida até 7 arenas:Corrida até 9 arenas")) {
+				case 1:
+					close;
+				case 2:
+					set @tipo_corrida, 3;
+					set @quantidade_numeros, 5;
+					break;
+				case 3:
+					set @tipo_corrida, 5;
+					set @quantidade_numeros, 9;
+					break;
+				case 4:
+					set @tipo_corrida, 7;
+					set @quantidade_numeros, 13;
+					break;
+				case 5:
+					set @tipo_corrida, 9;
+					set @quantidade_numeros, 17;
+					break;
+			}
+			
+			// Sorteia os numeros
+			deletearray @numeros_arenas[0], 30;
+			for (set .@i, 0; .@i < @quantidade_numeros; set .@i, .@i + 1) {
+				do {
+					set .@rand, rand(1,30);
+				} while (inarray(@numeros_arenas, .@rand) != -1);
+				set @numeros_arenas[.@i], .@rand;
+			}
+			
+			// Monta string com os numeros (mantendo a ordem aleatoria)
+			set .@msg$, "";
+			for (set .@j, 0; .@j < @quantidade_numeros; set .@j, .@j + 1) {
+				set .@msg$, .@msg$ + @numeros_arenas[.@j];
+				if (.@j < @quantidade_numeros - 1)
+					set .@msg$, .@msg$ + ", ";
+			}
+			
+			announce "Corrida até " + @tipo_corrida + " vitórias nas arenas: " + .@msg$  + ".", bc_all;
+			close;
+			
+		case 3:
+			mes "[Sorteio de Arenas]";
+			mes "Você escolheu o modo critério surepresa.";
+			next;
+			// Sorteia um número entre 1 e 19
+			set .@sorteio, rand(1,19);
+			switch(select("Fechar:Sortear")) {
+				case 1:
+				close;
+				case 2:
+				// Define a mensagem baseada no sorteio
+				switch(.@sorteio) {
+					case 1:
+						set .@msg$, "Sequência das arenas 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29.";
+						break;
+					case 2:
+						set .@msg$, "Sequência das arenas 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30";
+						break;
+					case 3:
+						set .@msg$, "Sequência das arenas 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29";
+						break;
+					case 4:
+						set .@msg$, "Sequência das arenas 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30";
+						break;
+					case 5:
+						set .@msg$, "Sequência das arenas 2, 4, 6, 8, 10, 12, 14, 16, 18, 20";
+						break;
+					case 6:
+						set .@msg$, "Sequência das arenas 10, 12, 14, 16, 18, 20, 22, 24, 26, 28";
+						break;
+					case 7:
+						set .@msg$, "Sequência das arenas 1, 3, 5, 7, 9, 11, 13, 15, 17, 19";
+						break;
+					case 8:
+						set .@msg$, "Sequência das arenas 11, 13, 15, 17, 19, 21, 23, 25, 27, 29";
+						break;
+					case 9:
+						set .@msg$, "Duas partidas em cada uma destas arenas: 2, 3, 5, 7, 11, 13";
+						break;
+					case 10:
+						set .@msg$, "Duas partidas em cada uma destas arenas: 2, 3, 6, 17, 23, 29";
+						break;
+					case 11:
+						set .@msg$, "Duas partidas em cada uma destas arenas: 5, 7, 11, 13, 17, 27";
+						break;
+					case 12:
+						set .@msg$, "Três partidas em cada uma destas arenas: 1, 5, 12, 28";
+						break;
+					case 13:
+						set .@msg$, "Três partidas em cada uma destas arenas: 3, 10, 12, 25";
+						break;
+					case 14:
+						set .@msg$, "Três partidas em cada uma destas arenas: 7, 14, 21, 30";
+						break;
+					case 15:
+						set .@msg$, "Três partidas em cada uma destas arenas: 2, 9, 16, 23";
+						break;
+					case 16:
+						set .@msg$, "Três partidas em cada uma destas arenas: 1, 3, 6, 26";
+						break;
+					case 17:
+						set .@msg$, "Três partidas em cada uma destas arenas: 6, 17, 27, 28";
+						break;
+					case 18:
+						set .@msg$, "Três partidas em cada uma destas arenas: 1, 6, 16, 27";
+						break;
+					case 19:
+						set .@msg$, "Três partidas em cada uma destas arenas: 6, 19, 22, 23";
+						break;
+				}
+
+			// Salva delay
+			set @ultima_corrida, gettimetick(2);
+
+			// Mensagem global com nome da guild
+			announce "A guilda " + getguildname(getcharid(2)) + " - definiu unilateralmente, de forma impositiva e não retroativa, sem espaço para choro, que o critério de jogos será este: " + .@msg$, bc_all;
+
+			mes "Sequência sorteada!";
+			close;
+	}
+			
+		case 4:
+			mes "[Rodadas de corridas]";
+			mes "Escolha o tipo de rodada:";
+			next;
+			switch(select("Rodada até 3 arenas:Rodada até 5 arenas")) {
+				case 1:
+					set @tipo_corrida, 3;
+					set @quantidade_numeros, 5;
+					break;
+				case 2:
+					set @tipo_corrida, 5;
+					set @quantidade_numeros, 9;
+					break;
+			}
+			
+			// Array com numeros excluidos
+			setarray .@excluidos[0], 2,4,13,14,19,24;
+			
+			// Sorteia os numeros
+			deletearray @numeros_arenas[0], 30;
+			for (set .@i, 0; .@i < @quantidade_numeros; set .@i, .@i + 1) {
+				do {
+					set .@rand, rand(1,30);
+				} while (inarray(@numeros_arenas, .@rand) != -1 || inarray(.@excluidos, .@rand) != -1);
+				set @numeros_arenas[.@i], .@rand;
+			}
+			
+			// Ordena os numeros em ordem crescente
+			for (set .@i, 0; .@i < @quantidade_numeros - 1; set .@i, .@i + 1) {
+				for (set .@j, .@i + 1; .@j < @quantidade_numeros; set .@j, .@j + 1) {
+					if (@numeros_arenas[.@i] > @numeros_arenas[.@j]) {
+						set .@temp, @numeros_arenas[.@i];
+						set @numeros_arenas[.@i], @numeros_arenas[.@j];
+						set @numeros_arenas[.@j], .@temp;
+					}
+				}
+			}
+			
+			// Monta string com os numeros
+			set .@msg$, "";
+			for (set .@j, 0; .@j < @quantidade_numeros; set .@j, .@j + 1) {
+				set .@msg$, .@msg$ + @numeros_arenas[.@j];
+				if (.@j < @quantidade_numeros - 1)
+					set .@msg$, .@msg$ + ", ";
+			}
+			
+			announce "Em uma mesma arena haverão partidas até que uma equipe tenha " + @tipo_corrida + " vitórias, ganhando uma rodada. O processo se repetirá até que uma equipe tenha ganhado " + @tipo_corrida + " rodadas. As arenas que serão palco das corridas serão as seguintes: " + .@msg$ + ".", bc_all;
+			close;
+		case 5:
             next;
-            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito inútil.";
+            mes "Para os jogadores não ficarem seguindo sempre a mesma ordem de arenas, e para os times não ficarem em dúvida sobre quantas partidas irão jogar sem mudar composição (classes, estratégias, pessoas), este sorteio passa a ser muito útil.";
             next;
             mes "O guild leader inicia um sorteio que lista uma sequência de arenas.";
-            mes "O critério é: corrida até um certo número de vitória, ou seja, o set de partidas é encerrado quando algum dos times acumular um número de vitória.";
-            next;
+            mes "Existem três opções: corrida por vitórias, rodada de corrida por vitórias e os critérios surpresas.";
+			mes "A corrida por vitórias é um set de partidas que encerrado quando algum dos times acumular o número de vitórias estipulado.";
             mes "Note que melhor de 3 não é a mesma coisa que corrida até 3 vitórias: na melhor de 3, basta ganhar 2 vezes; na corrida até 3 vitórias, você precisa ganhar 3 vezes, não importa se é 3x0 ou 3x2.";
-            mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
             next;
+			mes "Na corrida até 5 vitórias, a partida final pode ser o desempate entre 4x4, na corrida até 9, a partida final pode ser o desempate entre 8x8.";
+            mes "É por isso que ao escolher corrida até 3 vitórias, serão anunciadas 5 arenas, pois ainda que seja possível que a vitória seja encerrada após 3 rounds (3x0), também é possível que se extenda ao quinto round, para decidir o 2x2.";
+			next;
+			mes "Na rodada de corridas por vitórias, são eleitas arenas que serão palco de corridas por vitórias: em uma mesma arena será jogada quantas vezes for necessário até que o número estabelecido de vitórias por uma equipe for alcançado.";
+			mes "Quando uma equipe alcançar o número de vitórias em uma arena, ela ganhou uma rodada, e então segue-se para a próxima arena, e assim subsquentemente, até que uma equipe tenha alcança um número de rodadas ganhas, também estipulado previamente.";
+			next;
+			mes "Já os critérios sortidos são variados: existem sequências de arenas que envolvem números pares, ímpares, primos, arenas específicas escolhhidas a dedo; mas também existe opções que se repete duas vezes cada arena sorteada, ou até três vezes as arenas sorteadas. Os anúncios são claros e autoexplicativos.";
+			next;
             mes "É aconselhável que alguém tire foto do início de arenas para que tenha como referência.";
-            close;
-        case 2:
-			set @tipo_corrida, 9;
-			break;
-		case 3:
-			set @tipo_corrida, 7;
-			break;
-		case 4:
-			set @tipo_corrida, 5;
-			break;
-		case 5:
-			set @tipo_corrida, 3;
+            mes "O game design é que se jogue as arenas anunciadas, em sequência, até que o critério seja preenchido: nas sequências simples, todas as arenas; nas corridas por vitórias, o número de arenas necessáris para completar a corrida por vitórias.";
+			mes "Após o preenchimento de critério, em acordo mútuo, decide-se o novo critério (que pode ou não ser precedido de redraft).";
 			break;
 	}
-
-	if (@tipo_corrida == 9)
-		set @quantidade_numeros, 17;
-	else if (@tipo_corrida == 7)
-		set @quantidade_numeros, 13;
-	else if (@tipo_corrida == 5)
-		set @quantidade_numeros, 9;
-	else if (@tipo_corrida == 3)
-		set @quantidade_numeros, 5;
-
-    //set @quantidade_numeros, 5; // fallback
-
-	// Sorteia os números
-	deletearray @numeros_arenas[0], 30;
-	for (set .@i, 0; .@i < @quantidade_numeros; set .@i, .@i + 1) {
-		do {
-			set .@rand, rand(1,30);
-		} while (inarray(@numeros_arenas, .@rand) != -1); // Evita duplicados
-		set @numeros_arenas[.@i], .@rand;
-	}
-
-	// Salva delay
-	set @ultima_corrida, gettimetick(2);
-
-	// Monta string com os números
-	set .@msg$, "";
-	for (set .@j, 0; .@j < @quantidade_numeros; set .@j, .@j + 1) {
-		set .@msg$, .@msg$ + @numeros_arenas[.@j];
-		if (.@j < @quantidade_numeros - 1)
-			set .@msg$, .@msg$ + ", ";
-	}
-
-	// Mensagem global com nome da guild
-    announce getguildname(getcharid(2)) + " convoca uma corrida até " + @tipo_corrida + " vitórias nas arenas " + .@msg$, bc_all;
-
-	mes "Arenas estipuladas!";
-	close;
-}
+} 

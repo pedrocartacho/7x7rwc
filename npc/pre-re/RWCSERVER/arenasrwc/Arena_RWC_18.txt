@@ -4,7 +4,7 @@
 // ==============================================================================
 quiz_02,132,344,5	script	Waiting Room::kvm48R_Guillaume	418,{
 	cutin "arena18",4;
-	mes "Se vocï¿½ tem se divertido no servidor, demonstre sua apreciaï¿½ï¿½oo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que vocï¿½ sente ser proporcional ao entretenimento que vocï¿½ estï¿½ tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;
@@ -27,7 +27,7 @@ OnEnterBG:
 
 quiz_02,163,344,4	script	Waiting Room::kvm48R_Croix	414,{
 	cutin "arena18",4;
-	mes "Se vocï¿½ tem se divertido no servidor, demonstre sua apreciaï¿½ï¿½oo ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que vocï¿½ sente ser proporcional ao entretenimento que vocï¿½ estï¿½ tendo:";
+	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
 	next;
 	cutin "", 255;

@@ -4662,7 +4662,7 @@ static int skill_tarotcard(struct block_list* src, struct block_list *target, ui
 		status_heal(src, 2000, 0, 0);
 		// if (!map_flag_vs(target->m))
 		// 	unit_warp(target, -1, -1, -1, CLR_TELEPORT);
-		// break;
+		break;
 	}
 	case 7: // WHEEL OF FORTUNE - random 2 other effects
 	{
@@ -8097,6 +8097,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 					case SC_SPRITEMABLE:		case SC_BITESCAR:	case SC_CRUSHSTRIKE:
 					case SC_QUEST_BUFF1:	case SC_QUEST_BUFF2:	case SC_QUEST_BUFF3:
 					case SC_ARMOR_ELEMENT_EARTH:	case SC_ARMOR_ELEMENT_FIRE:	case SC_ARMOR_ELEMENT_WIND:
+					case SC_CLOSECONFINE:	case SC_CLOSECONFINE2:
 					// Clans
 					case SC_CLAN_INFO:
 					case SC_SWORDCLAN:
