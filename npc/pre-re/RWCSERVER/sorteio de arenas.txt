@@ -273,4 +273,5 @@ quiz_02,147,348,4	script	Sorteio de Arenas	563,{
 			mes "Após o preenchimento de critério, em acordo mútuo, decide-se o novo critério (que pode ou não ser precedido de redraft).";
 			break;
 	}
+	close;
 } 
