@@ -243,3 +243,7 @@
 5179,3,100  // Gold Tiara
 5147,3,100  // Baseball Cap
 
+//não pode fazer nada
+678,511,100  // edp
+7135,511,100  // frasco ad
+7136,511,100  //  frasco ad2

@@ -196,9 +196,10 @@ izlude,131,112,5	script	Healer	450,{
     }
 
 	// Set cart, falcon or riding
-	if (getskilllv("MC_PUSHCART")) {
-        atcommand "@option 0 0 8";
-    }
+    if (getskilllv("MC_PUSHCART")) {
+    .@cart_type = rand(1,12); // sorteia um número entre 1 e 12
+    atcommand "@cart " + .@cart_type;
+}
     
     if (getskilllv("HT_FALCON")) {
         atcommand "@option 0 0 16";
