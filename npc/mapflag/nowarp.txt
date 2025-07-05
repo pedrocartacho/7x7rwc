@@ -51,3 +51,14 @@
 // job_prist	mapflag	nowarp
 // ecl_tdun02	mapflag	nowarp
 // evt_bomb	mapflag	nowarp
+arena32	mapflag	nowarp
+arena33	mapflag	nowarp
+arena34	mapflag	nowarp
+arena35	mapflag	nowarp
+arena36	mapflag	nowarp
+arena37	mapflag	nowarp
+arena38	mapflag	nowarp
+arena39	mapflag	nowarp
+arena40	mapflag	nowarp
+arena41	mapflag	nowarp
+arena42	mapflag	nowarp

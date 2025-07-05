@@ -2,7 +2,7 @@
 // Arenas 7vs7 modificada inicialmente por rodrigo aka narutekz (2014) e Fissuris (2017) 
 // e intensamente aprimorada por Moskaum Y (2024 e 2025)
 // ==============================================================================
-quiz_02,126,356,5	script	Waiting Room::kvm62R_Guillaume	418,{
+quiz_02,129,356,5	script	Waiting Room::kvm62R_Guillaume	418,{
 	//cutin "aldeg_cas02",4;
 	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
@@ -25,7 +25,7 @@ OnEnterBG:
 	end;
 }
 
-quiz_02,169,356,4	script	Waiting Room::kvm62R_Croix	414,{
+quiz_02,166,356,4	script	Waiting Room::kvm62R_Croix	414,{
 	//cutin "arena30",4;
 	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
@@ -119,7 +119,7 @@ OnStart:
 	announce "- Duas equipes entraram na [ Arena 32 - aldeg_cas02 ]. -", bc_yellow;
 	set $@kvm62BG_Victory, 0;
 	// Warp Teams
-	bg_warp $@kvm62BG_id1,"aldeg_cas02",54,66;
+	bg_warp $@kvm62BG_id1,"aldeg_cas02",54,56;
 	bg_warp $@kvm62BG_id2,"aldeg_cas02",128,61;
 
 	if ($@guildsInArena2 > 0) {
@@ -128,7 +128,7 @@ OnStart:
 	if ($@guildsInArena2 > 0) {
         $@guildsInArena2--;
     }
-	setwall "aldeg_cas02",51,60,15,6,0,"batc20wall_a";
+	setwall "aldeg_cas02",50,50,15,6,0,"batc20wall_a";
 	setwall "aldeg_cas02",123,58,12,0,0,"batc20wall_b";
 	// setwall "aldeg_cas02",379,21,9,6,0,"batc20wall_c";
 	// setwall "aldeg_cas02",378,20,9,4,0,"batc20wall_d";

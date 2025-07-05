@@ -56,6 +56,17 @@ arena28	mapflag	nosave
 arena29	mapflag	nosave
 arena30	mapflag	nosave
 arena31	mapflag	nosave
+arena32	mapflag	nosave
+arena33	mapflag	nosave
+arena34	mapflag	nosave
+arena35	mapflag	nosave
+arena36	mapflag	nosave
+arena37	mapflag	nosave
+arena38	mapflag	nosave
+arena39	mapflag	nosave
+arena40	mapflag	nosave
+arena41	mapflag	nosave
+arena42	mapflag	nosave
 2009rwc_01	mapflag	nosave	SavePoint
 2009rwc_02	mapflag	nosave	SavePoint
 2009rwc_03	mapflag	nosave	SavePoint

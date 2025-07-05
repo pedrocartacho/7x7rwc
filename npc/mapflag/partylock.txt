@@ -54,6 +54,17 @@ arena28	mapflag	partylock
 arena29	mapflag	partylock
 arena30	mapflag	partylock
 arena31	mapflag	partylock
+arena32	mapflag	partylock
+arena33	mapflag	partylock
+arena34	mapflag	partylock
+arena35	mapflag	partylock
+arena36	mapflag	partylock
+arena37	mapflag	partylock
+arena38	mapflag	partylock
+arena39	mapflag	partylock
+arena40	mapflag	partylock
+arena41	mapflag	partylock
+arena42	mapflag	partylock
 2009rwc_01	mapflag	partylock
 2009rwc_02	mapflag	partylock
 2009rwc_03	mapflag	partylock

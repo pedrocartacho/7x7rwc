@@ -181,6 +181,17 @@ arena28	mapflag	noicewall
 arena29	mapflag	noicewall
 arena30	mapflag	noicewall
 arena31	mapflag	noicewall
+arena32	mapflag	noicewall
+arena33	mapflag	noicewall
+arena34	mapflag	noicewall
+arena35	mapflag	noicewall
+arena36	mapflag	noicewall
+arena37	mapflag	noicewall
+arena38	mapflag	noicewall
+arena39	mapflag	noicewall
+arena40	mapflag	noicewall
+arena41	mapflag	noicewall
+arena42	mapflag	noicewall
 2009rwc_01	mapflag	noicewall
 2009rwc_02	mapflag	noicewall
 2009rwc_03	mapflag	noicewall

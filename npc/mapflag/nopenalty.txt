@@ -55,6 +55,17 @@ arena28	mapflag	nopenalty
 arena29	mapflag	nopenalty
 arena30	mapflag	nopenalty
 arena31	mapflag	nopenalty
+arena32	mapflag	nopenalty
+arena33	mapflag	nopenalty
+arena34	mapflag	nopenalty
+arena35	mapflag	nopenalty
+arena36	mapflag	nopenalty
+arena37	mapflag	nopenalty
+arena38	mapflag	nopenalty
+arena39	mapflag	nopenalty
+arena40	mapflag	nopenalty
+arena41	mapflag	nopenalty
+arena42	mapflag	nopenalty
 2009rwc_01	mapflag	nopenalty
 2009rwc_02	mapflag	nopenalty
 2009rwc_03	mapflag	nopenalty

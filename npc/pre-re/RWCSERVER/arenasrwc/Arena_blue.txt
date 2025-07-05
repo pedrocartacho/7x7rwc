@@ -41,7 +41,7 @@ izlude,121,111,6	script	Blue Team	683,{
     set .@partymembercount, $@partymembercount;
     copyarray .@partymembername$[0], $@partymembername$[0], .@partymembercount;
 
-    if ((.@partymembercount == $@jogadoresblue) && (getcharid(2)) && (strcharinfo(0) == getguildmaster(.@guild_id))) {
+    if ((.@partymembercount >= $@jogadoresblue) && (getcharid(2)) && (strcharinfo(0) == getguildmaster(.@guild_id))) {
         // Check the party size
         if ( .@partymembercount < $@jogadoresblue ) {
             mes "[ ^0000FFChaos^000000 ]";
@@ -96,7 +96,7 @@ izlude,121,111,6	script	Blue Team	683,{
 // ========================================================= Teleporte
 //=======================================================================
 
-quiz_02,134,336,7	script	quitter#timeaz	849,{
+quiz_02,138,335,7	script	quitter#timeaz	849,{
 
     mes "[^0000ffquitter^000000]";
     mes "Você quer quitar?";
@@ -126,7 +126,7 @@ quiz_02,143,342,9	script	Employee#timeazul	419,{
             // Check if the player is the guild leader
             if (getcharid(2) == $@currentGuildID[getcharid(2)] && getcharid(0) == getguildmasterid($@currentGuildID[getcharid(2)])) {
                 // Teleport the entire guild to the red team
-                warpguild "quiz_02",154,347,getcharid(2);
+                warpguild "quiz_02",154,344,getcharid(2);
             }
             close;
 
@@ -150,7 +150,7 @@ OnTeleport:
         set .@teamcolor, "^0000FF";
         set .@dest_map$, "quiz_02";
         set .@x, 141;
-        set .@y, 347;
+        set .@y, 344;
     } else {
         set .@teamcolor, "^ff0000";
         set .@dest_map$, "quiz_02";
@@ -171,7 +171,7 @@ OnTeleport:
             }
         }
     }
-    warpguild "quiz_02",141,347,getcharid(2);
+    warpguild "quiz_02",141,344,getcharid(2);
 
     end;
 }

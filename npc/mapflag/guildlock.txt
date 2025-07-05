@@ -54,6 +54,17 @@ arena28	mapflag	guildlock
 arena29	mapflag	guildlock
 arena30	mapflag	guildlock
 arena31	mapflag	guildlock
+arena32	mapflag	guildlock
+arena33	mapflag	guildlock
+arena34	mapflag	guildlock
+arena35	mapflag	guildlock
+arena36	mapflag	guildlock
+arena37	mapflag	guildlock
+arena38	mapflag	guildlock
+arena39	mapflag	guildlock
+arena40	mapflag	guildlock
+arena41	mapflag	guildlock
+arena42	mapflag	guildlock
 2009rwc_01	mapflag	guildlock
 2009rwc_02	mapflag	guildlock
 2009rwc_03	mapflag	guildlock

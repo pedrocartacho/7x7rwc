@@ -61,6 +61,17 @@ arena28	mapflag	nomemo
 arena29	mapflag	nomemo
 arena30	mapflag	nomemo
 arena31	mapflag	nomemo
+arena32	mapflag	nomemo
+arena33	mapflag	nomemo
+arena34	mapflag	nomemo
+arena35	mapflag	nomemo
+arena36	mapflag	nomemo
+arena37	mapflag	nomemo
+arena38	mapflag	nomemo
+arena39	mapflag	nomemo
+arena40	mapflag	nomemo
+arena41	mapflag	nomemo
+arena42	mapflag	nomemo
 guild_vs2	mapflag	nomemo
 guild_vs3	mapflag	nomemo
 guild_vs4	mapflag	nomemo

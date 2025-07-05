@@ -44,6 +44,17 @@
 // guild_vs3	mapflag	pvp	off
 // guild_vs4	mapflag	pvp	off
 // guild_vs5	mapflag	pvp	off
+arena32	mapflag	pvp	off
+arena33	mapflag	pvp	off
+arena34	mapflag	pvp	off
+arena35	mapflag	pvp	off
+arena36	mapflag	pvp	off
+arena37	mapflag	pvp	off
+arena38	mapflag	pvp	off
+arena39	mapflag	pvp	off
+arena40	mapflag	pvp	off
+arena41	mapflag	pvp	off
+arena42	mapflag	pvp	off
 
 // // Cities ========================
 // ayo_in01	mapflag	pvp	off

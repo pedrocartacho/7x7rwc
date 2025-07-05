@@ -53,6 +53,17 @@ arena28	mapflag	notrade
 arena29	mapflag	notrade
 arena30	mapflag	notrade
 arena31	mapflag	notrade
+arena32	mapflag	notrade
+arena33	mapflag	notrade
+arena34	mapflag	notrade
+arena35	mapflag	notrade
+arena36	mapflag	notrade
+arena37	mapflag	notrade
+arena38	mapflag	notrade
+arena39	mapflag	notrade
+arena40	mapflag	notrade
+arena41	mapflag	notrade
+arena42	mapflag	notrade
 guild_vs2	mapflag	notrade
 guild_vs3	mapflag	notrade
 guild_vs4	mapflag	notrade

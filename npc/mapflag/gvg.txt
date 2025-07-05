@@ -57,6 +57,17 @@ arena28	mapflag	gvg
 arena29	mapflag	gvg
 arena30	mapflag	gvg
 arena31	mapflag	gvg
+arena32	mapflag	gvg
+arena33	mapflag	gvg
+arena34	mapflag	gvg
+arena35	mapflag	gvg
+arena36	mapflag	gvg
+arena37	mapflag	gvg
+arena38	mapflag	gvg
+arena39	mapflag	gvg
+arena40	mapflag	gvg
+arena41	mapflag	gvg
+arena42	mapflag	gvg
 guild_vs2	mapflag	gvg
 guild_vs3	mapflag	gvg
 guild_vs4	mapflag	gvg

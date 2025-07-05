@@ -53,6 +53,17 @@ arena28	mapflag	nodrop
 arena29	mapflag	nodrop
 arena30	mapflag	nodrop
 arena31	mapflag	nodrop
+arena32	mapflag	nodrop
+arena33	mapflag	nodrop
+arena34	mapflag	nodrop
+arena35	mapflag	nodrop
+arena36	mapflag	nodrop
+arena37	mapflag	nodrop
+arena38	mapflag	nodrop
+arena39	mapflag	nodrop
+arena40	mapflag	nodrop
+arena41	mapflag	nodrop
+arena42	mapflag	nodrop
 guild_vs2	mapflag	nodrop
 guild_vs3	mapflag	nodrop
 guild_vs4	mapflag	nodrop

@@ -59,6 +59,17 @@ arena28	mapflag	noreturn
 arena29	mapflag	noreturn
 arena30	mapflag	noreturn
 arena31	mapflag	noreturn
+arena32	mapflag	noreturn
+arena33	mapflag	noreturn
+arena34	mapflag	noreturn
+arena35	mapflag	noreturn
+arena36	mapflag	noreturn
+arena37	mapflag	noreturn
+arena38	mapflag	noreturn
+arena39	mapflag	noreturn
+arena40	mapflag	noreturn
+arena41	mapflag	noreturn
+arena42	mapflag	noreturn
 2009rwc_01	mapflag	noreturn
 2009rwc_02	mapflag	noreturn
 2009rwc_03	mapflag	noreturn

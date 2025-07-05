@@ -53,3 +53,14 @@
 // job_prist	mapflag	noteleport
 // ecl_tdun02	mapflag	noteleport
 // evt_bomb	mapflag	noteleport
+arena32	mapflag	noteleport
+arena33	mapflag	noteleport
+arena34	mapflag	noteleport
+arena35	mapflag	noteleport
+arena36	mapflag	noteleport
+arena37	mapflag	noteleport
+arena38	mapflag	noteleport
+arena39	mapflag	noteleport
+arena40	mapflag	noteleport
+arena41	mapflag	noteleport
+arena42	mapflag	noteleport

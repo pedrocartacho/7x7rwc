@@ -1249,7 +1249,7 @@ uint8 pc_isequip(struct map_session_data *sd,int n)
 	if (item->equip&EQP_AMMO) {
 		switch (item->look) {
 			case AMMO_ARROW:
-				if (battle_config.ammo_check_weapon && sd->status.weapon != W_BOW && sd->status.weapon != W_MUSICAL && sd->status.weapon != W_WHIP) {
+				if (battle_config.ammo_check_weapon && sd->status.weapon != W_BOW && sd->status.weapon != W_MUSICAL && sd->status.weapon != W_WHIP && sd->status.weapon != W_KATAR) {
 					clif_msg(sd, ITEM_NEED_BOW);
 					return ITEM_EQUIP_ACK_FAIL;
 				}

@@ -46,6 +46,17 @@ arena28	mapflag	nocostume
 arena29	mapflag	nocostume
 arena30	mapflag	nocostume
 arena31	mapflag	nocostume
+arena32	mapflag	nocostume
+arena33	mapflag	nocostume
+arena34	mapflag	nocostume
+arena35	mapflag	nocostume
+arena36	mapflag	nocostume
+arena37	mapflag	nocostume
+arena38	mapflag	nocostume
+arena39	mapflag	nocostume
+arena40	mapflag	nocostume
+arena41	mapflag	nocostume
+arena42	mapflag	nocostume
 2009rwc_01	mapflag	nocostume
 2009rwc_02	mapflag	nocostume
 2009rwc_03	mapflag	nocostume

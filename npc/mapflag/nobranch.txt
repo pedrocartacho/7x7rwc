@@ -58,6 +58,17 @@ arena28	mapflag	nobranch
 arena29	mapflag	nobranch
 arena30	mapflag	nobranch
 arena31	mapflag	nobranch
+arena32	mapflag	nobranch
+arena33	mapflag	nobranch
+arena34	mapflag	nobranch
+arena35	mapflag	nobranch
+arena36	mapflag	nobranch
+arena37	mapflag	nobranch
+arena38	mapflag	nobranch
+arena39	mapflag	nobranch
+arena40	mapflag	nobranch
+arena41	mapflag	nobranch
+arena42	mapflag	nobranch
 2009rwc_01	mapflag	nobranch
 2009rwc_02	mapflag	nobranch
 2009rwc_03	mapflag	nobranch
