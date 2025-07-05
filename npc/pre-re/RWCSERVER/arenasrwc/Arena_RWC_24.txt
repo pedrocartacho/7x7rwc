@@ -2,7 +2,7 @@
 // Arenas 7vs7 modificada inicialmente por rodrigo aka narutekz (2014) e Fissuris (2017) 
 // e intensamente aprimorada por Moskaum Y (2024 e 2025)
 // ==============================================================================
-quiz_02,129,352,5	script	Waiting Room::kvm54R_Guillaume	418,{
+quiz_02,132,342,5	script	Waiting Room::kvm54R_Guillaume	418,{
 	cutin "arena24",4;
 	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
@@ -25,7 +25,7 @@ OnEnterBG:
 	end;
 }
 
-quiz_02,166,352,4	script	Waiting Room::kvm54R_Croix	414,{
+quiz_02,163,342,4	script	Waiting Room::kvm54R_Croix	414,{
 	cutin "arena24",4;
 	mes "Se você tem se divertido no servidor, demonstre sua apreciação ^DB6446agora^000000 mesmo fazendo um pix em qualquer quantia que você sente ser proporcional ao entretenimento que você está tendo:";
 	mes "^33940CCHAVE PIX 7x7rwc@gmail.com^000000";
